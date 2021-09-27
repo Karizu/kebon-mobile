@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">http://superfriends-api.ap-southeast-1.elasticbeanstalk.com</domain>
+        <domain includeSubdomains="true">superfriends-api.ap-southeast-1.elasticbeanstalk.com</domain>
+        <domain includeSubdomains="true">https://fburl.com</domain>
+        <domain includeSubdomains="true">https://static.xx.fbcdn.net</domain>
+        <domain includeSubdomains="true">https://www.bowcockpursaill.co.uk</domain>
+        <domain includeSubdomains="true">https://archinect.imgix.net</domain>
+    </domain-config>
+</network-security-config>

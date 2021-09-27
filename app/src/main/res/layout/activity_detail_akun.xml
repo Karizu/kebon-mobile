@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient"
+    tools:context=".presentation.akun.DetailAkunActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#67C8B4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_title_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Info Akun"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+            <com.skydoves.elasticviews.ElasticImageView
+                android:id="@+id/btn_back"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                android:src="@drawable/ic_back"
+                app:imageView_duration="100"
+                app:imageView_scale="0.87" />
+
+            <com.skydoves.elasticviews.ElasticImageView
+                android:id="@+id/btn_save"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="17dp"
+                android:background="?attr/selectableItemBackground"
+                android:src="@drawable/img_save"
+                app:imageView_duration="100" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="131dp"
+        android:layout_height="131dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="140dp"
+        android:background="@drawable/bg_circle_info_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="65.96dp"
+            android:layout_height="65.96dp"
+            android:layout_gravity="center"
+            android:src="@drawable/icon_akun" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/btn_change_pic"
+        android:layout_width="120.5dp"
+        android:layout_height="41.69dp"
+        android:layout_marginTop="112.5dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="140dp"
+        android:background="@drawable/bg_text_info_akun"
+        android:foreground="?attr/selectableItemBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Ubah"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+    </FrameLayout>
+
+    <com.skydoves.elasticviews.ElasticLayout
+        android:id="@+id/layout_name"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="32.81dp"
+        android:background="@drawable/bg_info_akun_text"
+        android:orientation="horizontal"
+        app:layout_duration="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Nama"
+                android:textStyle="bold"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Dharmadi"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="14sp" />
+            
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_baseline_chevron_right_24"
+                android:layout_marginEnd="12dp"/>
+
+        </LinearLayout>
+
+    </com.skydoves.elasticviews.ElasticLayout>
+
+    <com.skydoves.elasticviews.ElasticLayout
+        android:id="@+id/layout_phone"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@drawable/bg_info_akun_text"
+        android:orientation="horizontal"
+        app:layout_duration="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_name">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Nomor Telepon"
+                android:textStyle="bold"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Belum Ada"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_baseline_chevron_right_24"
+                android:layout_marginEnd="12dp"/>
+
+        </LinearLayout>
+
+    </com.skydoves.elasticviews.ElasticLayout>
+
+    <com.skydoves.elasticviews.ElasticLayout
+        android:id="@+id/layout_email"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@drawable/bg_info_akun_text"
+        android:orientation="horizontal"
+        app:layout_duration="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_phone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Email"
+                android:textStyle="bold"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_regular"
+                android:text="******@gmail.com"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_baseline_chevron_right_24"
+                android:layout_marginEnd="12dp"/>
+
+        </LinearLayout>
+
+    </com.skydoves.elasticviews.ElasticLayout>
+
+    <com.skydoves.elasticviews.ElasticLayout
+        android:id="@+id/layout_address"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@drawable/bg_info_akun_text"
+        android:orientation="horizontal"
+        app:layout_duration="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_email">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Alamat"
+                android:textStyle="bold"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Belum Ada"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_baseline_chevron_right_24"
+                android:layout_marginEnd="12dp"/>
+
+        </LinearLayout>
+
+    </com.skydoves.elasticviews.ElasticLayout>
+
+    <com.skydoves.elasticviews.ElasticLayout
+        android:id="@+id/layout_change_pass"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_info_akun_text"
+        android:orientation="horizontal"
+        app:layout_duration="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_address">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Ubah Password"
+                android:textStyle="bold"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="14sp" />
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Dharmadi"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_baseline_chevron_right_24"
+                android:layout_marginEnd="12dp"/>
+
+        </LinearLayout>
+
+    </com.skydoves.elasticviews.ElasticLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

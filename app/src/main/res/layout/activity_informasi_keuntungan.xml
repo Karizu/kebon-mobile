@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient"
+    tools:context=".presentation.home.lahan.InformasiKeuntunganActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="41dp"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:text="Keuntungan"
+        android:textColor="@color/colorDarkBlue"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/imageView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="-55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/bg_informasi_keuntungan">
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="49dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginEnd="46dp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Keuntungan menanam di  Depari Farm"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorDarkBlue"/>
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="46dp"
+            android:layout_marginEnd="46dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="95%"
+            android:gravity="center"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorDarkBlue"/>
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="46dp"
+            android:layout_marginEnd="46dp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_regular"
+            android:text="tanaman berhasil dipanen"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorDarkBlue"/>
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="46dp"
+            android:layout_marginEnd="46dp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_regular"
+            android:text="untuk periode\nJanuari 2020 - Januari 2021"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorDarkBlue"/>
+
+        <Button
+            android:id="@+id/btn_kembali"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginStart="91dp"
+            android:layout_marginEnd="91dp"
+            android:text="Kembali"
+            android:textAllCaps="false"
+            android:textColor="@color/colorDarkBlue"
+            android:fontFamily="@font/poppins_regular"
+            android:textStyle="bold"
+            android:background="@drawable/bg_round_button_bro"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="123dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_grafik" />
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

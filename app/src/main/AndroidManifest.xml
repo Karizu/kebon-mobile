@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.selada.kebonmobile">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".presentation.home.tanam.PilihMetodeActivity"></activity>
+        <activity android:name=".presentation.akun.DetailAkunActivity" />
+        <activity android:name=".presentation.home.lahan.GaleriLahanActivity" />
+        <activity android:name=".presentation.home.lahan.InformasiKeuntunganActivity" />
+        <activity android:name=".presentation.home.pembayaran.RincianPembayaranActivity" />
+        <activity android:name=".presentation.home.pembayaran.KonfirmasiPembayaranActivity" />
+        <activity android:name=".presentation.home.pembayaran.PembayaranActivity" />
+        <activity android:name=".presentation.home.lahan.SewaLahanActivity" />
+        <activity android:name=".presentation.auth.VerificationEmailActivity" />
+        <activity android:name=".presentation.auth.Register3Activity" />
+        <activity android:name=".presentation.auth.Register2Activity" />
+        <activity android:name=".presentation.site.PickSiteActivity" />
+        <activity android:name=".presentation.auth.RegisterActivity" />
+        <activity
+            android:name=".presentation.auth.LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name=".IntroActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".presentation.MainActivity" />
+    </application>
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

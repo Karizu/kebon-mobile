@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Black"
+    tools:context=".presentation.home.lahan.GaleriLahanActivity">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back" />
+
+    <TextView
+        android:id="@+id/tv_farm_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="41dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:text="Depari Farm"
+        android:textColor="@color/White"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="0dp"
+        android:layout_height="413dp"
+        android:layout_marginTop="65dp"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_farm_name"
+        app:srcCompat="@drawable/hidroponik_43" />
+
+    <com.skydoves.elasticviews.ElasticButton
+        android:id="@+id/btn_pilih"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="19dp"
+        android:background="@drawable/bg_button_round"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Pilih Lahan Ini"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        app:button_duration="100"
+        app:button_scale="0.87"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="313dp"
+    android:layout_height="404dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_farm_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Depari Farm"
+            android:textColor="@color/colorTextBro"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img_farm"
+            android:layout_width="fill_parent"
+            android:layout_height="256.69dp"
+            android:layout_marginTop="12dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hidroponik_43"/>
+
+        <TextView
+            android:id="@+id/tv_status_farm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Status : Menunggu Pembayaran"
+            android:textColor="@color/colorTextBro"
+            android:textSize="14sp" />
+
+        <com.skydoves.elasticviews.ElasticButton
+            android:id="@+id/btn_rincian"
+            android:layout_width="match_parent"
+            android:layout_height="40.6dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="36dp"
+            android:background="@drawable/bg_button_round"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Lihat rincian pembayaran"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:button_duration="100"
+            app:button_scale="0.87"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_beranda" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient"
+    tools:context=".presentation.home.lahan.SewaLahanActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/app_bar_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/bg_frame_outline_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="Pilih Lahan"
+            android:textColor="@color/colorTextBro"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView1"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Tentukan pilihan lahanmu untuk menanam\ntanaman terbaikmu"
+            android:textColor="@color/colorTextBro"
+            android:textSize="12sp" />
+
+        <com.skydoves.elasticviews.ElasticImageView
+            android:id="@+id/btn_istilah"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="9dp"
+            android:layout_marginBottom="9dp"
+            app:imageView_duration="100"
+            android:src="@drawable/ic_tanda_tanya" />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/img_bg_lahan"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btn_pilih"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="1.0">
+
+        <com.skydoves.elasticviews.ElasticImageView
+            android:id="@+id/img_lahan"
+            android:layout_width="match_parent"
+            android:layout_height="110.44dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="55dp"
+            android:scaleType="centerCrop"
+            app:imageView_duration="100"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:srcCompat="@drawable/hidroponik_43" />
+
+        <com.skydoves.elasticviews.ElasticImageView
+            android:id="@+id/btn_min_kavling"
+            android:layout_width="28.15dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="9dp"
+            app:imageView_duration="100"
+            app:layout_constraintBottom_toTopOf="@+id/btn_min_sewa"
+            app:layout_constraintStart_toEndOf="@+id/textView15"
+            app:srcCompat="@drawable/ic_minus_button" />
+
+        <TextView
+            android:id="@+id/tv_quantity_kavling"
+            android:layout_width="29dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="-1dp"
+            android:layout_marginBottom="9dp"
+            android:background="@drawable/bg_quantity_text"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:maxLength="3"
+            android:text="0"
+            android:textColor="@color/colorTextBro"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_quantity_sewa"
+            app:layout_constraintStart_toEndOf="@+id/btn_min_kavling" />
+
+        <com.skydoves.elasticviews.ElasticImageView
+            android:id="@+id/btn_add_kavling"
+            android:layout_width="28.15dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="9dp"
+            app:imageView_duration="100"
+            app:layout_constraintBottom_toTopOf="@+id/btn_add_sewa"
+            app:layout_constraintStart_toEndOf="@+id/tv_quantity_kavling"
+            app:srcCompat="@drawable/ic_add_button" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="Pilih Lahan"
+            android:textColor="@color/colorTextBro"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.skydoves.elasticviews.ElasticCheckButton
+            android:id="@+id/btn_informasi"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="65dp"
+            android:background="@drawable/bg_text"
+            android:fontFamily="@font/poppins_bold"
+            app:checkButton_duration="100"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="Informasi Keuntungan"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_lahan" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Lokasi Lahan :"
+            android:textColor="@color/colorTextBroLight"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_informasi" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Jumlah Kavling :"
+            android:textColor="@color/colorTextBroLight"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Lubang dalam tiap kavling:"
+            android:textColor="@color/colorTextBroLight"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Harga Sewa (tahun) :"
+            android:textColor="@color/colorTextBroLight"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Maksimal Sewa: "
+            android:textColor="@color/colorTextBroLight"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:lines="2"
+            android:text="Jl. Nama Jalan No. XX Kota Nama"
+            android:textColor="@color/colorTextBro"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/btn_informasi" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="10 kavling"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextBro"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="10"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextBro"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Rp5,000,000"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextBro"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textView7"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="xx tahun"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextBro"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Jumlah Kavling"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView18"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Lama Sewa (tahun)"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.skydoves.elasticviews.ElasticImageView
+            android:id="@+id/btn_min_sewa"
+            android:layout_width="28.15dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="11dp"
+            app:imageView_duration="100"
+            app:layout_constraintStart_toEndOf="@+id/textView18"
+            app:layout_constraintTop_toBottomOf="@+id/textView15"
+            app:srcCompat="@drawable/ic_minus_button" />
+
+        <TextView
+            android:id="@+id/tv_quantity_sewa"
+            android:layout_width="29dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="-1dp"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/bg_quantity_text"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:maxLength="3"
+            android:text="0"
+            android:textColor="@color/colorTextBro"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/btn_min_sewa"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <com.skydoves.elasticviews.ElasticImageView
+            android:id="@+id/btn_add_sewa"
+            android:layout_width="28.15dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="11dp"
+            app:imageView_duration="100"
+            app:layout_constraintStart_toEndOf="@+id/tv_quantity_sewa"
+            app:layout_constraintTop_toBottomOf="@+id/textView15"
+            app:srcCompat="@drawable/ic_add_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.skydoves.elasticviews.ElasticButton
+        android:id="@+id/btn_pilih"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="19dp"
+        android:background="@drawable/bg_button_round"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Pilih Lahan Ini"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        app:button_duration="100"
+        app:button_scale="0.87"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.skydoves.elasticviews.ElasticImageView
+        android:id="@+id/imageView12"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="196dp"
+        android:layout_marginEnd="4dp"
+        app:imageView_duration="100"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:srcCompat="@drawable/ic_left" />
+
+    <com.skydoves.elasticviews.ElasticImageView
+        android:id="@+id/imageView13"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="196dp"
+        android:layout_marginEnd="8dp"
+        app:imageView_duration="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:srcCompat="@drawable/ic_right" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

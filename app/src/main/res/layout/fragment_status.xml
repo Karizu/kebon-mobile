@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="49dp"
+            android:layout_marginEnd="49dp"
+            android:src="@drawable/img_ilustration_1"/>
+
+        <com.skydoves.elasticviews.ElasticButton
+            android:id="@+id/btn_pilih"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginStart="59dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginBottom="19dp"
+            android:background="@drawable/bg_button_round"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Mulai Tanam Sekarang!"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:button_duration="100"
+            app:button_scale="0.87" />
+
+    </LinearLayout>
+
+</RelativeLayout>

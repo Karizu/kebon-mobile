@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient"
+    tools:context=".presentation.home.tanam.PilihMetodeActivity">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/app_bar_layout" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/bg_round_header_pilih_metode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2">
+
+        <TextView
+            android:id="@+id/tv_farm_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Pilih Metode Penanaman"
+            android:textColor="@color/colorTextBro"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_farm_name"
+            android:layout_marginStart="38dp"
+            android:layout_marginEnd="38dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Tentukan metode penanaman untuk hasil panen terbaik dari tanamanmu"
+            android:textColor="@color/colorTextBroLight"
+            android:textSize="12sp" />
+
+        <com.skydoves.elasticviews.ElasticImageView
+            android:id="@+id/btn_istilah"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="9dp"
+            android:layout_marginBottom="9dp"
+            android:src="@drawable/ic_tanda_tanya"
+            app:imageView_duration="100" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_auto_pilot"
+        android:layout_width="match_parent"
+        android:layout_height="202dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="15dp"
+        app:layout_duration="50"
+        android:background="@drawable/jadwal_image"
+        android:foreground="@drawable/bg_outer_bro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/bg_jadwal_image"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="Autopilot"
+                android:textColor="@color/colorTextBro"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.skydoves.elasticviews.ElasticButton
+                android:id="@+id/btn_info_selengkapnya"
+                android:layout_width="167dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/bg_button_info_selengkapnya"
+                android:fontFamily="@font/poppins_regular"
+                app:button_duration="100"
+                android:text="Informasi selengkapnya"
+                android:textAllCaps="false"
+                android:textColor="#FBF4EA"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="281dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:text="Jenis tanaman dan jumlah tanaman yang  akan ditanam ditentukan  oleh operator."
+                android:textColor="@color/colorTextBroLight"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_konvensional"
+        android:layout_width="match_parent"
+        android:layout_height="202dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="15dp"
+        app:layout_duration="50"
+        android:background="@drawable/jadwal_image"
+        android:foreground="@drawable/bg_outer_bro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_auto_pilot">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/bg_jadwal_image"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="Konvensional"
+                android:textColor="@color/colorTextBro"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.skydoves.elasticviews.ElasticButton
+                android:id="@+id/btn_info_selengkapnya_konvensional"
+                android:layout_width="167dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/bg_button_info_selengkapnya"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Informasi selengkapnya"
+                app:button_duration="100"
+                android:textAllCaps="false"
+                android:textColor="#FBF4EA"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="281dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:text="Jenis tanaman dan  jumlah tanaman yang  akan ditanam ditentukan oleh Anda."
+                android:textColor="@color/colorTextBroLight"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+    <com.skydoves.elasticviews.ElasticButton
+        android:id="@+id/btn_pilih"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="19dp"
+        android:background="@drawable/bg_button_round"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Pilih"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        app:button_duration="100"
+        app:button_scale="0.87"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

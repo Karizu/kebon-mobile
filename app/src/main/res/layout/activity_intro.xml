@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient"
+    tools:context=".IntroActivity">
+
+    <com.skydoves.elasticviews.ElasticButton
+        android:id="@+id/btn_gabung"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/bg_button_round"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Gabung Sekarang"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:button_duration="100"
+        app:button_scale="0.87"
+        android:layout_above="@+id/textView"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="48dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:text="Sudah Punya Akun? Klik Disini"
+        android:textColor="@color/colorOrange"
+        android:layout_alignParentBottom="true"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_gabung" />
+    
+    <LinearLayout
+        android:id="@+id/layoutDots"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="41dp"
+        android:gravity="center"
+        android:layout_above="@+id/btn_gabung">
+        
+        <ImageView
+            android:id="@+id/img_dots_1"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_dots_orange"/>
+
+        <ImageView
+            android:id="@+id/img_dots_2"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_dots_grey"/>
+
+        <ImageView
+            android:id="@+id/img_dots_3"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_dots_grey"/>
+        
+    </LinearLayout>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/btn_back"
+        android:layout_width="28dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_chevron_back"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"/>
+    
+    <ImageView
+        android:id="@+id/btn_next"
+        android:layout_width="11dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="25dp"
+        android:src="@drawable/ic_next"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

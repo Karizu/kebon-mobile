@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_splash_gradient">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/app_bar_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_akun_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+        <com.skydoves.elasticviews.ElasticLayout
+            android:id="@+id/frame_profile"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            app:layout_duration="100"
+            android:background="@drawable/bg_circle_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_profile"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_profile" />
+
+        </com.skydoves.elasticviews.ElasticLayout>
+
+        <TextView
+            android:id="@+id/tv_pengguna"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_toEndOf="@+id/frame_profile"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Pengguna"
+            android:textColor="@color/colorTextBroLight"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/frame_profile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/jumlah_lahan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_pengguna"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/frame_profile"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Jumlah Lahan"
+            android:textColor="@color/colorTextBroLight"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/frame_profile"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pengguna" />
+
+        <TextView
+            android:id="@+id/tv_jumlah_lahan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/frame_profile"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Belum Ada Lahan"
+            android:textColor="@color/colorTextBroLight"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/jumlah_lahan"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pengguna" />
+
+        <TextView
+            android:id="@+id/jumlah_slot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_pengguna"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/frame_profile"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Jumlah Slot"
+            android:textColor="@color/colorTextBroLight"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/frame_profile"
+            app:layout_constraintTop_toBottomOf="@+id/jumlah_lahan" />
+
+        <TextView
+            android:id="@+id/tv_jumlah_slot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/frame_profile"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Belum Ada Lahan"
+            android:textColor="@color/colorTextBroLight"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/jumlah_slot"
+            app:layout_constraintTop_toBottomOf="@+id/jumlah_lahan" />
+
+        <TextView
+            android:id="@+id/jumlah_slot_kosong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_pengguna"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/frame_profile"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Jumlah Slot Kosong"
+            android:textColor="@color/colorTextBroLight"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/frame_profile"
+            app:layout_constraintTop_toBottomOf="@+id/jumlah_slot" />
+
+        <TextView
+            android:id="@+id/tv_jumlah_slot_kosong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/frame_profile"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Belum Ada Lahan"
+            android:textColor="@color/colorTextBroLight"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/jumlah_slot_kosong"
+            app:layout_constraintTop_toBottomOf="@+id/jumlah_slot" />
+
+        <TextView
+            android:id="@+id/masa_sewa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_pengguna"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/frame_profile"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Masa Sewa"
+            android:textColor="@color/colorTextBroLight"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/frame_profile"
+            app:layout_constraintTop_toBottomOf="@+id/jumlah_slot_kosong" />
+
+        <TextView
+            android:id="@+id/tv_masa_sewa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/frame_profile"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Belum Ada Lahan"
+            android:textColor="@color/colorTextBroLight"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/masa_sewa"
+            app:layout_constraintTop_toBottomOf="@+id/jumlah_slot_kosong" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.skydoves.elasticviews.ElasticLayout
+        android:id="@+id/btn_tambah_lahan"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="22dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_round_top_right_left"
+        app:layout_duration="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/ic_add_lahan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Tambah Lahan"
+                android:textColor="@color/colorTextBroLight"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </com.skydoves.elasticviews.ElasticLayout>
+
+    <com.skydoves.elasticviews.ElasticLayout
+        android:id="@+id/btn_history"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:background="@drawable/bg_round_bottom_right_left"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_tambah_lahan"
+        app:layout_duration="100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/ic_histori" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:text="Histori"
+                android:textColor="@color/colorTextBroLight"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </com.skydoves.elasticviews.ElasticLayout>
+
+    <com.skydoves.elasticviews.ElasticLayout
+        android:id="@+id/btn_faq"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="22dp"
+        android:background="@drawable/bg_round_top_right_left"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_history"
+        app:layout_duration="100">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/ic_faq" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:text="FAQ"
+                android:textColor="@color/colorTextBroLight"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </com.skydoves.elasticviews.ElasticLayout>
+
+    <com.skydoves.elasticviews.ElasticLayout
+        android:id="@+id/btn_cs"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:background="@drawable/bg_rectangle_bro"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_faq"
+        app:layout_duration="100">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/ic_cs" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:text="Customer Service"
+                android:textColor="@color/colorTextBroLight"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </com.skydoves.elasticviews.ElasticLayout>
+
+    <com.skydoves.elasticviews.ElasticLayout
+        android:id="@+id/btn_about"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:background="@drawable/bg_round_bottom_right_left"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cs"
+        app:layout_duration="100">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/ic_about" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:text="Tentang Kami"
+                android:textColor="@color/colorTextBroLight"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </com.skydoves.elasticviews.ElasticLayout>
+
+    <com.skydoves.elasticviews.ElasticLayout
+        android:id="@+id/btn_keluar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="22dp"
+        android:background="@drawable/bg_akun_header"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_about"
+        app:layout_duration="100">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/ic_keluar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:text="Keluar"
+                android:textColor="@color/colorTextBroLight"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </com.skydoves.elasticviews.ElasticLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

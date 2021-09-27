@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.skydoves.elasticviews.ElasticCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cvItem"
+    android:layout_width="185dp"
+    android:layout_height="144dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginEnd="16dp"
+    app:cardView_duration="100"
+    app:cardView_scale="0.87"
+    app:cardCornerRadius="5dp"
+    app:cardBackgroundColor="#FEF9E6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        
+        <ImageView
+            android:id="@+id/img_item"
+            android:layout_width="match_parent"
+            android:layout_height="111.65dp"
+            android:src="@drawable/hidroponik_43"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/text_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Depari Farm"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/colorDarkBlue"/>
+        
+    </LinearLayout>
+
+</com.skydoves.elasticviews.ElasticCardView>
