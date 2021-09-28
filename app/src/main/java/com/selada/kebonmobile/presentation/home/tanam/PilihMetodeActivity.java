@@ -1,16 +1,21 @@
 package com.selada.kebonmobile.presentation.home.tanam;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.selada.kebonmobile.IntroActivity;
 import com.selada.kebonmobile.R;
+import com.selada.kebonmobile.presentation.auth.RegisterActivity;
 import com.selada.kebonmobile.util.Constant;
 import com.selada.kebonmobile.util.MethodUtil;
 import com.skydoves.elasticviews.ElasticButton;
@@ -46,6 +51,7 @@ public class PilihMetodeActivity extends AppCompatActivity {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @OnClick(R.id.btn_auto_pilot)
     void onClickAutoPilot(){
         btn_auto_pilot.setForeground(getResources().getDrawable(R.drawable.bg_outer_orange));
@@ -54,6 +60,7 @@ public class PilihMetodeActivity extends AppCompatActivity {
         btn_pilih.setEnabled(true);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @OnClick(R.id.btn_konvensional)
     void onClickKonvensional(){
         btn_auto_pilot.setForeground(getResources().getDrawable(R.drawable.bg_outer_bro));
@@ -80,7 +87,9 @@ public class PilihMetodeActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_pilih)
     void onClickPilih(){
-
+        Intent intent = new Intent(PilihMetodeActivity.this, PilihTanamanActivity.class);
+        startActivity(intent);
+        PilihMetodeActivity.this.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     @Override
