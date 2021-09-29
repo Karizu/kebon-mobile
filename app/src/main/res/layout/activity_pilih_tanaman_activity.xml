@@ -8,11 +8,203 @@
     tools:context=".presentation.home.tanam.PilihTanamanActivity">
 
     <include
+        android:id="@+id/include3"
         layout="@layout/app_bar_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.skydoves.elasticviews.ElasticImageView
+        android:id="@+id/imageView11"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        app:imageView_duration="100"
+        android:src="@drawable/ic_cart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include3" />
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="145dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_side_pilih_tanaman"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include3">
+
+        <com.skydoves.elasticviews.ElasticLayout
+            android:id="@+id/btn_filter"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_filter_tanaman"
+            app:layout_duration="50">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_down_bro_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:text="A ~ Z"
+                    android:textColor="@color/colorTextBroLight"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </com.skydoves.elasticviews.ElasticLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_tanaman"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="20dp" />
+
+    </LinearLayout>
+
+    <com.iambedant.text.OutlineTextView
+        android:id="@+id/tv_plant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="61dp"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:text="Kangkung"
+        android:textColor="#FFE693"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:outlineColor="#704D20"
+        app:outlineWidth="0.7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include3" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="56dp"
+        android:src="@drawable/img_plant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/tv_plant_name" />
+
+    <TextView
+        android:id="@+id/tv_plant_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:text="Panen dalam : 27 hari Harga jual : Rp3,000/kg"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/imageView17" />
+
+    <com.skydoves.elasticviews.ElasticButton
+        android:id="@+id/btn_lihat_keuntungan"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="19dp"
+        android:background="@drawable/bg_button_round"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Lihat Keuntungan"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:button_duration="100"
+        app:button_scale="0.87"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/tv_plant_desc" />
+
+    <com.skydoves.elasticviews.ElasticImageView
+        android:id="@+id/btn_min_kavling"
+        android:layout_width="27.93dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginBottom="9dp"
+        app:imageView_duration="100"
+        app:layout_constraintTop_toBottomOf="@+id/btn_lihat_keuntungan"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:srcCompat="@drawable/ic_minus_button" />
+
+    <TextView
+        android:id="@+id/tv_quantity_kavling"
+        android:layout_width="43.53dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="-1dp"
+        android:layout_marginBottom="9dp"
+        android:background="@drawable/bg_quantity_text"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:maxLength="3"
+        android:text="0"
+        android:textColor="@color/colorTextBro"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_lihat_keuntungan"
+        app:layout_constraintStart_toEndOf="@+id/btn_min_kavling" />
+
+    <com.skydoves.elasticviews.ElasticImageView
+        android:id="@+id/btn_add_kavling"
+        android:layout_width="27.93dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="9dp"
+        app:imageView_duration="100"
+        app:layout_constraintTop_toBottomOf="@+id/btn_lihat_keuntungan"
+        app:layout_constraintStart_toEndOf="@+id/tv_quantity_kavling"
+        app:srcCompat="@drawable/ic_add_button" />
+
+    <com.skydoves.elasticviews.ElasticButton
+        android:id="@+id/btn_tambah_keranjang"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="19dp"
+        android:background="@drawable/bg_button_round_green"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Tambah Ke Keranjang"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:button_duration="100"
+        app:button_scale="0.87"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/btn_min_kavling" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

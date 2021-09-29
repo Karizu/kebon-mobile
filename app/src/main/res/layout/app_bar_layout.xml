@@ -34,8 +34,9 @@
             android:layout_height="40dp"
             android:src="@drawable/ic_chat"
             android:layout_alignParentEnd="true"
+            android:padding="5dp"
             app:imageView_duration="100"
-            android:layout_marginEnd="7.6dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginTop="6dp"/>
 
     </RelativeLayout>

@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".presentation.home.tanam.PilihMetodeActivity"></activity>
+        <activity android:name=".presentation.home.tanam.PilihTanamanActivity"></activity>
+        <activity android:name=".presentation.home.tanam.PilihMetodeActivity" />
         <activity android:name=".presentation.akun.DetailAkunActivity" />
         <activity android:name=".presentation.home.lahan.GaleriLahanActivity" />
         <activity android:name=".presentation.home.lahan.InformasiKeuntunganActivity" />
@@ -40,8 +41,8 @@
         </activity>
         <activity android:name=".presentation.MainActivity" />
     </application>
-    <uses-permission android:name="android.permission.CAMERA" />
-
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
 </manifest>
