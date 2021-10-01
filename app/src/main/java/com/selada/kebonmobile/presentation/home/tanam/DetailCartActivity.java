@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.selada.kebonmobile.R;
+import com.selada.kebonmobile.presentation.home.tanam.adapter.CartBottomDetailAdapter;
+import com.selada.kebonmobile.presentation.home.tanam.adapter.CartDetailAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,9 +1,8 @@
-package com.selada.kebonmobile.presentation.home.tanam;
+package com.selada.kebonmobile.presentation.home.tanam.adapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,8 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.selada.kebonmobile.R;
-import com.selada.kebonmobile.presentation.home.pembayaran.RincianPembayaranActivity;
-import com.skydoves.elasticviews.ElasticButton;
+import com.selada.kebonmobile.presentation.home.tanam.PilihTanamanActivity;
 
 import java.util.List;
 

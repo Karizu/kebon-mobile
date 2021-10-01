@@ -9,6 +9,7 @@ import android.widget.EditText;
 import com.selada.kebonmobile.IntroActivity;
 import com.selada.kebonmobile.R;
 import com.selada.kebonmobile.presentation.MainActivity;
+import com.selada.kebonmobile.util.PreferenceManager;
 import com.skydoves.elasticviews.ElasticButton;
 import com.skydoves.elasticviews.ElasticImageView;
 import com.skydoves.elasticviews.ElasticLayout;
@@ -26,6 +27,8 @@ public class LoginActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_lanjutkan)
     void onClickBtnLanjutkan(){
+        PreferenceManager.setIsLogin();
+
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(intent);
         LoginActivity.this.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
@@ -37,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
+        new PreferenceManager(this);
         initComponent();
     }
 

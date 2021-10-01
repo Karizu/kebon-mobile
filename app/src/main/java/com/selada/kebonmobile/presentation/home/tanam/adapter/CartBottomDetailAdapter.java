@@ -1,4 +1,4 @@
-package com.selada.kebonmobile.presentation.home.tanam;
+package com.selada.kebonmobile.presentation.home.tanam.adapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;

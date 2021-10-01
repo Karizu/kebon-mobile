@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import com.selada.kebonmobile.R;
 import com.selada.kebonmobile.presentation.MainActivity;
+import com.selada.kebonmobile.util.PreferenceManager;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -15,6 +16,7 @@ public class VerificationEmailActivity extends AppCompatActivity {
 
     @OnClick(R.id.tv_skip)
     void onClickSkip(){
+        PreferenceManager.setIsLogin();
         startActivity(new Intent(VerificationEmailActivity.this, MainActivity.class));
     }
 

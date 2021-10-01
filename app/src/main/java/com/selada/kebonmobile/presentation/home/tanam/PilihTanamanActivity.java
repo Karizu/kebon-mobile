@@ -23,6 +23,8 @@ import com.bumptech.glide.Glide;
 import com.iambedant.text.OutlineTextView;
 import com.selada.kebonmobile.R;
 import com.selada.kebonmobile.presentation.akun.DetailAkunActivity;
+import com.selada.kebonmobile.presentation.home.tanam.adapter.CartAdapter;
+import com.selada.kebonmobile.presentation.home.tanam.adapter.PilihTanamanAdapter;
 import com.selada.kebonmobile.util.MethodUtil;
 import com.skydoves.elasticviews.ElasticButton;
 import com.skydoves.elasticviews.ElasticImageView;

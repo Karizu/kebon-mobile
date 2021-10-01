@@ -33,6 +33,14 @@ public class PreferenceManager {
         return mInstance;
     }
 
+    public static void setIsLogin(){
+        Hawk.put(IS_LOGIN, true);
+    }
+
+    public static boolean getIsLogin() {
+        return Hawk.get(IS_LOGIN, false);
+    }
+
     public static void setSessionToken(String sessionToken){
         Hawk.put(SESSION_TOKEN, sessionToken);
     }

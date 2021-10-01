@@ -62,7 +62,44 @@
         <!--        app:layout_constraintStart_toStartOf="parent"-->
         <!--        app:layout_constraintTop_toBottomOf="@+id/imageView10" />-->
 
+        <LinearLayout
+            android:visibility="invisible"
+            android:id="@+id/layout_header_already_plant_site"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Panen terdekat anda"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorDarkBlue"/>
+
+            <TextView
+                android:layout_width="149dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_round_header_home"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_regular"
+                android:text="15 Hari"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorDarkBlue" />
+
+        </LinearLayout>
+        
         <com.skydoves.elasticviews.ElasticImageView
+            android:visibility="visible"
             android:id="@+id/img_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -84,6 +121,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="#80FFFFFF"
+            android:layout_marginTop="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img_title">
@@ -145,7 +183,7 @@
                 android:visibility="visible"
                 android:id="@+id/layoutInvestor"
                 android:layout_width="match_parent"
-                android:layout_height="468dp"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
@@ -171,6 +209,143 @@
         </LinearLayout>
 
         <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layout_already_plant_site"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="27dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Menu"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorDarkBlue"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.skydoves.elasticviews.ElasticCardView
+                android:id="@+id/cv_jadwal"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="14dp"
+                app:cardView_duration="100"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/White">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="26dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Jadwal"
+                        android:textColor="@color/colorDarkBlue"
+                        android:textSize="25sp"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView17"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="right"
+                        android:text="Lihat jadwal panen tanaman."
+                        android:textColor="@color/colorDarkBlue"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView17"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+                    <ImageView
+                        android:id="@+id/imageView17"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_ilustration_1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.skydoves.elasticviews.ElasticCardView>
+
+            <com.skydoves.elasticviews.ElasticCardView
+                android:id="@+id/cv_tanam_baru"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="10dp"
+                app:cardView_duration="100"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/White">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="26dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Tanam Baru"
+                        android:textColor="@color/colorDarkBlue"
+                        android:textSize="25sp"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="right"
+                        android:lines="2"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Mulai menanam di lahan yang\nkamu sewa."
+                        android:textColor="@color/colorDarkBlue"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_ilustration_1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.skydoves.elasticviews.ElasticCardView>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -179,7 +354,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layout">
+            app:layout_constraintTop_toBottomOf="@+id/layout_already_plant_site">
 
             <TextView
                 android:layout_width="match_parent"
@@ -204,9 +379,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_home_2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="21dp"
-                android:layout_marginTop="21dp"/>
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

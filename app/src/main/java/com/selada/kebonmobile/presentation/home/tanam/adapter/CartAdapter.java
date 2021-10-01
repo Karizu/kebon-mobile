@@ -1,4 +1,4 @@
-package com.selada.kebonmobile.presentation.home;
+package com.selada.kebonmobile.presentation.home.tanam.adapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -20,15 +20,16 @@ import com.selada.kebonmobile.presentation.home.pembayaran.RincianPembayaranActi
 import com.selada.kebonmobile.presentation.home.tanam.PilihMetodeActivity;
 import com.skydoves.elasticviews.ElasticButton;
 import com.skydoves.elasticviews.ElasticCardView;
+import com.skydoves.elasticviews.ElasticImageView;
 
 import java.util.List;
 
-public class HomeLahanAdapter extends RecyclerView.Adapter<HomeLahanAdapter.ViewHolder> {
+public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     private List<String> transactionModels;
     private Context context;
     private Activity activity;
 
-    public HomeLahanAdapter(List<String> transactionModels, Context context, Activity activity) {
+    public CartAdapter(List<String> transactionModels, Context context, Activity activity) {
         this.transactionModels = transactionModels;
         this.context = context;
         this.activity = activity;
@@ -38,28 +39,14 @@ public class HomeLahanAdapter extends RecyclerView.Adapter<HomeLahanAdapter.View
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_home_lahan, parent, false);
+                .inflate(R.layout.list_item_cart, parent, false);
         return new ViewHolder(v);
     }
 
     @SuppressLint({"SetTextI18n", "ResourceAsColor", "CheckResult"})
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        if (position == 1){
-            holder.btn_rincian.setText("Mulai Tanam");
-            holder.tv_status_farm.setText("Siap Ditanam");
-            holder.btn_rincian.setOnClickListener(view -> {
-                Intent intent = new Intent(activity, PilihMetodeActivity.class);
-                activity.startActivity(intent);
-                activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-            });
-        } else {
-            holder.btn_rincian.setOnClickListener(view -> {
-                Intent intent = new Intent(activity, RincianPembayaranActivity.class);
-                activity.startActivity(intent);
-                activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-            });
-        }
+        holder.tv_plant_name.setText(transactionModels.get(position));
     }
 
     @Override
@@ -68,16 +55,15 @@ public class HomeLahanAdapter extends RecyclerView.Adapter<HomeLahanAdapter.View
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView img_farm;
-        TextView tv_farm_name, tv_status_farm;
-        ElasticButton btn_rincian;
+        TextView tv_plant_name, tv_quantity;
+        ElasticImageView btn_min, btn_add;
 
         ViewHolder(View v) {
             super(v);
-            tv_farm_name = v.findViewById(R.id.tv_farm_name);
-            tv_status_farm = v.findViewById(R.id.tv_status_farm);
-            img_farm = v.findViewById(R.id.img_farm);
-            btn_rincian = v.findViewById(R.id.btn_rincian);
+            tv_plant_name = v.findViewById(R.id.tv_plant_name);
+            tv_quantity = v.findViewById(R.id.tv_quantity);
+            btn_add = v.findViewById(R.id.btn_add);
+            btn_min = v.findViewById(R.id.btn_min);
         }
     }
 }
