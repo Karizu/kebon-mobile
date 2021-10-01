@@ -15,9 +15,9 @@ import java.lang.Override;
 public class KonfirmasiPembayaranActivity_ViewBinding implements Unbinder {
   private KonfirmasiPembayaranActivity target;
 
-  private View view7f0a006d;
+  private View view7f0a006f;
 
-  private View view7f0a006a;
+  private View view7f0a006c;
 
   @UiThread
   public KonfirmasiPembayaranActivity_ViewBinding(KonfirmasiPembayaranActivity target) {
@@ -32,7 +32,7 @@ public class KonfirmasiPembayaranActivity_ViewBinding implements Unbinder {
     View view;
     target.progressBar = Utils.findRequiredViewAsType(source, R.id.progressBar, "field 'progressBar'", ProgressBar.class);
     view = Utils.findRequiredView(source, R.id.btn_beranda, "method 'onClickBeranda'");
-    view7f0a006d = view;
+    view7f0a006f = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -40,7 +40,7 @@ public class KonfirmasiPembayaranActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.btn_batalkan, "method 'onClickBatalkan'");
-    view7f0a006a = view;
+    view7f0a006c = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -58,9 +58,9 @@ public class KonfirmasiPembayaranActivity_ViewBinding implements Unbinder {
 
     target.progressBar = null;
 
-    view7f0a006d.setOnClickListener(null);
-    view7f0a006d = null;
-    view7f0a006a.setOnClickListener(null);
-    view7f0a006a = null;
+    view7f0a006f.setOnClickListener(null);
+    view7f0a006f = null;
+    view7f0a006c.setOnClickListener(null);
+    view7f0a006c = null;
   }
 }

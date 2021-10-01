@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.skydoves.elasticviews.ElasticImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/btn_cart"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginTop="12dp"
@@ -51,23 +51,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <Spinner
+                    android:id="@+id/spinner_filter_tanaman"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingEnd="24dp"
+                    android:textSize="14sp"
+                    android:background="@null"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/colorTextBroLight"/>
+
                 <ImageView
+                    android:id="@+id/img"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="4dp"
                     android:src="@drawable/ic_baseline_keyboard_arrow_down_bro_24" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="@font/poppins_regular"
-                    android:gravity="center"
-                    android:text="A ~ Z"
-                    android:textColor="@color/colorTextBroLight"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -83,25 +84,27 @@
     </LinearLayout>
 
     <com.iambedant.text.OutlineTextView
+        android:visibility="invisible"
         android:id="@+id/tv_plant_name"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginTop="57dp"
-        android:layout_marginEnd="61dp"
-        android:fontFamily="@font/poppins_regular"
+        android:fontFamily="@font/poppins_bold"
         android:gravity="center"
         android:text="Kangkung"
         android:textColor="#FFE693"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:outlineColor="#704D20"
-        app:outlineWidth="0.7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include3" />
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/include3"
+        app:outlineColor="#704D20"
+        app:outlineWidth="1" />
 
     <ImageView
-        android:id="@+id/imageView17"
+        android:visibility="invisible"
+        android:id="@+id/img_plant"
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:layout_marginStart="59dp"
@@ -112,8 +115,37 @@
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/tv_plant_name" />
 
-    <TextView
+    <TextSwitcher
         android:id="@+id/tv_plant_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/img_plant"
+        android:layout_gravity="center_horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:text="Silahkan pilih tanaman"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </TextSwitcher>
+
+    <TextView
+        android:visibility="gone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -127,9 +159,10 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/imageView17" />
+        app:layout_constraintTop_toBottomOf="@+id/img_plant" />
 
     <com.skydoves.elasticviews.ElasticButton
+        android:enabled="false"
         android:id="@+id/btn_lihat_keuntungan"
         android:layout_width="0dp"
         android:layout_height="30dp"
@@ -148,20 +181,20 @@
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/tv_plant_desc" />
 
-    <com.skydoves.elasticviews.ElasticImageView
-        android:id="@+id/btn_min_kavling"
+    <com.skydoves.elasticviews.ElasticButton
+        android:id="@+id/btn_min"
         android:layout_width="27.93dp"
         android:layout_height="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginStart="81dp"
         android:layout_marginBottom="9dp"
-        app:imageView_duration="100"
+        app:button_duration="100"
         app:layout_constraintTop_toBottomOf="@+id/btn_lihat_keuntungan"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:srcCompat="@drawable/ic_minus_button" />
+        android:background="@drawable/ic_minus_button" />
 
     <TextView
-        android:id="@+id/tv_quantity_kavling"
+        android:id="@+id/tv_quantity"
         android:layout_width="43.53dp"
         android:layout_height="24dp"
         android:layout_marginTop="16dp"
@@ -175,20 +208,22 @@
         android:textColor="@color/colorTextBro"
         android:textSize="14sp"
         app:layout_constraintTop_toBottomOf="@+id/btn_lihat_keuntungan"
-        app:layout_constraintStart_toEndOf="@+id/btn_min_kavling" />
+        app:layout_constraintStart_toEndOf="@+id/btn_min" />
 
-    <com.skydoves.elasticviews.ElasticImageView
-        android:id="@+id/btn_add_kavling"
+    <com.skydoves.elasticviews.ElasticButton
+        android:enabled="false"
+        android:id="@+id/btn_add"
         android:layout_width="27.93dp"
         android:layout_height="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="9dp"
-        app:imageView_duration="100"
+        app:button_duration="100"
         app:layout_constraintTop_toBottomOf="@+id/btn_lihat_keuntungan"
-        app:layout_constraintStart_toEndOf="@+id/tv_quantity_kavling"
-        app:srcCompat="@drawable/ic_add_button" />
+        app:layout_constraintStart_toEndOf="@+id/tv_quantity"
+        android:background="@drawable/ic_add_button" />
 
     <com.skydoves.elasticviews.ElasticButton
+        android:enabled="false"
         android:id="@+id/btn_tambah_keranjang"
         android:layout_width="0dp"
         android:layout_height="30dp"
@@ -205,6 +240,57 @@
         app:button_scale="0.87"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/btn_min_kavling" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_min" />
+
+    <com.skydoves.elasticviews.ElasticLayout
+        android:visibility="gone"
+        android:id="@+id/btn_cart_inq"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/bg_button_dialog_cart"
+        android:fontFamily="@font/poppins_bold"
+        android:textAllCaps="false"
+        android:textColor="@color/colorTextBroLight"
+        app:layout_duration="100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Jenis Tanaman yang Dipilih:"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorTextBroLight"/>
+
+            <TextView
+                android:id="@+id/tv_plant_qty"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins_bold"
+                android:text="1"
+                android:gravity="center_vertical"
+                android:paddingEnd="16dp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorTextBroLight"/>
+
+
+        </LinearLayout>
+
+    </com.skydoves.elasticviews.ElasticLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,6 +24,8 @@ import com.selada.kebonmobile.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -58,6 +60,11 @@ public class MethodUtil extends Application {
         dialog.getWindow().setAttributes(lp);
 
         return dialog;
+    }
+
+    public static String toCurrencyNumber(int nominal){
+        NumberFormat formatter = new DecimalFormat("#,###");
+        return formatter.format(nominal);
     }
 
     public static ProgressDialog getLoadingBar(Context context, String msg) {

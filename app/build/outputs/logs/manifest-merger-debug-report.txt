@@ -1,13 +1,14 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:2:1-47:12
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:2:1-51:12
 MERGED from [com.github.skydoves:ElasticViews:2.1.0] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\16425ce25d930744cca9be5570ab1af7\jetified-elasticviews-2.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\38d1521d748677c2b09e84c932ed360b\material-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\80e6df3ba46e54d5aa68bf187c184d0c\constraintlayout-2.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.anshulagarwal06:PasswordEditText:v1.0] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\945636e97b146799a36a5b11d08b8fa6\jetified-PasswordEditText-v1.0\AndroidManifest.xml:2:1-17:12
+MERGED from [com.github.iamBedant:OutlineTextView:1.0.5] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\9ed4e9fd5530adf6b77f007efa6911ec\jetified-OutlineTextView-1.0.5\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\a9143e339934693fd25c609be027dfc4\appcompat-1.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.bumptech.glide:glide:4.10.0] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\1ff87ae3dbfa9145309864a82e6907a7\jetified-glide-4.10.0\AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\8bf807d2cfd2aee62c59857e6921d726\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
@@ -49,25 +50,25 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\df6fc830f1f0f2266a999d82f9803238\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\b12514dc2f93ab4d9a3650edc0ebd11a\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.facebook.conceal:conceal:1.1.3] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\1f3db0b6929dac8ca7a294d4c2a0e2f9\jetified-conceal-1.1.3\AndroidManifest.xml:7:1-16:12
-INJECTED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:2:1-51:12
 	package
 		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:3:5-37
 		INJECTED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml
 		INJECTED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:2:1-47:12
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:2:1-51:12
 		INJECTED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:2:1-47:12
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:2:1-51:12
 		INJECTED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:5:5-42:19
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:5:5-46:19
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\38d1521d748677c2b09e84c932ed360b\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\38d1521d748677c2b09e84c932ed360b\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\80e6df3ba46e54d5aa68bf187c184d0c\constraintlayout-2.1.0\AndroidManifest.xml:9:5-20
@@ -100,98 +101,114 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] C:\Users\PRO\.gradle\c
 		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:12:9-40
 	android:networkSecurityConfig
 		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:9:9-69
+activity#com.selada.kebonmobile.presentation.home.tanam.SelesaiMenanamActivity
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:13:9-93
+	android:name
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:13:19-81
+activity#com.selada.kebonmobile.presentation.home.tanam.DetailCartActivity
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:14:9-80
+	android:name
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:14:19-77
+activity#com.selada.kebonmobile.presentation.home.tanam.KeuntunganTanamanActivity
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:15:9-87
+	android:name
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:15:19-84
+activity#com.selada.kebonmobile.presentation.home.tanam.PilihTanamanActivity
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:16:9-82
+	android:name
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:16:19-79
 activity#com.selada.kebonmobile.presentation.home.tanam.PilihMetodeActivity
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:13:9-90
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:17:9-81
 	android:name
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:13:19-78
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:17:19-78
 activity#com.selada.kebonmobile.presentation.akun.DetailAkunActivity
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:14:9-74
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:18:9-74
 	android:name
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:14:19-71
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:18:19-71
 activity#com.selada.kebonmobile.presentation.home.lahan.GaleriLahanActivity
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:15:9-81
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:19:9-81
 	android:name
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:15:19-78
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:19:19-78
 activity#com.selada.kebonmobile.presentation.home.lahan.InformasiKeuntunganActivity
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:16:9-89
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:20:9-89
 	android:name
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:16:19-86
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:20:19-86
 activity#com.selada.kebonmobile.presentation.home.pembayaran.RincianPembayaranActivity
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:17:9-92
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:21:9-92
 	android:name
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:17:19-89
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:21:19-89
 activity#com.selada.kebonmobile.presentation.home.pembayaran.KonfirmasiPembayaranActivity
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:18:9-95
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:22:9-95
 	android:name
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:18:19-92
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:22:19-92
 activity#com.selada.kebonmobile.presentation.home.pembayaran.PembayaranActivity
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:19:9-85
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:23:9-85
 	android:name
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:19:19-82
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:23:19-82
 activity#com.selada.kebonmobile.presentation.home.lahan.SewaLahanActivity
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:20:9-79
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:24:9-79
 	android:name
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:20:19-76
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:24:19-76
 activity#com.selada.kebonmobile.presentation.auth.VerificationEmailActivity
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:21:9-81
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:25:9-81
 	android:name
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:21:19-78
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:25:19-78
 activity#com.selada.kebonmobile.presentation.auth.Register3Activity
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:22:9-73
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:26:9-73
 	android:name
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:22:19-70
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:26:19-70
 activity#com.selada.kebonmobile.presentation.auth.Register2Activity
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:23:9-73
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:27:9-73
 	android:name
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:23:19-70
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:27:19-70
 activity#com.selada.kebonmobile.presentation.site.PickSiteActivity
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:24:9-72
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:28:9-72
 	android:name
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:24:19-69
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:28:19-69
 activity#com.selada.kebonmobile.presentation.auth.RegisterActivity
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:25:9-72
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:29:9-72
 	android:name
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:25:19-69
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:29:19-69
 activity#com.selada.kebonmobile.presentation.auth.LoginActivity
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:26:9-28:83
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:30:9-32:83
 	android:theme
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:28:13-80
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:32:13-80
 	android:name
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:27:13-60
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:31:13-60
 activity#com.selada.kebonmobile.IntroActivity
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:29:9-31:83
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:33:9-35:83
 	android:theme
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:31:13-80
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:35:13-80
 	android:name
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:30:13-42
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:34:13-42
 activity#com.selada.kebonmobile.SplashActivity
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:32:9-40:20
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:36:9-44:20
 	android:theme
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:34:13-71
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:38:13-71
 	android:name
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:33:13-43
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:37:13-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:35:13-39:29
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:39:13-43:29
 action#android.intent.action.MAIN
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:36:17-69
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:40:17-69
 	android:name
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:36:25-66
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:40:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:38:17-77
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:42:17-77
 	android:name
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:38:27-74
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:42:27-74
 activity#com.selada.kebonmobile.presentation.MainActivity
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:41:9-63
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:45:9-63
 	android:name
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:41:19-60
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:45:19-60
 uses-permission#android.permission.CAMERA
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:43:5-65
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:47:5-65
 	android:name
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:43:22-62
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:47:22-62
 uses-permission#android.permission.INTERNET
-ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:45:5-67
+ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:49:5-67
 	android:name
-		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:45:22-64
+		ADDED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml:49:22-64
 uses-sdk
 INJECTED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\ProjectAndroid\KebonMobile\app\src\main\AndroidManifest.xml
@@ -204,6 +221,8 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\PRO\.gra
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\80e6df3ba46e54d5aa68bf187c184d0c\constraintlayout-2.1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.github.anshulagarwal06:PasswordEditText:v1.0] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\945636e97b146799a36a5b11d08b8fa6\jetified-PasswordEditText-v1.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.anshulagarwal06:PasswordEditText:v1.0] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\945636e97b146799a36a5b11d08b8fa6\jetified-PasswordEditText-v1.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.iamBedant:OutlineTextView:1.0.5] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\9ed4e9fd5530adf6b77f007efa6911ec\jetified-OutlineTextView-1.0.5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.iamBedant:OutlineTextView:1.0.5] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\9ed4e9fd5530adf6b77f007efa6911ec\jetified-OutlineTextView-1.0.5\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\a9143e339934693fd25c609be027dfc4\appcompat-1.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\a9143e339934693fd25c609be027dfc4\appcompat-1.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [com.github.bumptech.glide:glide:4.10.0] C:\Users\PRO\.gradle\caches\transforms-2\files-2.1\1ff87ae3dbfa9145309864a82e6907a7\jetified-glide-4.10.0\AndroidManifest.xml:6:5-8:41

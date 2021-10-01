@@ -14,17 +14,17 @@ import java.lang.Override;
 public class DetailAkunActivity_ViewBinding implements Unbinder {
   private DetailAkunActivity target;
 
-  private View view7f0a013b;
+  private View view7f0a0151;
 
-  private View view7f0a013d;
+  private View view7f0a0153;
 
-  private View view7f0a013a;
+  private View view7f0a0150;
 
-  private View view7f0a0138;
+  private View view7f0a014e;
 
-  private View view7f0a0139;
+  private View view7f0a014f;
 
-  private View view7f0a0069;
+  private View view7f0a006b;
 
   @UiThread
   public DetailAkunActivity_ViewBinding(DetailAkunActivity target) {
@@ -37,7 +37,7 @@ public class DetailAkunActivity_ViewBinding implements Unbinder {
 
     View view;
     view = Utils.findRequiredView(source, R.id.layout_name, "method 'onClickEditName'");
-    view7f0a013b = view;
+    view7f0a0151 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -45,7 +45,7 @@ public class DetailAkunActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.layout_phone, "method 'onClickEditPhone'");
-    view7f0a013d = view;
+    view7f0a0153 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -53,7 +53,7 @@ public class DetailAkunActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.layout_email, "method 'onClickEditEmail'");
-    view7f0a013a = view;
+    view7f0a0150 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -61,7 +61,7 @@ public class DetailAkunActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.layout_address, "method 'onClickEditAddress'");
-    view7f0a0138 = view;
+    view7f0a014e = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -69,7 +69,7 @@ public class DetailAkunActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.layout_change_pass, "method 'onClickEditPass'");
-    view7f0a0139 = view;
+    view7f0a014f = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -77,7 +77,7 @@ public class DetailAkunActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.btn_back, "method 'onClickBack'");
-    view7f0a0069 = view;
+    view7f0a006b = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -93,17 +93,17 @@ public class DetailAkunActivity_ViewBinding implements Unbinder {
     target = null;
 
 
-    view7f0a013b.setOnClickListener(null);
-    view7f0a013b = null;
-    view7f0a013d.setOnClickListener(null);
-    view7f0a013d = null;
-    view7f0a013a.setOnClickListener(null);
-    view7f0a013a = null;
-    view7f0a0138.setOnClickListener(null);
-    view7f0a0138 = null;
-    view7f0a0139.setOnClickListener(null);
-    view7f0a0139 = null;
-    view7f0a0069.setOnClickListener(null);
-    view7f0a0069 = null;
+    view7f0a0151.setOnClickListener(null);
+    view7f0a0151 = null;
+    view7f0a0153.setOnClickListener(null);
+    view7f0a0153 = null;
+    view7f0a0150.setOnClickListener(null);
+    view7f0a0150 = null;
+    view7f0a014e.setOnClickListener(null);
+    view7f0a014e = null;
+    view7f0a014f.setOnClickListener(null);
+    view7f0a014f = null;
+    view7f0a006b.setOnClickListener(null);
+    view7f0a006b = null;
   }
 }

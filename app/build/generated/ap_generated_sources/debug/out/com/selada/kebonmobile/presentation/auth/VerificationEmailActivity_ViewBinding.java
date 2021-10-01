@@ -14,7 +14,7 @@ import java.lang.Override;
 public class VerificationEmailActivity_ViewBinding implements Unbinder {
   private VerificationEmailActivity target;
 
-  private View view7f0a0260;
+  private View view7f0a028c;
 
   @UiThread
   public VerificationEmailActivity_ViewBinding(VerificationEmailActivity target) {
@@ -28,7 +28,7 @@ public class VerificationEmailActivity_ViewBinding implements Unbinder {
 
     View view;
     view = Utils.findRequiredView(source, R.id.tv_skip, "method 'onClickSkip'");
-    view7f0a0260 = view;
+    view7f0a028c = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -44,7 +44,7 @@ public class VerificationEmailActivity_ViewBinding implements Unbinder {
     target = null;
 
 
-    view7f0a0260.setOnClickListener(null);
-    view7f0a0260 = null;
+    view7f0a028c.setOnClickListener(null);
+    view7f0a028c = null;
   }
 }

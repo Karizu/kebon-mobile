@@ -14,9 +14,9 @@ import java.lang.Override;
 public class GaleriLahanActivity_ViewBinding implements Unbinder {
   private GaleriLahanActivity target;
 
-  private View view7f0a0083;
+  private View view7f0a008e;
 
-  private View view7f0a0069;
+  private View view7f0a006b;
 
   @UiThread
   public GaleriLahanActivity_ViewBinding(GaleriLahanActivity target) {
@@ -29,7 +29,7 @@ public class GaleriLahanActivity_ViewBinding implements Unbinder {
 
     View view;
     view = Utils.findRequiredView(source, R.id.btn_pilih, "method 'onClickPilih'");
-    view7f0a0083 = view;
+    view7f0a008e = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -37,7 +37,7 @@ public class GaleriLahanActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.btn_back, "method 'onClickBack'");
-    view7f0a0069 = view;
+    view7f0a006b = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -53,9 +53,9 @@ public class GaleriLahanActivity_ViewBinding implements Unbinder {
     target = null;
 
 
-    view7f0a0083.setOnClickListener(null);
-    view7f0a0083 = null;
-    view7f0a0069.setOnClickListener(null);
-    view7f0a0069 = null;
+    view7f0a008e.setOnClickListener(null);
+    view7f0a008e = null;
+    view7f0a006b.setOnClickListener(null);
+    view7f0a006b = null;
   }
 }

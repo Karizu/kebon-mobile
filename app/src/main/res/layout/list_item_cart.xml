@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+    android:background="#FEF0C0"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_cart_item"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/tv_plant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Kangkung"
+        android:textStyle="bold"
+        android:textColor="@color/colorTextBroLight"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginEnd="12dp">
+
+        <com.skydoves.elasticviews.ElasticImageView
+            android:id="@+id/btn_min"
+            android:layout_width="27.93dp"
+            android:layout_height="24dp"
+            app:imageView_duration="100"
+            app:srcCompat="@drawable/ic_minus_button" />
+
+        <TextView
+            android:id="@+id/tv_quantity"
+            android:layout_width="43.53dp"
+            android:layout_height="24dp"
+            android:background="@drawable/bg_quantity_text"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:maxLength="3"
+            android:text="0"
+            android:textColor="@color/colorTextBro"
+            android:textSize="14sp" />
+
+        <com.skydoves.elasticviews.ElasticImageView
+            android:id="@+id/btn_add"
+            android:layout_width="27.93dp"
+            android:layout_height="24dp"
+            app:imageView_duration="100"
+            app:srcCompat="@drawable/ic_add_button" />
+
+    </LinearLayout>
+
+</RelativeLayout>

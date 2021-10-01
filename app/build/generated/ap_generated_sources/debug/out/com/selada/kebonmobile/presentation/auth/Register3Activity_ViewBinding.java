@@ -14,7 +14,7 @@ import java.lang.Override;
 public class Register3Activity_ViewBinding implements Unbinder {
   private Register3Activity target;
 
-  private View view7f0a007e;
+  private View view7f0a0087;
 
   @UiThread
   public Register3Activity_ViewBinding(Register3Activity target) {
@@ -27,7 +27,7 @@ public class Register3Activity_ViewBinding implements Unbinder {
 
     View view;
     view = Utils.findRequiredView(source, R.id.btn_lanjutkan, "method 'onClickLnajutkan'");
-    view7f0a007e = view;
+    view7f0a0087 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -43,7 +43,7 @@ public class Register3Activity_ViewBinding implements Unbinder {
     target = null;
 
 
-    view7f0a007e.setOnClickListener(null);
-    view7f0a007e = null;
+    view7f0a0087.setOnClickListener(null);
+    view7f0a0087 = null;
   }
 }

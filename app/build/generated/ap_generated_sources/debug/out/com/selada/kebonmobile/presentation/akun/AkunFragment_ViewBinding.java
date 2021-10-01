@@ -16,19 +16,19 @@ import java.lang.Override;
 public class AkunFragment_ViewBinding implements Unbinder {
   private AkunFragment target;
 
-  private View view7f0a0086;
+  private View view7f0a0094;
 
-  private View view7f0a0076;
+  private View view7f0a007c;
 
-  private View view7f0a0072;
+  private View view7f0a0077;
 
-  private View view7f0a0071;
+  private View view7f0a0075;
 
-  private View view7f0a0065;
+  private View view7f0a0066;
 
-  private View view7f0a007b;
+  private View view7f0a0081;
 
-  private View view7f0a00f2;
+  private View view7f0a0104;
 
   @UiThread
   public AkunFragment_ViewBinding(final AkunFragment target, View source) {
@@ -39,7 +39,7 @@ public class AkunFragment_ViewBinding implements Unbinder {
     target.btnChat = Utils.findRequiredViewAsType(source, R.id.btn_chat, "field 'btnChat'", ImageView.class);
     target.tvTitleBar = Utils.findRequiredViewAsType(source, R.id.tv_title_bar, "field 'tvTitleBar'", TextView.class);
     view = Utils.findRequiredView(source, R.id.btn_tambah_lahan, "method 'onClickTambahLahan'");
-    view7f0a0086 = view;
+    view7f0a0094 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -47,7 +47,7 @@ public class AkunFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.btn_history, "method 'onClickHistory'");
-    view7f0a0076 = view;
+    view7f0a007c = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -55,7 +55,7 @@ public class AkunFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.btn_faq, "method 'onClickFaq'");
-    view7f0a0072 = view;
+    view7f0a0077 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -63,7 +63,7 @@ public class AkunFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.btn_cs, "method 'onClickCs'");
-    view7f0a0071 = view;
+    view7f0a0075 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -71,7 +71,7 @@ public class AkunFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.btn_about, "method 'onClickAbout'");
-    view7f0a0065 = view;
+    view7f0a0066 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -79,7 +79,7 @@ public class AkunFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.btn_keluar, "method 'onClickKeluar'");
-    view7f0a007b = view;
+    view7f0a0081 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -87,7 +87,7 @@ public class AkunFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.frame_profile, "method 'onClickProfile'");
-    view7f0a00f2 = view;
+    view7f0a0104 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -107,19 +107,19 @@ public class AkunFragment_ViewBinding implements Unbinder {
     target.btnChat = null;
     target.tvTitleBar = null;
 
-    view7f0a0086.setOnClickListener(null);
-    view7f0a0086 = null;
-    view7f0a0076.setOnClickListener(null);
-    view7f0a0076 = null;
-    view7f0a0072.setOnClickListener(null);
-    view7f0a0072 = null;
-    view7f0a0071.setOnClickListener(null);
-    view7f0a0071 = null;
-    view7f0a0065.setOnClickListener(null);
-    view7f0a0065 = null;
-    view7f0a007b.setOnClickListener(null);
-    view7f0a007b = null;
-    view7f0a00f2.setOnClickListener(null);
-    view7f0a00f2 = null;
+    view7f0a0094.setOnClickListener(null);
+    view7f0a0094 = null;
+    view7f0a007c.setOnClickListener(null);
+    view7f0a007c = null;
+    view7f0a0077.setOnClickListener(null);
+    view7f0a0077 = null;
+    view7f0a0075.setOnClickListener(null);
+    view7f0a0075 = null;
+    view7f0a0066.setOnClickListener(null);
+    view7f0a0066 = null;
+    view7f0a0081.setOnClickListener(null);
+    view7f0a0081 = null;
+    view7f0a0104.setOnClickListener(null);
+    view7f0a0104 = null;
   }
 }

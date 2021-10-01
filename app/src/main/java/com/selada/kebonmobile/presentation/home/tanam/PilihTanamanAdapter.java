@@ -43,7 +43,17 @@ public class PilihTanamanAdapter extends RecyclerView.Adapter<PilihTanamanAdapte
     @SuppressLint({"SetTextI18n", "ResourceAsColor", "CheckResult"})
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        String plantName = transactionModels.get(position);
+        int dayHarvest = 20 + position;
+        int price = 5000 + (position * 2);
+        String img = "";
+
+        holder.tv_plant_name.setText(transactionModels.get(position));
         holder.frame_item.setOnClickListener(view -> {
+            if (context instanceof PilihTanamanActivity) {
+                ((PilihTanamanActivity)context).setDataTanaman(plantName, String.valueOf(dayHarvest), String.valueOf(price), img);
+                ((PilihTanamanActivity)context).setEnableComponent();
+            }
             pos = position;
             notifyDataSetChanged();
         });

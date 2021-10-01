@@ -23,6 +23,10 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.selada.kebonmobile.presentation.home.tanam.SelesaiMenanamActivity" />
+        <activity android:name="com.selada.kebonmobile.presentation.home.tanam.DetailCartActivity" />
+        <activity android:name="com.selada.kebonmobile.presentation.home.tanam.KeuntunganTanamanActivity" />
+        <activity android:name="com.selada.kebonmobile.presentation.home.tanam.PilihTanamanActivity" />
         <activity android:name="com.selada.kebonmobile.presentation.home.tanam.PilihMetodeActivity" />
         <activity android:name="com.selada.kebonmobile.presentation.akun.DetailAkunActivity" />
         <activity android:name="com.selada.kebonmobile.presentation.home.lahan.GaleriLahanActivity" />

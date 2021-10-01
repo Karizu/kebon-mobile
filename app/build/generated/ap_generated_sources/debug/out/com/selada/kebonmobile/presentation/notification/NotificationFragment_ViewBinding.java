@@ -14,7 +14,7 @@ import java.lang.Override;
 public class NotificationFragment_ViewBinding implements Unbinder {
   private NotificationFragment target;
 
-  private View view7f0a0087;
+  private View view7f0a0095;
 
   @UiThread
   public NotificationFragment_ViewBinding(final NotificationFragment target, View source) {
@@ -22,7 +22,7 @@ public class NotificationFragment_ViewBinding implements Unbinder {
 
     View view;
     view = Utils.findRequiredView(source, R.id.btn_tanam, "method 'onClickTanam'");
-    view7f0a0087 = view;
+    view7f0a0095 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -38,7 +38,7 @@ public class NotificationFragment_ViewBinding implements Unbinder {
     target = null;
 
 
-    view7f0a0087.setOnClickListener(null);
-    view7f0a0087 = null;
+    view7f0a0095.setOnClickListener(null);
+    view7f0a0095 = null;
   }
 }

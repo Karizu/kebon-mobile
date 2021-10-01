@@ -16,13 +16,13 @@ import java.lang.Override;
 public class IntroActivity_ViewBinding implements Unbinder {
   private IntroActivity target;
 
-  private View view7f0a0082;
+  private View view7f0a008d;
 
-  private View view7f0a0069;
+  private View view7f0a006b;
 
-  private View view7f0a0074;
+  private View view7f0a007a;
 
-  private View view7f0a0215;
+  private View view7f0a0232;
 
   @UiThread
   public IntroActivity_ViewBinding(IntroActivity target) {
@@ -38,7 +38,7 @@ public class IntroActivity_ViewBinding implements Unbinder {
     target.dotsLayout = Utils.findRequiredViewAsType(source, R.id.layoutDots, "field 'dotsLayout'", LinearLayout.class);
     view = Utils.findRequiredView(source, R.id.btn_next, "field 'btn_next' and method 'onClickBtnNext'");
     target.btn_next = Utils.castView(view, R.id.btn_next, "field 'btn_next'", ImageView.class);
-    view7f0a0082 = view;
+    view7f0a008d = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -47,7 +47,7 @@ public class IntroActivity_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.btn_back, "field 'btn_back' and method 'onClickBtnBack'");
     target.btn_back = Utils.castView(view, R.id.btn_back, "field 'btn_back'", ImageView.class);
-    view7f0a0069 = view;
+    view7f0a006b = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -58,7 +58,7 @@ public class IntroActivity_ViewBinding implements Unbinder {
     target.img_dots_2 = Utils.findRequiredViewAsType(source, R.id.img_dots_2, "field 'img_dots_2'", ImageView.class);
     target.img_dots_3 = Utils.findRequiredViewAsType(source, R.id.img_dots_3, "field 'img_dots_3'", ImageView.class);
     view = Utils.findRequiredView(source, R.id.btn_gabung, "method 'onClickGabung'");
-    view7f0a0074 = view;
+    view7f0a007a = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -66,7 +66,7 @@ public class IntroActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.textView, "method 'onClickLogin'");
-    view7f0a0215 = view;
+    view7f0a0232 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -90,13 +90,13 @@ public class IntroActivity_ViewBinding implements Unbinder {
     target.img_dots_2 = null;
     target.img_dots_3 = null;
 
-    view7f0a0082.setOnClickListener(null);
-    view7f0a0082 = null;
-    view7f0a0069.setOnClickListener(null);
-    view7f0a0069 = null;
-    view7f0a0074.setOnClickListener(null);
-    view7f0a0074 = null;
-    view7f0a0215.setOnClickListener(null);
-    view7f0a0215 = null;
+    view7f0a008d.setOnClickListener(null);
+    view7f0a008d = null;
+    view7f0a006b.setOnClickListener(null);
+    view7f0a006b = null;
+    view7f0a007a.setOnClickListener(null);
+    view7f0a007a = null;
+    view7f0a0232.setOnClickListener(null);
+    view7f0a0232 = null;
   }
 }

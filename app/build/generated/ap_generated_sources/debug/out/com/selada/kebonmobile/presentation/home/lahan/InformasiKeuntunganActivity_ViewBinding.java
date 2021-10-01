@@ -14,9 +14,9 @@ import java.lang.Override;
 public class InformasiKeuntunganActivity_ViewBinding implements Unbinder {
   private InformasiKeuntunganActivity target;
 
-  private View view7f0a007c;
+  private View view7f0a0082;
 
-  private View view7f0a0069;
+  private View view7f0a006b;
 
   @UiThread
   public InformasiKeuntunganActivity_ViewBinding(InformasiKeuntunganActivity target) {
@@ -30,7 +30,7 @@ public class InformasiKeuntunganActivity_ViewBinding implements Unbinder {
 
     View view;
     view = Utils.findRequiredView(source, R.id.btn_kembali, "method 'onClickKembali'");
-    view7f0a007c = view;
+    view7f0a0082 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -38,7 +38,7 @@ public class InformasiKeuntunganActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.btn_back, "method 'onClickBack'");
-    view7f0a0069 = view;
+    view7f0a006b = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -54,9 +54,9 @@ public class InformasiKeuntunganActivity_ViewBinding implements Unbinder {
     target = null;
 
 
-    view7f0a007c.setOnClickListener(null);
-    view7f0a007c = null;
-    view7f0a0069.setOnClickListener(null);
-    view7f0a0069 = null;
+    view7f0a0082.setOnClickListener(null);
+    view7f0a0082 = null;
+    view7f0a006b.setOnClickListener(null);
+    view7f0a006b = null;
   }
 }

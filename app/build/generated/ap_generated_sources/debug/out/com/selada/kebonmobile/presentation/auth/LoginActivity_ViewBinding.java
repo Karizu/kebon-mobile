@@ -15,7 +15,7 @@ import java.lang.Override;
 public class LoginActivity_ViewBinding implements Unbinder {
   private LoginActivity target;
 
-  private View view7f0a007e;
+  private View view7f0a0087;
 
   @UiThread
   public LoginActivity_ViewBinding(LoginActivity target) {
@@ -30,7 +30,7 @@ public class LoginActivity_ViewBinding implements Unbinder {
     target.editTextPass = Utils.findRequiredViewAsType(source, R.id.editTextPass, "field 'editTextPass'", EditText.class);
     target.editTextKonfirmPass = Utils.findRequiredViewAsType(source, R.id.editTextKonfirmPass, "field 'editTextKonfirmPass'", EditText.class);
     view = Utils.findRequiredView(source, R.id.btn_lanjutkan, "method 'onClickBtnLanjutkan'");
-    view7f0a007e = view;
+    view7f0a0087 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -49,7 +49,7 @@ public class LoginActivity_ViewBinding implements Unbinder {
     target.editTextPass = null;
     target.editTextKonfirmPass = null;
 
-    view7f0a007e.setOnClickListener(null);
-    view7f0a007e = null;
+    view7f0a0087.setOnClickListener(null);
+    view7f0a0087 = null;
   }
 }

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <CheckBox
+        android:id="@+id/cb_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:buttonTint="@color/colorTextBro"
+        android:layout_marginStart="9dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="111dp"
+        android:background="@drawable/bg_frame_outline_border"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="6dp">
+
+        <ImageView
+            android:id="@+id/img_plant"
+            android:layout_width="66.31dp"
+            android:layout_height="88.61dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="11dp"
+            android:src="@drawable/img_plant"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Nama Tanaman : "
+            android:textColor="@color/colorTextBro"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/img_plant"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Harga Jual : "
+            android:textColor="@color/colorTextBro"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/img_plant"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Jumlah Tanaman"
+            android:textColor="@color/colorTextBro"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_plant" />
+
+        <com.skydoves.elasticviews.ElasticImageView
+            android:id="@+id/btn_delete"
+            android:layout_width="22.73dp"
+            android:layout_height="23.37dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_trash"
+            app:imageView_duration="50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Kangkung"
+            android:textColor="@color/dark_green_text"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Rp. 3,000/kg"
+            android:textColor="@color/dark_green_text"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/textView1"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <com.skydoves.elasticviews.ElasticButton
+            android:id="@+id/btn_min"
+            android:layout_width="23.06dp"
+            android:layout_height="17.19dp"
+            android:layout_marginBottom="19dp"
+            android:background="@drawable/ic_minus_button"
+            app:button_duration="100"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_quantity" />
+
+        <TextView
+            android:id="@+id/tv_quantity"
+            android:layout_width="35.05dp"
+            android:layout_height="17.19dp"
+            android:layout_marginBottom="19dp"
+            android:background="@drawable/bg_quantity_text"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:maxLength="3"
+            android:text="0"
+            android:textColor="@color/colorTextBro"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_add" />
+
+        <com.skydoves.elasticviews.ElasticButton
+            android:id="@+id/btn_add"
+            android:layout_width="23.06dp"
+            android:layout_height="17.19dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="19dp"
+            android:background="@drawable/ic_add_button"
+            android:enabled="false"
+            app:button_duration="100"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

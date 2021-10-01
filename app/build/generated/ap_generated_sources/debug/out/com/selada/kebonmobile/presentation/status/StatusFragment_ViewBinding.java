@@ -14,7 +14,7 @@ import java.lang.Override;
 public class StatusFragment_ViewBinding implements Unbinder {
   private StatusFragment target;
 
-  private View view7f0a0083;
+  private View view7f0a008e;
 
   @UiThread
   public StatusFragment_ViewBinding(final StatusFragment target, View source) {
@@ -22,7 +22,7 @@ public class StatusFragment_ViewBinding implements Unbinder {
 
     View view;
     view = Utils.findRequiredView(source, R.id.btn_pilih, "method 'onClickPilih'");
-    view7f0a0083 = view;
+    view7f0a008e = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -38,7 +38,7 @@ public class StatusFragment_ViewBinding implements Unbinder {
     target = null;
 
 
-    view7f0a0083.setOnClickListener(null);
-    view7f0a0083 = null;
+    view7f0a008e.setOnClickListener(null);
+    view7f0a008e = null;
   }
 }

@@ -16,23 +16,23 @@ import java.lang.Override;
 public class SewaLahanActivity_ViewBinding implements Unbinder {
   private SewaLahanActivity target;
 
-  private View view7f0a0080;
+  private View view7f0a008b;
 
-  private View view7f0a0081;
+  private View view7f0a008c;
+
+  private View view7f0a006b;
+
+  private View view7f0a0068;
 
   private View view7f0a0069;
 
-  private View view7f0a0066;
+  private View view7f0a0080;
 
-  private View view7f0a0067;
+  private View view7f0a008e;
 
-  private View view7f0a007a;
+  private View view7f0a007f;
 
-  private View view7f0a0083;
-
-  private View view7f0a0079;
-
-  private View view7f0a0122;
+  private View view7f0a0136;
 
   @UiThread
   public SewaLahanActivity_ViewBinding(SewaLahanActivity target) {
@@ -47,7 +47,7 @@ public class SewaLahanActivity_ViewBinding implements Unbinder {
     target.tv_quantity_kavling = Utils.findRequiredViewAsType(source, R.id.tv_quantity_kavling, "field 'tv_quantity_kavling'", TextView.class);
     view = Utils.findRequiredView(source, R.id.btn_min_kavling, "field 'btn_min_kavling' and method 'onClickBtnMinKavling'");
     target.btn_min_kavling = Utils.castView(view, R.id.btn_min_kavling, "field 'btn_min_kavling'", ElasticImageView.class);
-    view7f0a0080 = view;
+    view7f0a008b = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -57,7 +57,7 @@ public class SewaLahanActivity_ViewBinding implements Unbinder {
     target.tv_quantity_sewa = Utils.findRequiredViewAsType(source, R.id.tv_quantity_sewa, "field 'tv_quantity_sewa'", TextView.class);
     view = Utils.findRequiredView(source, R.id.btn_min_sewa, "field 'btn_min_sewa' and method 'onClickBtnMinSewa'");
     target.btn_min_sewa = Utils.castView(view, R.id.btn_min_sewa, "field 'btn_min_sewa'", ElasticImageView.class);
-    view7f0a0081 = view;
+    view7f0a008c = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -66,7 +66,7 @@ public class SewaLahanActivity_ViewBinding implements Unbinder {
     });
     target.tv_title_bar = Utils.findRequiredViewAsType(source, R.id.tv_title_bar, "field 'tv_title_bar'", TextView.class);
     view = Utils.findRequiredView(source, R.id.btn_back, "method 'onClickBtnBack'");
-    view7f0a0069 = view;
+    view7f0a006b = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -74,7 +74,7 @@ public class SewaLahanActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.btn_add_kavling, "method 'onClickBtnAddKavling'");
-    view7f0a0066 = view;
+    view7f0a0068 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -82,7 +82,7 @@ public class SewaLahanActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.btn_add_sewa, "method 'onClickBtnAddSewa'");
-    view7f0a0067 = view;
+    view7f0a0069 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -90,7 +90,7 @@ public class SewaLahanActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.btn_istilah, "method 'onClickBtnIstilah'");
-    view7f0a007a = view;
+    view7f0a0080 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -98,7 +98,7 @@ public class SewaLahanActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.btn_pilih, "method 'onClickPilih'");
-    view7f0a0083 = view;
+    view7f0a008e = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -106,7 +106,7 @@ public class SewaLahanActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.btn_informasi, "method 'onClickBtnInformasiKeuntungan'");
-    view7f0a0079 = view;
+    view7f0a007f = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -114,7 +114,7 @@ public class SewaLahanActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.img_lahan, "method 'onClickImgLahan'");
-    view7f0a0122 = view;
+    view7f0a0136 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -136,23 +136,23 @@ public class SewaLahanActivity_ViewBinding implements Unbinder {
     target.btn_min_sewa = null;
     target.tv_title_bar = null;
 
-    view7f0a0080.setOnClickListener(null);
-    view7f0a0080 = null;
-    view7f0a0081.setOnClickListener(null);
-    view7f0a0081 = null;
+    view7f0a008b.setOnClickListener(null);
+    view7f0a008b = null;
+    view7f0a008c.setOnClickListener(null);
+    view7f0a008c = null;
+    view7f0a006b.setOnClickListener(null);
+    view7f0a006b = null;
+    view7f0a0068.setOnClickListener(null);
+    view7f0a0068 = null;
     view7f0a0069.setOnClickListener(null);
     view7f0a0069 = null;
-    view7f0a0066.setOnClickListener(null);
-    view7f0a0066 = null;
-    view7f0a0067.setOnClickListener(null);
-    view7f0a0067 = null;
-    view7f0a007a.setOnClickListener(null);
-    view7f0a007a = null;
-    view7f0a0083.setOnClickListener(null);
-    view7f0a0083 = null;
-    view7f0a0079.setOnClickListener(null);
-    view7f0a0079 = null;
-    view7f0a0122.setOnClickListener(null);
-    view7f0a0122 = null;
+    view7f0a0080.setOnClickListener(null);
+    view7f0a0080 = null;
+    view7f0a008e.setOnClickListener(null);
+    view7f0a008e = null;
+    view7f0a007f.setOnClickListener(null);
+    view7f0a007f = null;
+    view7f0a0136.setOnClickListener(null);
+    view7f0a0136 = null;
   }
 }

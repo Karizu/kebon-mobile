@@ -15,7 +15,7 @@ import java.lang.Override;
 public class Register2Activity_ViewBinding implements Unbinder {
   private Register2Activity target;
 
-  private View view7f0a007e;
+  private View view7f0a0087;
 
   @UiThread
   public Register2Activity_ViewBinding(Register2Activity target) {
@@ -29,7 +29,7 @@ public class Register2Activity_ViewBinding implements Unbinder {
     View view;
     target.editTextEmail = Utils.findRequiredViewAsType(source, R.id.editTextEmail, "field 'editTextEmail'", TextView.class);
     view = Utils.findRequiredView(source, R.id.btn_lanjutkan, "method 'onClickLnajutkan'");
-    view7f0a007e = view;
+    view7f0a0087 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -47,7 +47,7 @@ public class Register2Activity_ViewBinding implements Unbinder {
 
     target.editTextEmail = null;
 
-    view7f0a007e.setOnClickListener(null);
-    view7f0a007e = null;
+    view7f0a0087.setOnClickListener(null);
+    view7f0a0087 = null;
   }
 }

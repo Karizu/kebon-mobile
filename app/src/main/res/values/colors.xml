@@ -19,6 +19,7 @@
     <color name="light_white">#FDFDFD</color>
     <color name="light_green">#83BB58</color>
     <color name="green">#47C756</color>
+    <color name="dark_green_text">#558C55</color>
     <color name="green_primary">#3DB991</color>
     <color name="black_primary">#1D1D1B</color>
     <color name="grey_disabled">#EAEAEA</color>

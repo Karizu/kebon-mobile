@@ -1,27 +1,11 @@
 [
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_akun_pressed.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_akun_pressed.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_dummy.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\layout_dummy.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_dots_orange.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_dots_orange.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_clock.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_clock.png"
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_intro_slide_2.xml.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\intro_slide_2.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_button_round.xml.flat",
@@ -32,32 +16,16 @@
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_bg_bottom.png"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_progress.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_progress.png"
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_bottom_detail_cart.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\list_item_bottom_detail_cart.xml"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_akun.xml.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\fragment_akun.xml"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_konfirmasi_pembayaran.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_konfirmasi_pembayaran.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_home_lahan.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\item_home_lahan.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_info_selengkapnya.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_info_selengkapnya.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_add_button.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_add_button.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_galeri_lahan.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_galeri_lahan.xml"
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_keyboard_arrow_down_bro_24.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_baseline_keyboard_arrow_down_bro_24.xml"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
@@ -80,32 +48,12 @@
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_down.png"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_outer_orange.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_outer_orange.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
-    },
-    {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_histori.png.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_histori.png"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_chevron_back.png.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_chevron_back.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo_kebon.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\logo_kebon.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_keluar.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_keluar.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_text.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_text.png"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_line.xml.flat",
@@ -116,64 +64,32 @@
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\anim\\layout_animation.xml"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_in.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\anim\\fade_in.xml"
-    },
-    {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_intro_slide_3.xml.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\intro_slide_3.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_signin_google.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\btn_signin_google.png"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_circle_info_profile.png.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_circle_info_profile.png"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_right.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_right.png"
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_info_konvensional.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\dialog_info_konvensional.xml"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash.xml.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_splash.xml"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_info_konvensional.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\dialog_info_konvensional.xml"
-    },
-    {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_profile.png.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_profile.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_status.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\fragment_status.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\anim_zoom_out.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\anim\\zoom_out.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_intro.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_intro.xml"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_intro_slide_1.xml.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\intro_slide_1.xml"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_left.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_left.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_atau.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_atau.png"
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_bottom_detail_cart.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_bottom_detail_cart.png"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_cs.png.flat",
@@ -184,80 +100,28 @@
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_notification_empty.png"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\font_poppins_italic.ttf.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\font\\poppins_italic.ttf"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_konfirmasi_pembayaran.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_konfirmasi_pembayaran.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_login.xml"
-    },
-    {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_out.xml.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\anim\\slide_out.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\anim_scale_down.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\anim\\scale_down.xml"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_register.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_field_transparent.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_field_transparent.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_button_round_green.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_button_round_green.xml"
-    },
-    {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_chevron_right_24.xml.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_baseline_chevron_right_24.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_informasi_keuntungan.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_informasi_keuntungan.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_informasi_keuntungan.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_informasi_keuntungan.png"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_akun.png.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\icon_akun.png"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_sewa_lahan.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_sewa_lahan.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_round_header_pilih_metode.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_round_header_pilih_metode.png"
-    },
-    {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_round_bottom_right_left.xml.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_round_bottom_right_left.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_outer_pilih_tanaman.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_outer_pilih_tanaman.xml"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_title_login.png.flat",
@@ -272,16 +136,8 @@
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hidroponik_43.jpeg.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\hidroponik_43.jpeg"
-    },
-    {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\font_poppins_light.ttf.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\font\\poppins_light.ttf"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_chat.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_chat.png"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_grafik.png.flat",
@@ -290,10 +146,6 @@
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_round_rincian_bayar.xml.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_round_rincian_bayar.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_notif.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_notif.png"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
@@ -308,32 +160,16 @@
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_quantity_text.png"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_round_top_right_left.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_round_top_right_left.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_ilustration_2.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_ilustration_2.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_tanam_sekarang.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_tanam_sekarang.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_password_visible_24dp.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_password_visible_24dp.png"
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_button_round_green_5dp.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_button_round_green_5dp.xml"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\font_poppins_regular.ttf.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\font\\poppins_regular.ttf"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_title_splash.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\title_splash.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_add_lahan.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_add_lahan.png"
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_checked.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\checked.xml"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\font_poppins_bold.ttf.flat",
@@ -342,10 +178,6 @@
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_text_splash.png.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_text_splash.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_title_lahan.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_title_lahan.png"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\anim_zoom_in.xml.flat",
@@ -364,96 +196,56 @@
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_inquiry_pay.png"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_beranda_pressed.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_beranda_pressed.png"
-    },
-    {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_pilih_metode.xml.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_pilih_metode.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_pick_site.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_pick_site.xml"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_next.png.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_next.png"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rafiki.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\rafiki.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_notif_pressed.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_notif_pressed.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_rincian_pembayaran.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_rincian_pembayaran.png"
-    },
-    {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_akun_header.png.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_akun_header.png"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_out.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\anim\\fade_out.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_circle_profile.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_circle_profile.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_outer_bro.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_outer_bro.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_home_list_2.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\item_home_list_2.xml"
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_cart.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\list_item_cart.xml"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hidroponik.png.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\hidroponik.png"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_password_hidden_24dp.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_password_hidden_24dp.png"
-    },
-    {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_pembayaran.xml.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_pembayaran.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_faq.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_faq.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_about.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_about.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_going_up.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_going_up.png"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_status.png.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_status.png"
     },
     {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item_detail_cart.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\list_item_detail_cart.xml"
+    },
+    {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_top_rincian_pembayaran.png.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_top_rincian_pembayaran.png"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_splash_gradient.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_splash_gradient.xml"
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_solid_pilih_tanaman.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_solid_pilih_tanaman.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_checked.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_checked.png"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_info_auto.xml.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\dialog_info_auto.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_splash_gradient.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_splash_gradient.xml"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\font_poppins_lightitalic.ttf.flat",
@@ -468,10 +260,6 @@
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\anim\\pull_up_from_bottom.xml"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\xml_network_security_config.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\xml\\network_security_config.xml"
-    },
-    {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circular_progress_bar.xml.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\circular_progress_bar.xml"
     },
@@ -484,48 +272,16 @@
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_text_inquiry.png"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_bg_lahan.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_bg_lahan.png"
-    },
-    {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\anim_item_animation_fall_down.xml.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\anim\\item_animation_fall_down.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circle_shape.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\circle_shape.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_notification.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\fragment_notification.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\font_poppins_semibold.ttf.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\font\\poppins_semibold.ttf"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_save.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_save.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_back.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_back.png"
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pop_up_auto_pilot.png.flat",
@@ -540,60 +296,40 @@
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_frame_outline_border.xml"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_rectangle_bro.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_rectangle_bro.xml"
-    },
-    {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_jadwal_image.png.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_jadwal_image.png"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_tanda_tanya.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_tanda_tanya.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_close_red.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_close_red.png"
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_round_bottom_right_left_bro.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_round_bottom_right_left_bro.xml"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_rincian_pembayaran.xml.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_rincian_pembayaran.xml"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_ilustration_1.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_ilustration_1.png"
-    },
-    {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_keyboard_arrow_down_24.xml.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_baseline_keyboard_arrow_down_24.xml"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_ilustration_1.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_ilustration_1.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_custom_spinner.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_custom_spinner.xml"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_register2.xml.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_register2.xml"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_bottom_nav.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\menu\\menu_bottom_nav.xml"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_istilah.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_istilah.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_text_info_akun.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_text_info_akun.png"
-    },
-    {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_beranda.png.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_beranda.png"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_add.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_add.png"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
@@ -604,8 +340,8 @@
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_round_button_bro.xml"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_detail_akun.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_detail_akun.xml"
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_plant.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_plant.png"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_verification_email.xml.flat",
@@ -624,12 +360,12 @@
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_pilih_tanaman.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\item_pilih_tanaman.xml"
     },
     {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_app_bar_layout.xml.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\app_bar_layout.xml"
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_outer_text_plant.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_outer_text_plant.xml"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_line.png.flat",
@@ -638,10 +374,6 @@
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_minus_button.png.flat",
-        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_minus_button.png"
     },
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_cloud.png.flat",
@@ -654,5 +386,421 @@
     {
         "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_akun.png.flat",
         "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_akun.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_akun_pressed.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_akun_pressed.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_dummy.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\layout_dummy.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_dots_orange.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_dots_orange.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_clock.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_clock.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_round_detail_pesanan.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_round_detail_pesanan.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_progress.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_progress.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_konfirmasi_pembayaran.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_konfirmasi_pembayaran.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_cart.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\dialog_cart.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_home_lahan.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\item_home_lahan.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_info_selengkapnya.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_info_selengkapnya.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_add_button.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_add_button.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_galeri_lahan.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_galeri_lahan.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_outer_orange.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_outer_orange.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_detail_cart.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_detail_cart.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pana.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\pana.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo_kebon.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\logo_kebon.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_keluar.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_keluar.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_in.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\anim\\fade_in.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_text.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_text.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_signin_google.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\btn_signin_google.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_right.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_right.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_selesai_menanam.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_selesai_menanam.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_status.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\fragment_status.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\anim_zoom_out.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\anim\\zoom_out.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_intro.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_intro.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_left.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_left.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_atau.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_atau.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\font_poppins_italic.ttf.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\font\\poppins_italic.ttf"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_konfirmasi_pembayaran.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_konfirmasi_pembayaran.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_filter_tanaman.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_filter_tanaman.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\anim_scale_down.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\anim\\scale_down.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_keuntungan_tanaman.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_keuntungan_tanaman.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_field_transparent.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_field_transparent.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_button_round_green.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_button_round_green.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_pilih_tanaman_activity.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_pilih_tanaman_activity.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu_list_lokasi.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\menu\\list_lokasi.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_informasi_keuntungan.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_informasi_keuntungan.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_informasi_keuntungan.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_informasi_keuntungan.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_sewa_lahan.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_sewa_lahan.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_round_header_pilih_metode.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_round_header_pilih_metode.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_line_cart_item.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\line_cart_item.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_spinner_cart.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_spinner_cart.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hidroponik_43.jpeg.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\hidroponik_43.jpeg"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_chat.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_chat.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_notif.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_notif.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_round_top_right_left.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_round_top_right_left.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_ilustration_2.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_ilustration_2.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_tanam_sekarang.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_tanam_sekarang.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_password_visible_24dp.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_password_visible_24dp.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_cart.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_cart.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_title_splash.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\title_splash.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_add_lahan.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_add_lahan.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_title_lahan.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_title_lahan.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_beranda_pressed.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_beranda_pressed.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_pick_site.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_pick_site.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rafiki.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\rafiki.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_notif_pressed.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_notif_pressed.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_rincian_pembayaran.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_rincian_pembayaran.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_out.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\anim\\fade_out.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_circle_profile.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_circle_profile.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_outer_bro.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_outer_bro.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_home_list_2.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\item_home_list_2.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_password_hidden_24dp.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_password_hidden_24dp.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_faq.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_faq.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_about.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_about.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_going_up.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_going_up.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_button_dialog_cart.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_button_dialog_cart.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\xml_network_security_config.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\xml\\network_security_config.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_dialog_cart.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_dialog_cart.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_trash.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_trash.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_bg_lahan.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_bg_lahan.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circle_shape.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\circle_shape.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\font_poppins_semibold.ttf.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\font\\poppins_semibold.ttf"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_notification.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\fragment_notification.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_spinner_item.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\custom_spinner_item.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_save.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\img_save.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_back.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_back.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_rectangle_bro.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_rectangle_bro.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_tanda_tanya.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_tanda_tanya.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_spinner_drop_item.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\custom_spinner_drop_item.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_close_red.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_close_red.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_istilah.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_istilah.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_bottom_nav.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\menu\\menu_bottom_nav.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_text_info_akun.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_text_info_akun.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_spinner_drop_filter_item.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\custom_spinner_drop_filter_item.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_detail_akun.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\activity_detail_akun.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_search.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_search.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_app_bar_layout.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\app_bar_layout.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_side_pilih_tanaman.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\bg_side_pilih_tanaman.png"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_spinner_filter_item.xml.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\layout\\custom_spinner_filter_item.xml"
+    },
+    {
+        "merged": "E:\\ProjectAndroid\\KebonMobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_minus_button.png.flat",
+        "source": "E:\\ProjectAndroid\\KebonMobile\\app\\src\\main\\res\\drawable\\ic_minus_button.png"
     }
 ]
