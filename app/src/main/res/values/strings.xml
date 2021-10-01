@@ -4,4 +4,10 @@
     <string name="text_inq">Site : Depari Farm\nJumlah Kavling : 10 kavling\nLama Sewa : 1 tahun\nHarga : Rp 4,500,000</string>
     <string name="text_istilah">Lahan : Lahan adalah lahan\nKavling : Kavling adalah kavling.\nKavling terdiri atas x slot.</string>
     <string name="text_panen_online">Metode panen yang dipilih otomatis online. Namun Anda masih dapat merubahnya menjadi offline dengan cara menekan tombol ‘Panen Sekarang’ di halaman panen tanaman saya.</string>
+    <string name="req_nama">Maks. 30 Karakter</string>
+    <string name="req_email">Maks. 100 Karakter</string>
+    <string name="req_telp">Maks. 13 Karakter</string>
+    <string name="ubah_password">Untuk mengamankan akunmu,
+        silakan verifikasi identitas dengan
+        memasukkan password</string>
 </resources>
