@@ -2,9 +2,16 @@ package com.selada.kebonmobile.presentation.akun;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.selada.kebonmobile.R;
+import com.selada.kebonmobile.presentation.akun.alamat.DaftarAlamatActivity;
+import com.selada.kebonmobile.presentation.akun.alamat.UbahAlamatActivity;
+import com.selada.kebonmobile.presentation.akun.email.UbahEmailActivity;
+import com.selada.kebonmobile.presentation.akun.nama.UbahNamaActivity;
+import com.selada.kebonmobile.presentation.akun.password.UbahPasswordActivity;
+import com.selada.kebonmobile.presentation.akun.telepon.UbahTeleponActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -13,27 +20,32 @@ public class DetailAkunActivity extends AppCompatActivity {
 
     @OnClick(R.id.layout_name)
     void onClickEditName(){
-
+        Intent intent = new Intent(DetailAkunActivity.this, UbahNamaActivity.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.layout_phone)
     void onClickEditPhone(){
-
+        Intent intent = new Intent(DetailAkunActivity.this, UbahTeleponActivity.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.layout_email)
     void onClickEditEmail(){
-
+        Intent intent = new Intent(DetailAkunActivity.this, UbahEmailActivity.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.layout_address)
     void onClickEditAddress(){
-
+        Intent intent = new Intent(DetailAkunActivity.this, DaftarAlamatActivity.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.layout_change_pass)
     void onClickEditPass(){
-
+        Intent intent = new Intent(DetailAkunActivity.this, UbahPasswordActivity.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.btn_back)
