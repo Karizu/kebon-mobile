@@ -3,10 +3,14 @@ package com.selada.kebonmobile.presentation;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.selada.kebonmobile.R;
+import com.selada.kebonmobile.presentation.status.StatusActivity;
+import com.selada.kebonmobile.util.NonSwipeableViewPager;
 import com.selada.kebonmobile.util.ViewPagerAdapter;
 import com.skydoves.elasticviews.ElasticImageView;
 
@@ -19,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.bottomNavigation)
     BottomNavigationView bottomNavigation;
     @BindView(R.id.view_pager)
-    ViewPager view_pager;
+    NonSwipeableViewPager view_pager;
 
     @BindView(R.id.nav_beranda)
     ElasticImageView nav_beranda;
@@ -37,7 +41,9 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.nav_status)
     void onClickNavStatus(){
-        view_pager.setCurrentItem(1);
+        Intent intent = new Intent(this, StatusActivity.class);
+        startActivity(intent);
+        this.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 
     @OnClick(R.id.nav_notifikasi)
@@ -78,10 +84,9 @@ public class MainActivity extends AppCompatActivity {
                         nav_akun.setImageDrawable(getResources().getDrawable(R.drawable.ic_akun));
                         break;
                     case 1:
-                        nav_beranda.setImageDrawable(getResources().getDrawable(R.drawable.ic_beranda));
-                        nav_status.setImageDrawable(getResources().getDrawable(R.drawable.ic_status));
-                        nav_notifikasi.setImageDrawable(getResources().getDrawable(R.drawable.ic_notif));
-                        nav_akun.setImageDrawable(getResources().getDrawable(R.drawable.ic_akun));
+                        Intent intent = new Intent(MainActivity.this, StatusActivity.class);
+                        startActivity(intent);
+                        MainActivity.this.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                         break;
                     case 2:
                         nav_beranda.setImageDrawable(getResources().getDrawable(R.drawable.ic_beranda));
