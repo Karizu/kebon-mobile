@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="250dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/bg_share_layout">
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_share_instagram"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="64dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Instagram"
+            android:textColor="@color/colorTextBroLight"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="Share"
+            android:textColor="@color/colorTextBro"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_share_twitter"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="9dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Twitter"
+            android:textColor="@color/colorTextBroLight"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_share_whatsapp"
+            android:layout_marginTop="9dp"
+            android:layout_toStartOf="@+id/textView23"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Whatsapp"
+            android:textColor="@color/colorTextBroLight"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_share_bluetooth"
+            android:layout_marginTop="9dp"
+            android:layout_toStartOf="@+id/textView27"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Bluetooth"
+            android:textColor="@color/colorTextBroLight"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_share_line"
+            android:layout_marginTop="9dp"
+            android:layout_toEndOf="@+id/textView23"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Line"
+            android:textColor="@color/colorTextBroLight"
+            android:textStyle="bold" />
+
+        <com.skydoves.elasticviews.ElasticImageView
+            android:id="@+id/btn_share_whatsapp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="52dp"
+            android:layout_toStartOf="@+id/btn_share_instagram"
+            android:src="@drawable/logo_whatsapp"
+            app:imageView_duration="100" />
+
+        <com.skydoves.elasticviews.ElasticImageView
+            android:id="@+id/btn_share_instagram"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="74dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="74dp"
+            android:src="@drawable/logo_instagram"
+            app:imageView_duration="100" />
+
+        <com.skydoves.elasticviews.ElasticImageView
+            android:id="@+id/btn_share_line"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="51dp"
+            android:layout_marginEnd="65dp"
+            android:layout_toEndOf="@id/btn_share_instagram"
+            android:src="@drawable/logo_line"
+            app:imageView_duration="100" />
+
+        <com.skydoves.elasticviews.ElasticImageView
+            android:id="@+id/btn_share_bluetooth"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/btn_share_whatsapp"
+            android:layout_marginTop="45dp"
+            android:layout_toStartOf="@id/btn_share_instagram"
+            android:src="@drawable/logo_bluetooth"
+            app:imageView_duration="100" />
+
+        <com.skydoves.elasticviews.ElasticImageView
+            android:id="@+id/btn_share_twitter"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/btn_share_instagram"
+            android:layout_marginStart="74dp"
+            android:layout_marginTop="45dp"
+            android:layout_toEndOf="@id/btn_share_bluetooth"
+            android:src="@drawable/logo_twitter"
+            app:imageView_duration="100" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
