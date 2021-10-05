@@ -1,25 +1,19 @@
-package com.selada.kebonmobile.presentation.status.tab.lahan;
+package com.selada.kebonmobile.presentation.status.tab.tanaman;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 
-import android.app.Dialog;
-import android.content.Context;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.iambedant.text.OutlineTextView;
 import com.selada.kebonmobile.R;
 import com.selada.kebonmobile.presentation.status.tab.adapter.DetailStatusLahanAdapter;
-import com.selada.kebonmobile.util.MethodUtil;
-import com.selada.kebonmobile.util.ViewPagerDetailStatusAdapter;
-import com.selada.kebonmobile.util.ViewPagerStatusAdapter;
+import com.selada.kebonmobile.presentation.status.tab.adapter.DetailStatusTanamanAdapter;
 import com.skydoves.elasticviews.ElasticImageView;
 
 import java.util.ArrayList;
@@ -30,66 +24,53 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class DetailStatusLahanActivity extends AppCompatActivity {
+public class DetailStatusTanamanActivity extends AppCompatActivity {
 
+    @BindView(R.id.text_title)
+    TextView text_title;
+    @BindView(R.id.img_plant)
+    ElasticImageView img_plant;
+    @BindView(R.id.tv_plant_name)
+    OutlineTextView tv_plant_name;
     @BindView(R.id.rv_tanaman_site)
     RecyclerView rv_tanaman_site;
-    @BindView(R.id.view_pager)
-    ViewPager viewPager;
-    @BindView(R.id.tab_info)
-    FrameLayout tab_info;
-    @BindView(R.id.tab_riwayat)
-    FrameLayout tab_riwayat;
-    @BindView(R.id.tv_farm_name)
-    OutlineTextView tv_farm_name;
+    @BindView(R.id.tv_jumlah_lubang)
+    TextView tv_jumlah_lubang;
+    @BindView(R.id.tv_usia_panen)
+    TextView tv_usia_panen;
+    @BindView(R.id.tv_harga_jual)
+    TextView tv_harga_jual;
 
-    private Context context;
+    @OnClick(R.id.btn_jadwal)
+    void onClickJadwal(){
+
+    }
+
+    @OnClick(R.id.btn_share)
+    void onClickShare(){
+        showDialogShare();
+    }
 
     @OnClick(R.id.btn_back)
     void onClickBack(){
         onBackPressed();
     }
 
-    @OnClick(R.id.btn_share)
-    void onClickhare(){
-        showDialogShare();
-    }
-
-    @OnClick(R.id.btn_jadwal)
-    void onClcikJadwal(){
-
-    }
-
-    @OnClick(R.id.btn_play)
-    void onClickPlay(){
-
-    }
-
-    @OnClick(R.id.tab_info)
-    void onClickTabInfo(){
-        viewPager.setCurrentItem(0);
-    }
-
-    @OnClick(R.id.tab_riwayat)
-    void onClickTabRiwayat(){
-        viewPager.setCurrentItem(1);
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_status_lahan);
+        setContentView(R.layout.activity_detail_status_tanaman);
         ButterKnife.bind(this);
 
         initComponent();
     }
 
+    @SuppressLint("SetTextI18n")
     private void initComponent() {
-        context = this;
-
         if (getIntent()!=null){
-            String farm_name = getIntent().getStringExtra("tv_farm_name");
-            tv_farm_name.setText(farm_name);
+            String plantName = getIntent().getStringExtra("plant_name");
+            tv_plant_name.setText(plantName);
+            text_title.setText("Informasi Tanaman : "+plantName);
         }
 
         //setRecyclerView
@@ -97,41 +78,12 @@ public class DetailStatusLahanActivity extends AppCompatActivity {
         rv_tanaman_site.setLayoutManager(layoutManager);
 
         List<String> listBottom = new ArrayList<>();
-        listBottom.add("Sawi");
-        listBottom.add("Bayam");
-        listBottom.add("Pakcoy");
+        listBottom.add("Depari Farm");
+        listBottom.add("Green HOS");
+        listBottom.add("SeladaSegar");
 
-        DetailStatusLahanAdapter adapter = new DetailStatusLahanAdapter(listBottom, this, this);
+        DetailStatusTanamanAdapter adapter = new DetailStatusTanamanAdapter(listBottom, this, this);
         rv_tanaman_site.setAdapter(adapter);
-
-        //setViewPager
-        ViewPagerDetailStatusAdapter statusAdapter = new ViewPagerDetailStatusAdapter(getSupportFragmentManager());
-        viewPager.setAdapter(statusAdapter);
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                switch (position){
-                    case 0:
-                        tab_info.setBackground(getResources().getDrawable(R.drawable.bg_round_tab_status_on_presssed));
-                        tab_riwayat.setBackground(getResources().getDrawable(R.drawable.bg_round_tab_status));
-                        break;
-                    case 1:
-                        tab_info.setBackground(getResources().getDrawable(R.drawable.bg_round_tab_status));
-                        tab_riwayat.setBackground(getResources().getDrawable(R.drawable.bg_round_tab_status_on_presssed));
-                        break;
-                }
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
     }
 
     private void showDialogShare() {
@@ -203,7 +155,6 @@ public class DetailStatusLahanActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        finish();
-        this.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        this.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 }

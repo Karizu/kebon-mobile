@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient"
+    android:orientation="vertical"
+    tools:context=".presentation.status.tab.tanaman.panen.KonfirmasiAddressActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#67C8B4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_title_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Pengiriman"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+            <com.skydoves.elasticviews.ElasticImageView
+                android:id="@+id/btn_back"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                android:src="@drawable/ic_back"
+                android:background="?attr/selectableItemBackground"
+                app:imageView_duration="100"
+                app:imageView_scale="0.87" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_address"
+        android:layout_width="match_parent"
+        android:layout_height="133.13dp"
+        android:background="@drawable/bg_round_detail_pesanan"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp">
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Alamat Pengiriman"
+            android:textColor="@color/colorTextOrange"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="15dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="17dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_pin" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Jl. Sulaksana Makmur Raya No.30, Cicaheum, Kec. Kiaracondong, Kota Bandung, Jawa Barat 40282"
+            android:textColor="@color/Black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="13dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_chevron_right_bro" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Metode Pengiriman"
+        android:textColor="@color/colorTextBro"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/bg_rectangle_bro_pengiriman"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_gojek"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:paddingStart="4dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center_vertical"
+            android:text="Gojek"
+            android:buttonTint="@color/colorTextBro"
+            android:textColor="@color/colorTextBro"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/bg_rectangle_bro_pengiriman"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_grab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:paddingStart="4dp"
+            android:fontFamily="@font/poppins_regular"
+            android:buttonTint="@color/colorTextBro"
+            android:gravity="center_vertical"
+            android:text="Grab"
+            android:textColor="@color/colorTextBro"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/bg_rectangle_bro_pengiriman"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_jnt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:paddingStart="4dp"
+            android:fontFamily="@font/poppins_regular"
+            android:buttonTint="@color/colorTextBro"
+            android:gravity="center_vertical"
+            android:text="JNT"
+            android:textColor="@color/colorTextBro"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/bg_rectangle_bro_pengiriman"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_jne"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:paddingStart="4dp"
+            android:fontFamily="@font/poppins_regular"
+            android:buttonTint="@color/colorTextBro"
+            android:gravity="center_vertical"
+            android:text="JNE"
+            android:textColor="@color/colorTextBro"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.skydoves.elasticviews.ElasticButton
+            android:id="@+id/btn_proses"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_button_round"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Proses"
+            android:textSize="25sp"
+            android:textAllCaps="false"
+            android:textColor="@color/White"
+            android:textStyle="bold"
+            app:button_duration="100"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -14,7 +14,7 @@
             android:id="@+id/imageView10"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -63,7 +63,7 @@
         <!--        app:layout_constraintTop_toBottomOf="@+id/imageView10" />-->
 
         <LinearLayout
-            android:visibility="invisible"
+            android:visibility="visible"
             android:id="@+id/layout_header_already_plant_site"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -91,6 +91,7 @@
                 android:background="@drawable/bg_round_header_home"
                 android:gravity="center"
                 android:fontFamily="@font/poppins_regular"
+                android:paddingTop="2dp"
                 android:text="15 Hari"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -99,7 +100,7 @@
         </LinearLayout>
         
         <com.skydoves.elasticviews.ElasticImageView
-            android:visibility="visible"
+            android:visibility="invisible"
             android:id="@+id/img_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -190,7 +191,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="23dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="6dp"
                     android:fontFamily="@font/poppins_regular"
                     android:text="Kebon Anda"
                     android:textSize="20sp"
@@ -209,7 +210,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:visibility="gone"
+            android:visibility="visible"
             android:id="@+id/layout_already_plant_site"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -348,7 +349,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:background="#80FFFFFF"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"

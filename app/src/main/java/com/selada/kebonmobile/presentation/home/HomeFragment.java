@@ -1,6 +1,7 @@
 package com.selada.kebonmobile.presentation.home;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,8 +20,10 @@ import com.selada.kebonmobile.model.response.FeedBottomHome;
 import com.selada.kebonmobile.presentation.home.adapter.HomeFeedAdapter;
 import com.selada.kebonmobile.presentation.home.adapter.HomeFeedBottomAdapter;
 import com.selada.kebonmobile.presentation.home.adapter.HomeLahanAdapter;
+import com.selada.kebonmobile.presentation.home.tanam.PilihTanamanActivity;
 import com.selada.kebonmobile.util.Constant;
 import com.selada.kebonmobile.util.PreferenceManager;
+import com.skydoves.elasticviews.ElasticCardView;
 import com.skydoves.elasticviews.ElasticImageView;
 
 import java.util.ArrayList;
@@ -28,6 +31,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class HomeFragment extends Fragment {
 
@@ -61,6 +65,20 @@ public class HomeFragment extends Fragment {
             "CARA MENYEWA LAHAN BARU",
             "CARA MEMILIH TANAMAN"
     };
+
+    @OnClick(R.id.cv_jadwal)
+    void onClickJadwal(){
+//        Intent intent = new Intent(requireActivity(), PilihTanamanActivity.class);
+//        startActivity(intent);
+//        requireActivity().overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+    }
+
+    @OnClick(R.id.cv_tanam_baru)
+    void onClickTanamBaru(){
+        Intent intent = new Intent(requireActivity(), PilihTanamanActivity.class);
+        startActivity(intent);
+        requireActivity().overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+    }
 
     @SuppressLint("InflateParams")
     @Nullable

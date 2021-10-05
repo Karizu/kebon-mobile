@@ -10,7 +10,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".presentation.status.tab.lahan.DetailStatusLahanActivity"></activity>
+        <activity android:name=".presentation.status.tab.tanaman.panen.KonfirmasiPanenOnlineActivity"></activity>
+        <activity android:name=".presentation.status.tab.tanaman.panen.KonfirmasiAddressActivity" />
+        <activity android:name=".presentation.status.tab.tanaman.MenanamContinueActivity" />
+        <activity android:name=".presentation.status.tab.tanaman.panen.KonfirmasiPanenOfflineActivity" />
+        <activity android:name=".presentation.status.tab.tanaman.panen.PanenTanamanActivity" />
+        <activity android:name=".presentation.status.tab.tanaman.DetailTanamanActivity" />
+        <activity android:name=".presentation.status.tab.tanaman.DetailStatusTanamanActivity" />
+        <activity android:name=".presentation.status.tab.lahan.DetailStatusLahanActivity" />
         <activity android:name=".presentation.status.StatusActivity" />
         <activity android:name=".presentation.home.tanam.SelesaiMenanamActivity" />
         <activity android:name=".presentation.home.tanam.DetailCartActivity" />
@@ -29,11 +36,14 @@
         <activity android:name=".presentation.auth.Register2Activity" />
         <activity android:name=".presentation.site.PickSiteActivity" />
         <activity android:name=".presentation.auth.RegisterActivity" />
+        <activity android:name=".presentation.akun.nama.UbahNamaActivity" />
         <activity android:name=".presentation.akun.alamat.UbahAlamatActivity" />
         <activity android:name=".presentation.akun.telepon.UbahTeleponActivity" />
         <activity android:name=".presentation.akun.email.UbahEmailActivity" />
         <activity android:name=".presentation.akun.alamat.DaftarAlamatActivity" />
         <activity android:name=".presentation.akun.password.UbahPasswordActivity" />
+        <activity android:name=".presentation.akun.password.PasswordBaruActivity" />
+        <activity android:name=".presentation.akun.alamat.TambahAlamatActivity" />
         <activity
             android:name=".presentation.auth.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
@@ -51,8 +61,8 @@
         </activity>
         <activity android:name=".presentation.MainActivity" />
     </application>
-    <uses-permission android:name="android.permission.CAMERA" />
-
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
 </manifest>

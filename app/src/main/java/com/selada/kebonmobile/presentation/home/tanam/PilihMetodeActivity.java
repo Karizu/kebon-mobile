@@ -111,7 +111,6 @@ public class PilihMetodeActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        finish();
         this.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 }

@@ -1,67 +1,74 @@
-package com.selada.kebonmobile.presentation.status.tab.lahan;
+package com.selada.kebonmobile.presentation.status.tab.tanaman;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
-import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
-import com.iambedant.text.OutlineTextView;
 import com.selada.kebonmobile.R;
-import com.selada.kebonmobile.presentation.status.tab.adapter.DetailStatusLahanAdapter;
-import com.selada.kebonmobile.util.MethodUtil;
+import com.selada.kebonmobile.presentation.status.tab.tanaman.panen.PanenTanamanActivity;
 import com.selada.kebonmobile.util.ViewPagerDetailStatusAdapter;
-import com.selada.kebonmobile.util.ViewPagerStatusAdapter;
+import com.selada.kebonmobile.util.ViewPagerDetailTanamanAdapter;
 import com.skydoves.elasticviews.ElasticImageView;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class DetailStatusLahanActivity extends AppCompatActivity {
+public class DetailTanamanActivity extends AppCompatActivity {
 
-    @BindView(R.id.rv_tanaman_site)
-    RecyclerView rv_tanaman_site;
+    @BindView(R.id.tv_day)
+    TextView tv_day;
+    @BindView(R.id.tv_plant_name)
+    TextView tv_plant_name;
+    @BindView(R.id.img_plant)
+    ElasticImageView img_plant;
     @BindView(R.id.view_pager)
     ViewPager viewPager;
     @BindView(R.id.tab_info)
     FrameLayout tab_info;
-    @BindView(R.id.tab_riwayat)
-    FrameLayout tab_riwayat;
+    @BindView(R.id.tab_grafik)
+    FrameLayout tab_grafik;
     @BindView(R.id.tv_farm_name)
-    OutlineTextView tv_farm_name;
+    TextView tv_farm_name;
+    @BindView(R.id.tv_jumlah_kavling)
+    TextView tv_jumlah_kavling;
+    @BindView(R.id.tv_lama_sewa)
+    TextView tv_lama_sewa;
+    @BindView(R.id.tv_harga)
+    TextView tv_harga;
+    @BindView(R.id.img_site)
+    ImageView img_site;
 
-    private Context context;
+    private String plantName;
 
-    @OnClick(R.id.btn_back)
-    void onClickBack(){
-        onBackPressed();
+    @OnClick(R.id.btn_jadwal)
+    void onClickJadwal(){
+
+    }
+
+    @OnClick(R.id.btn_panen)
+    void onClickPanen(){
+        Intent intent = new Intent(this, PanenTanamanActivity.class);
+        intent.putExtra("plant_name", plantName);
+        startActivity(intent);
+        this.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 
     @OnClick(R.id.btn_share)
-    void onClickhare(){
+    void onClickShare(){
         showDialogShare();
     }
 
-    @OnClick(R.id.btn_jadwal)
-    void onClcikJadwal(){
-
-    }
-
-    @OnClick(R.id.btn_play)
-    void onClickPlay(){
+    @OnClick(R.id.btn_reminder)
+    void onClickReminder(){
 
     }
 
@@ -70,42 +77,33 @@ public class DetailStatusLahanActivity extends AppCompatActivity {
         viewPager.setCurrentItem(0);
     }
 
-    @OnClick(R.id.tab_riwayat)
+    @OnClick(R.id.tab_grafik)
     void onClickTabRiwayat(){
         viewPager.setCurrentItem(1);
+    }
+
+    @OnClick(R.id.btn_back)
+    void onClickBack(){
+        onBackPressed();
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_status_lahan);
+        setContentView(R.layout.activity_detail_tanaman);
         ButterKnife.bind(this);
 
         initComponent();
     }
 
     private void initComponent() {
-        context = this;
-
         if (getIntent()!=null){
-            String farm_name = getIntent().getStringExtra("tv_farm_name");
-            tv_farm_name.setText(farm_name);
+            plantName = getIntent().getStringExtra("plant_name");
+            tv_plant_name.setText(plantName);
         }
 
-        //setRecyclerView
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        rv_tanaman_site.setLayoutManager(layoutManager);
-
-        List<String> listBottom = new ArrayList<>();
-        listBottom.add("Sawi");
-        listBottom.add("Bayam");
-        listBottom.add("Pakcoy");
-
-        DetailStatusLahanAdapter adapter = new DetailStatusLahanAdapter(listBottom, this, this);
-        rv_tanaman_site.setAdapter(adapter);
-
         //setViewPager
-        ViewPagerDetailStatusAdapter statusAdapter = new ViewPagerDetailStatusAdapter(getSupportFragmentManager());
+        ViewPagerDetailTanamanAdapter statusAdapter = new ViewPagerDetailTanamanAdapter(getSupportFragmentManager());
         viewPager.setAdapter(statusAdapter);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -118,11 +116,11 @@ public class DetailStatusLahanActivity extends AppCompatActivity {
                 switch (position){
                     case 0:
                         tab_info.setBackground(getResources().getDrawable(R.drawable.bg_round_tab_status_on_presssed));
-                        tab_riwayat.setBackground(getResources().getDrawable(R.drawable.bg_round_tab_status));
+                        tab_grafik.setBackground(getResources().getDrawable(R.drawable.bg_round_tab_status));
                         break;
                     case 1:
                         tab_info.setBackground(getResources().getDrawable(R.drawable.bg_round_tab_status));
-                        tab_riwayat.setBackground(getResources().getDrawable(R.drawable.bg_round_tab_status_on_presssed));
+                        tab_grafik.setBackground(getResources().getDrawable(R.drawable.bg_round_tab_status_on_presssed));
                         break;
                 }
             }
@@ -203,7 +201,6 @@ public class DetailStatusLahanActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        finish();
         this.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 }

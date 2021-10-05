@@ -3,6 +3,7 @@ package com.selada.kebonmobile.presentation.status.tab.adapter;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.selada.kebonmobile.R;
+import com.selada.kebonmobile.presentation.status.tab.tanaman.DetailTanamanActivity;
 import com.skydoves.elasticviews.ElasticButton;
 
 import java.util.List;
@@ -42,7 +44,10 @@ public class DetailStatusLahanAdapter extends RecyclerView.Adapter<DetailStatusL
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.tv_plant_name.setText(transactionModels.get(position));
         holder.cvItem.setOnClickListener(view -> {
-
+            Intent intent = new Intent(activity, DetailTanamanActivity.class);
+            intent.putExtra("plant_name", transactionModels.get(position));
+            activity.startActivity(intent);
+            activity.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         });
     }
 

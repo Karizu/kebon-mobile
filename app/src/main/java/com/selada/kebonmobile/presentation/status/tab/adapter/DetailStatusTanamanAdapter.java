@@ -15,16 +15,16 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.selada.kebonmobile.R;
-import com.selada.kebonmobile.presentation.status.tab.tanaman.DetailStatusTanamanActivity;
+import com.selada.kebonmobile.presentation.status.tab.lahan.DetailStatusLahanActivity;
 
 import java.util.List;
 
-public class StatusTanamanAdapter extends RecyclerView.Adapter<StatusTanamanAdapter.ViewHolder> {
+public class DetailStatusTanamanAdapter extends RecyclerView.Adapter<DetailStatusTanamanAdapter.ViewHolder> {
     private List<String> transactionModels;
     private Context context;
     private Activity activity;
 
-    public StatusTanamanAdapter(List<String> transactionModels, Context context, Activity activity) {
+    public DetailStatusTanamanAdapter(List<String> transactionModels, Context context, Activity activity) {
         this.transactionModels = transactionModels;
         this.context = context;
         this.activity = activity;
@@ -34,8 +34,7 @@ public class StatusTanamanAdapter extends RecyclerView.Adapter<StatusTanamanAdap
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_status_tanaman, parent, false);
-
+                .inflate(R.layout.item_detail_status_tanaman, parent, false);
         return new ViewHolder(v);
     }
 
@@ -43,10 +42,9 @@ public class StatusTanamanAdapter extends RecyclerView.Adapter<StatusTanamanAdap
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.tv_farm_name.setText(transactionModels.get(position));
-        holder.tv_tanaman_no.setText("Tanaman #"+position+1);
         holder.cvItem.setOnClickListener(view -> {
-            Intent intent = new Intent(activity, DetailStatusTanamanActivity.class);
-            intent.putExtra("plant_name", transactionModels.get(position));
+            Intent intent = new Intent(activity, DetailStatusLahanActivity.class);
+            intent.putExtra("tv_farm_name", transactionModels.get(position));
             activity.startActivity(intent);
             activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         });
@@ -58,16 +56,17 @@ public class StatusTanamanAdapter extends RecyclerView.Adapter<StatusTanamanAdap
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView img_plant;
-        TextView tv_farm_name, tv_tanaman_no, tv_total_location;
+        TextView tv_farm_name, tv_jumlah_lubang, tv_jumlah_lubang_kosong, tv_tanaman;
         ConstraintLayout cvItem;
+        ImageView img_plant;
 
         ViewHolder(View v) {
             super(v);
-            img_plant = v.findViewById(R.id.img_plant);
             tv_farm_name = v.findViewById(R.id.tv_farm_name);
-            tv_tanaman_no = v.findViewById(R.id.tv_tanaman_no);
-            tv_total_location = v.findViewById(R.id.tv_total_location);
+            tv_jumlah_lubang = v.findViewById(R.id.tv_jumlah_lubang);
+            tv_tanaman = v.findViewById(R.id.tv_tanaman);
+            tv_jumlah_lubang_kosong = v.findViewById(R.id.tv_jumlah_lubang_kosong);
+            img_plant = v.findViewById(R.id.img_plant);
             cvItem = v.findViewById(R.id.constraintLayout6);
         }
     }
