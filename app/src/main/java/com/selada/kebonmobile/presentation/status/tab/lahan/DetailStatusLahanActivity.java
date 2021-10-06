@@ -16,6 +16,7 @@ import android.widget.RelativeLayout;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.iambedant.text.OutlineTextView;
 import com.selada.kebonmobile.R;
+import com.selada.kebonmobile.presentation.jadwal.JadwalActivity;
 import com.selada.kebonmobile.presentation.status.tab.adapter.DetailStatusLahanAdapter;
 import com.selada.kebonmobile.util.MethodUtil;
 import com.selada.kebonmobile.util.ViewPagerDetailStatusAdapter;
@@ -57,7 +58,9 @@ public class DetailStatusLahanActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_jadwal)
     void onClcikJadwal(){
-
+        Intent intent = new Intent(this, JadwalActivity.class);
+        startActivity(intent);
+        this.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 
     @OnClick(R.id.btn_play)

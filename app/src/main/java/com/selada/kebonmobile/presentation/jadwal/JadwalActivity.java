@@ -11,9 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.github.dewinjm.monthyearpicker.MonthYearPickerDialog;
 import com.github.dewinjm.monthyearpicker.MonthYearPickerDialogFragment;
-import com.riontech.calendar.CustomCalendar;
-import com.riontech.calendar.dao.EventData;
-import com.riontech.calendar.dao.dataAboutDate;
 import com.selada.kebonmobile.R;
 import com.selada.kebonmobile.model.CalendarModel;
 import com.selada.kebonmobile.util.CalendarAdapter;
@@ -37,7 +34,6 @@ public class JadwalActivity extends AppCompatActivity {
     @BindView(R.id.year)
     TextView year;
 
-    private CustomCalendar customCalendar;
     private int DAYS_COUNT = 42;
     private List<CalendarModel> calendarList;
     private Calendar calendar;
@@ -183,22 +179,22 @@ public class JadwalActivity extends AppCompatActivity {
 //        }
     }
 
-    private ArrayList<EventData> getEventDataList(int eventCount) {
-        ArrayList<EventData> eventData = new ArrayList<>();
-        EventData data = new EventData();
-
-        ArrayList<dataAboutDate> dataAboutDateList = new ArrayList<>();
-        dataAboutDate aboutDate = new dataAboutDate();
-        aboutDate.setTitle("Panen");
-        aboutDate.setSubject("Tanaman anda sudah panen hari ini");
-        dataAboutDateList.add(aboutDate);
-
-        data.setSection("Panen Section");
-        data.setData(dataAboutDateList);
-        eventData.add(data);
-
-        return eventData;
-    }
+//    private ArrayList<EventData> getEventDataList(int eventCount) {
+//        ArrayList<EventData> eventData = new ArrayList<>();
+//        EventData data = new EventData();
+//
+//        ArrayList<dataAboutDate> dataAboutDateList = new ArrayList<>();
+//        dataAboutDate aboutDate = new dataAboutDate();
+//        aboutDate.setTitle("Panen");
+//        aboutDate.setSubject("Tanaman anda sudah panen hari ini");
+//        dataAboutDateList.add(aboutDate);
+//
+//        data.setSection("Panen Section");
+//        data.setData(dataAboutDateList);
+//        eventData.add(data);
+//
+//        return eventData;
+//    }
 
     @Override
     public void onBackPressed() {
