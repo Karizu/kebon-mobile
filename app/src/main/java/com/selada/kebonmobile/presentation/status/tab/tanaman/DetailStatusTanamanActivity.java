@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.iambedant.text.OutlineTextView;
 import com.selada.kebonmobile.R;
+import com.selada.kebonmobile.presentation.jadwal.JadwalActivity;
 import com.selada.kebonmobile.presentation.status.tab.adapter.DetailStatusLahanAdapter;
 import com.selada.kebonmobile.presentation.status.tab.adapter.DetailStatusTanamanAdapter;
 import com.skydoves.elasticviews.ElasticImageView;
@@ -43,7 +44,9 @@ public class DetailStatusTanamanActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_jadwal)
     void onClickJadwal(){
-
+        Intent intent = new Intent(this, JadwalActivity.class);
+        startActivity(intent);
+        this.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 
     @OnClick(R.id.btn_share)

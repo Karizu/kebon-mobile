@@ -3,10 +3,12 @@ package com.selada.kebonmobile.presentation.status;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
 import com.selada.kebonmobile.R;
+import com.selada.kebonmobile.presentation.status.history.HistoryActivity;
 import com.selada.kebonmobile.util.ViewPagerAdapter;
 import com.selada.kebonmobile.util.ViewPagerStatusAdapter;
 
@@ -30,7 +32,9 @@ public class StatusActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_history)
     void onClickHistory(){
-
+        Intent intent = new Intent(this, HistoryActivity.class);
+        startActivity(intent);
+        this.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 
     @OnClick(R.id.tab_lahan)

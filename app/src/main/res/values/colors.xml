@@ -25,6 +25,10 @@
     <color name="grey_disabled">#EAEAEA</color>
     <color name="grey_text">#787878</color>
 
+    <color name="date_true">#2c2e31</color>
+<!--    <color name="date_false">#c6c9cf</color>-->
+    <color name="date_false">#ABABAB</color>
+
     <color name="grey_control_highlight">#C4C4C4</color>
 
 
