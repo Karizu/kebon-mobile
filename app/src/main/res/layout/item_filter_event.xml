@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.skydoves.elasticviews.ElasticLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="6dp"
+    app:layout_duration="100"
+    android:background="@drawable/bg_item_filter_event">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingStart="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_farm_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:text="Depari Farm"
+            android:textColor="@color/White"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</com.skydoves.elasticviews.ElasticLayout>

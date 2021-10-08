@@ -1,12 +1,15 @@
 package com.selada.kebonmobile.presentation.home;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,20 +17,34 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.gson.Gson;
+import com.selada.kebonmobile.KebonApplication;
 import com.selada.kebonmobile.R;
+import com.selada.kebonmobile.model.JoinModel;
 import com.selada.kebonmobile.model.response.FeedBottomHome;
+import com.selada.kebonmobile.model.response.socket.SocketDataResponse;
 import com.selada.kebonmobile.presentation.home.adapter.HomeFeedAdapter;
 import com.selada.kebonmobile.presentation.home.adapter.HomeFeedBottomAdapter;
 import com.selada.kebonmobile.presentation.home.adapter.HomeLahanAdapter;
+import com.selada.kebonmobile.presentation.home.tanam.PilihTanamanActivity;
+import com.selada.kebonmobile.presentation.jadwal.JadwalActivity;
 import com.selada.kebonmobile.util.Constant;
 import com.selada.kebonmobile.util.PreferenceManager;
 import com.skydoves.elasticviews.ElasticImageView;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
+import io.socket.client.IO;
+import io.socket.client.Manager;
+import io.socket.client.Socket;
+import io.socket.emitter.Emitter;
 
 public class HomeFragment extends Fragment {
 
@@ -61,6 +78,100 @@ public class HomeFragment extends Fragment {
             "CARA MENYEWA LAHAN BARU",
             "CARA MEMILIH TANAMAN"
     };
+
+    private Socket socket;
+    private int RECONNECTION_ATTEMPT = 10;
+    private long CONNECTION_TIMEOUT = 30000;
+    private static final String[] TRANSPORTS = {
+            "websocket"
+    };
+
+    @OnClick(R.id.cv_jadwal)
+    void onClickJadwal(){
+        Intent intent = new Intent(requireActivity(), JadwalActivity.class);
+        startActivity(intent);
+        requireActivity().overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+    }
+
+    @OnClick(R.id.cv_tanam_baru)
+    void onClickTanamBaru(){
+        Intent intent = new Intent(requireActivity(), PilihTanamanActivity.class);
+        startActivity(intent);
+        requireActivity().overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+    }
+
+    @OnClick(R.id.imageView10)
+    void onClickBtnChat(){
+        attemptSend();
+    }
+
+    public void connectToSocket() {
+        try {
+            IO.Options opts = new IO.Options();
+            opts.timeout = CONNECTION_TIMEOUT;
+            opts.reconnection = true;
+            opts.reconnectionAttempts = RECONNECTION_ATTEMPT;
+            opts.reconnectionDelay = 1000;
+            opts.transports = TRANSPORTS;
+            opts.forceNew = true;
+            socket = IO.socket("http://13.250.108.11:8081", opts);
+            makeConnection();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void makeConnection() {
+        if (socket != null) {
+            socket.on("connect", onConnect);
+            socket.connect();
+            socket.on("message", args -> {
+                try {
+                    JSONObject messageJson = new JSONObject(args[0].toString());
+                    Log.d("message", new Gson().toJson(messageJson));
+                    String json = new Gson().toJson(messageJson);
+                    JSONObject message = new JSONObject(json);
+                    String msgJson = new Gson().toJson(message.get("nameValuePairs"));
+                    if (messageJson.has("msg_ucode")){
+                        SocketDataResponse socketDataResponse = new Gson().fromJson(msgJson, SocketDataResponse.class);
+                        Log.d("socketDataResponse", " - " + new Gson().toJson(socketDataResponse));
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            });
+            socket.on("roomData", args -> {
+                try {
+                    JSONObject messageJson = new JSONObject(args[0].toString());
+                    Log.d("roomData", new Gson().toJson(messageJson));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            });
+            socket.io().on(Manager.EVENT_TRANSPORT, args -> {
+//                    Transport transport = (Transport) args[0];
+//                    transport.on(Transport.EVENT_ERROR, new Emitter.Listener() {
+//                        @Override
+//                        public void call(Object... args) {
+//                            Exception e = (Exception) args[0];
+//                            Log.e("SOCKET", "Transport error " + e);
+//                            e.printStackTrace();
+//                            e.getCause().printStackTrace();
+//                        }
+//                    });
+            });
+        }
+    }
+
+    private Emitter.Listener onConnect = args -> {
+        Log.d("Socket", socket.connected()?"isConnected":"notConnect");
+    };
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        connectToSocket();
+    }
 
     @SuppressLint("InflateParams")
     @Nullable
@@ -140,4 +251,17 @@ public class HomeFragment extends Fragment {
         rv_home_lahan.setLayoutManager(layoutManager3);
         rv_home_lahan.setAdapter(adapter3);
     }
+
+    private void attemptSend() {
+        String jsonString = "{username: " + "'" + "rizkyazhary@gmail.com" + "', " + "room: " + "'" + "depari_gateway_1" + "'" +"}";
+        Log.d("join request", jsonString);
+        try {
+            JSONObject jsonData = new JSONObject(jsonString);
+            socket.emit("join", jsonData);
+        } catch (JSONException e){
+            e.printStackTrace();
+        }
+    }
+
+
 }

@@ -31,7 +31,6 @@ public class InformasiKeuntunganActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        finish();
         this.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 }

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="right"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <LinearLayout
+       android:layout_width="295dp"
+       android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:background="#B58342">
+
+      <TextView
+          android:id="@+id/tv_title_bar"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/poppins_bold"
+          android:layout_marginTop="9dp"
+          android:layout_marginStart="13dp"
+          android:text="Filter"
+          android:textColor="@android:color/white"
+          android:textSize="25sp" />
+
+      <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="2dp"
+         android:layout_marginTop="6dp"
+          android:background="#7B5A2E"
+          android:alpha="100"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/poppins_bold"
+          android:layout_marginTop="8dp"
+          android:layout_marginStart="17dp"
+          android:text="Lahan"
+          android:textColor="@android:color/white"
+          android:textSize="18sp" />
+
+      <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/rv_filter_lahan"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:numColumns="2"
+          tools:listitem="@layout/item_filter_event"
+          app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+
+      <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="2dp"
+          android:layout_marginTop="25dp"
+          android:background="#7B5A2E"
+          android:alpha="100"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/poppins_bold"
+          android:layout_marginTop="8dp"
+          android:layout_marginStart="17dp"
+          android:text="Tanaman"
+          android:textColor="@android:color/white"
+          android:textSize="18sp" />
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/rv_filter_tanaman"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:numColumns="2"
+          tools:listitem="@layout/item_filter_event"
+          app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+            <com.skydoves.elasticviews.ElasticButton
+               android:id="@+id/btn_atur_ulang"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toStartOf="@+id/btn_pakai"
+                android:layout_marginEnd="9dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+               android:text="Atur Ulang"
+               android:textColor="#FF0000"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_regular"
+                android:textAllCaps="false"
+                app:button_duration="100"
+               android:background="@drawable/bg_outline_atur_ulang"/>
+
+         <com.skydoves.elasticviews.ElasticButton
+             android:id="@+id/btn_pakai"
+             android:layout_width="93dp"
+             android:layout_height="wrap_content"
+             android:layout_alignParentBottom="true"
+             android:layout_alignParentEnd="true"
+             android:layout_marginEnd="18dp"
+             android:layout_marginBottom="16dp"
+             android:text="Pakai"
+             android:textColor="#11890E"
+             android:gravity="center"
+             android:textSize="12sp"
+             android:fontFamily="@font/poppins_regular"
+             android:textAllCaps="false"
+             app:button_duration="100"
+             android:background="@drawable/bg_outline_pakai"/>
+
+      </RelativeLayout>
+
+   </LinearLayout>
+
+</LinearLayout>

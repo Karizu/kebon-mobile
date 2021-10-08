@@ -19,4 +19,13 @@
         <item name="android:windowEnterAnimation">@anim/fade_in</item>
         <item name="android:windowExitAnimation">@anim/fade_out</item>
     </style>
+
+    <style name="DialogThemesFilter" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#B58342</item>
+        <item name="colorPrimaryDark">#B58342</item>
+        <item name="colorAccent">#B58342</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:windowEnterAnimation">@anim/slide_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_out</item>
+    </style>
 </resources>

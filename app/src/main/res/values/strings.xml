@@ -10,13 +10,6 @@
     <string name="ubah_password">Untuk mengamankan akunmu,
         silakan verifikasi identitas dengan
         memasukkan password</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="text_notif1">Ceritakan pengalaman Anda pada saat
-        berkebun di KEBON</string>
-    <string name="text_notif2">Panen sekarang Sawi Anda di Lahan Depari Farm</string>
-    <string name="text_notif3">Pembayaran sewa lahan anda telah diterima</string>
-    <string name="text_notif4">Segera melakukan pembayaran sewa lahan sebelum tanggal 24 Agustus 2021</string>
-    <string name="feedback_hint">Beritahu pengguna lain mengapa Anda sangat
-        menyukai hasil panen tanaman ini</string>
+    <string name="text">text</string>
+    <string name="desc_panen">Silahkan datang ke kebun <b>Depari Farm</b>\ndari tanggal <b>24 September s/d 27 September</b></string>
 </resources>

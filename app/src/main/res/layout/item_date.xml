@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.skydoves.elasticviews.ElasticLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="87.99dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="6dp"
+    app:layout_duration="100"
+    android:background="@drawable/bg_custom_calendar"
+    android:paddingBottom="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="87.99dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="16dp"
+            android:layout_height="23.33dp"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="11sp"
+            android:text="20"
+            android:background="@drawable/bg_union"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/dot"
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="2dp"
+            android:paddingLeft="1dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/text_event"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:textColor="@color/White"
+            android:text="2"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</com.skydoves.elasticviews.ElasticLayout>

@@ -12,4 +12,6 @@ public class Constant {
 
     public static final int AUTO_PILOT = 1;
     public static final int KONVENSIONAL = 2;
+
+    public static final String USERNAME = "depari_gateway_1";
 }

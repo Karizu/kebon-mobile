@@ -1,13 +1,12 @@
 package com.selada.kebonmobile.presentation.akun;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.selada.kebonmobile.R;
 import com.selada.kebonmobile.presentation.akun.alamat.DaftarAlamatActivity;
-import com.selada.kebonmobile.presentation.akun.alamat.UbahAlamatActivity;
 import com.selada.kebonmobile.presentation.akun.email.UbahEmailActivity;
 import com.selada.kebonmobile.presentation.akun.nama.UbahNamaActivity;
 import com.selada.kebonmobile.presentation.akun.password.UbahPasswordActivity;

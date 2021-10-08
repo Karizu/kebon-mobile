@@ -7,5 +7,8 @@
         <domain includeSubdomains="true">https://static.xx.fbcdn.net</domain>
         <domain includeSubdomains="true">https://www.bowcockpursaill.co.uk</domain>
         <domain includeSubdomains="true">https://archinect.imgix.net</domain>
+        <domain includeSubdomains="true">http://13.250.108.11</domain>
+        <domain includeSubdomains="true">http://13.250.108.11:8081</domain>
+        <domain includeSubdomains="true">13.250.108.11</domain>
     </domain-config>
 </network-security-config>

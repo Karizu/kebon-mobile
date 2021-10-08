@@ -101,6 +101,22 @@ public class MethodUtil extends Application {
         return dialog;
     }
 
+    public static Dialog getDialogFilter(int layout, Context context) {
+        Dialog dialog = new Dialog(context);
+        dialog.setContentView(layout);
+        dialog.setCanceledOnTouchOutside(true);
+        dialog.setCancelable(true);
+        Objects.requireNonNull(dialog.getWindow()).getAttributes().windowAnimations = R.style.DialogThemesFilter;
+        Objects.requireNonNull(dialog.getWindow()).setBackgroundDrawableResource(android.R.color.transparent);
+        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+        lp.copyFrom(Objects.requireNonNull(dialog.getWindow()).getAttributes());
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.height = WindowManager.LayoutParams.MATCH_PARENT;
+        dialog.show();
+        dialog.getWindow().setAttributes(lp);
+        return dialog;
+    }
+
     public static void toggleTransitionSlideEnd(ViewGroup parent, View layout, boolean isShow) {
         Transition transition = new Explode();
         transition.setDuration(300);
