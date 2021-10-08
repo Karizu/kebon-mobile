@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -33,13 +34,6 @@ public class NotificationPlantFragment extends Fragment {
     private NotificationAdapter notifAdapter;
     private ArrayList<NotificationModel> notifArrayList;
 
-
-//    @OnClick(R.id.notif1)
-//    void onClickFeedbackNotification() {
-//        Intent intent = new Intent(requireActivity(), FeedbackActivity.class);
-//        startActivity(intent);
-//        requireActivity().overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-//    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -67,4 +61,5 @@ public class NotificationPlantFragment extends Fragment {
         notifArrayList.add(new NotificationModel("Pembayaran","Pembayaran sewa lahan anda telah diterima", "23 Sept"));
         notifArrayList.add(new NotificationModel("Pembayaran","Segera melakukan pembayaran sewa lahan sebelum tanggal 24 Agustus 2021", "24 Sept"));
     }
+
 }

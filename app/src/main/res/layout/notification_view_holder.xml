@@ -6,15 +6,15 @@
     android:background="@drawable/bg_notif"
     app:layout_duration="100">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
         <FrameLayout
             android:id="@+id/chat_notif"
-            android:layout_width="63dp"
-            android:layout_height="63dp"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
             android:layout_marginStart="17dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
@@ -22,35 +22,41 @@
 
             <ImageView
                 android:id="@+id/img_notif"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/bg_chat_notif"/>
+                android:src="@drawable/bg_chat_notif" />
 
         </FrameLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:id="@+id/notif_content"
+            android:layout_width="242dp"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="12dp"
+            android:layout_toRightOf="@+id/chat_notif"
+            android:scrollbars="vertical">
 
             <TextView
                 android:id="@+id/notif_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="15dp"
+
                 android:text="Penilaian"
                 android:textSize="18sp"
                 android:textStyle="bold"
+                android:fontFamily="@font/poppins_semibold"
                 android:textColor="@color/Black" />
 
             <TextView
                 android:id="@+id/notif_text"
-                android:layout_width="242dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/text_notif1"
-                android:layout_marginStart="12dp"
+                android:text="text penilian"
+                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/Black"
                 android:textSize="12sp" />
 
@@ -64,8 +70,12 @@
             android:layout_marginEnd="7dp"
             android:textColor="@color/Black"
             android:text="29 Sept"
-            android:textSize="14sp" />
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_toRightOf="@+id/notif_content"
+            android:layout_alignParentRight="true"
+            android:textAlignment="textEnd"/>
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </com.skydoves.elasticviews.ElasticLayout>

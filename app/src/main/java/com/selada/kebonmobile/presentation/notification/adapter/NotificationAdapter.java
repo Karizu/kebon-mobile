@@ -1,9 +1,11 @@
 package com.selada.kebonmobile.presentation.notification.adapter;
 
 import android.app.Notification;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -11,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.selada.kebonmobile.R;
+import com.selada.kebonmobile.presentation.feedback.FeedbackActivity;
 import com.selada.kebonmobile.presentation.notification.model.NotificationModel;
 
 import org.jetbrains.annotations.NotNull;
@@ -48,6 +51,7 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
         return (notifList != null) ? notifList.size() : 0;
     }
 
+
     public class NotificationViewHolder extends RecyclerView.ViewHolder {
 
         private ImageView imgNotif;
@@ -58,6 +62,8 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
             notifTitle = itemView.findViewById(R.id.notif_title);
             notifText = itemView.findViewById(R.id.notif_text);
             notifDate = itemView.findViewById(R.id.notif_date);
+
         }
+
     }
 }
