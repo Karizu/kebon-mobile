@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient"
+    tools:context=".presentation.home.tanam.KeuntunganTanamanActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="41dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Keuntungan penjualan Kangkung setiap panen"
+        android:textColor="@color/colorDarkBlue"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/imageView15"
+        android:layout_width="wrap_content"
+        android:layout_height="233dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#FFFFFF">
+
+        <com.skydoves.elasticviews.ElasticButton
+            android:id="@+id/btn_tambah_keranjang"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+            android:text="Tambah Ke Keranjang"
+            android:textAllCaps="false"
+            android:textColor="@color/White"
+            android:fontFamily="@font/poppins_regular"
+            android:textStyle="bold"
+            app:button_duration="100"
+            android:background="@drawable/bg_button_round_green"/>
+
+        <TextView
+            android:id="@+id/btn_keuntungan_lain"
+            android:layout_below="@+id/btn_tambah_keranjang"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginEnd="46dp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Lihat keuntungan tanaman lain"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextOrange"/>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="185dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_percentage"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="46dp"
+                android:layout_marginEnd="46dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="50%"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorDarkBlue"/>
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="13dp"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Peningkatan sebesar persentase dalam setiap bulan sejak Agustus 2021 - September 2021"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorDarkBlue"/>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="123dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_grafik" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
