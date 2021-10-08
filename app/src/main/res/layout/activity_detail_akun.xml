@@ -34,6 +34,7 @@
                 android:id="@+id/btn_back"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
                 android:padding="15dp"
                 android:src="@drawable/ic_back"
                 app:imageView_duration="100"

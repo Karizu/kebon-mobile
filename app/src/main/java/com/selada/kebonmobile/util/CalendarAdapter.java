@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.selada.kebonmobile.R;
@@ -20,6 +21,7 @@ import com.selada.kebonmobile.model.CalendarModel;
 import com.selada.kebonmobile.presentation.status.history.DetailHistory;
 import com.skydoves.elasticviews.ElasticLayout;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -47,9 +49,6 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.date.setText(String.valueOf(transactionModels.get(position).getDate()));
-        holder.item.setOnClickListener(view -> {
-            Toast.makeText(context, dateBuilder(transactionModels.get(position).getDate(), transactionModels.get(position).getMonth()+1, transactionModels.get(position).getYear()), Toast.LENGTH_SHORT).show();
-        });
 
         if (transactionModels.get(position).getMonth() == transactionModels.get(position).getCalendarCompare().get(Calendar.MONTH) && transactionModels.get(position).getYear() == transactionModels.get(position).getCalendarCompare().get(Calendar.YEAR)){
             holder.item.setBackground(activity.getResources().getDrawable(R.drawable.bg_custom_calendar));
@@ -71,6 +70,18 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.ViewHo
         } else {
             holder.text_event.setVisibility(View.GONE);
         }
+
+        holder.item.setOnClickListener((View.OnClickListener) view -> {
+            if (transactionModels.get(position).getStatus()!=null){
+                if (transactionModels.get(position).getStatus().equals("event")){
+                    List<String> list = new ArrayList<>();
+                    list.add("Kangkung");
+                    list.add("Bayam");
+                    CustomBottomSheetDialog bottomSheet = new CustomBottomSheetDialog(list, context, activity);
+                    bottomSheet.show(((AppCompatActivity)context).getSupportFragmentManager(), "exampleBottomSheet");
+                }
+            }
+        });
     }
 
     @Override

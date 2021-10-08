@@ -13,6 +13,7 @@
             android:id="@+id/btn_back"
             android:layout_width="50dp"
             android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
             android:padding="15dp"
             android:src="@drawable/ic_back"
             app:imageView_duration="100"
@@ -30,14 +31,12 @@
         
         <com.skydoves.elasticviews.ElasticImageView
             android:id="@+id/btn_chat"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
             android:src="@drawable/ic_chat"
             android:layout_alignParentEnd="true"
-            android:padding="5dp"
-            app:imageView_duration="100"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="6dp"/>
+            android:padding="7dp"
+            app:imageView_duration="100"/>
 
     </RelativeLayout>
 

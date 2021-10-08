@@ -7,23 +7,24 @@
     android:background="@color/Black"
     tools:context=".presentation.home.lahan.GaleriLahanActivity">
 
-    <ImageView
+    <com.skydoves.elasticviews.ElasticImageView
         android:id="@+id/btn_back"
-        android:layout_width="22dp"
-        android:layout_height="22dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="18dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="15dp"
+        android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_back" />
+        app:imageView_duration="100"
+        app:imageView_scale="0.87" />
 
     <TextView
         android:id="@+id/tv_farm_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginStart="41dp"
-        android:layout_marginTop="11dp"
         android:layout_marginEnd="41dp"
         android:fontFamily="@font/poppins_semibold"
         android:gravity="center"

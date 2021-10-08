@@ -54,8 +54,8 @@ public class PilihMetodeActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.M)
     @OnClick(R.id.btn_auto_pilot)
     void onClickAutoPilot(){
-        btn_auto_pilot.setForeground(getResources().getDrawable(R.drawable.bg_outer_orange));
-        btn_konvensional.setForeground(getResources().getDrawable(R.drawable.bg_outer_bro));
+        btn_auto_pilot.setBackground(getResources().getDrawable(R.drawable.bg_outer_orange));
+        btn_konvensional.setBackground(getResources().getDrawable(R.drawable.bg_outer_bro));
         metodeType = Constant.AUTO_PILOT;
         btn_pilih.setEnabled(true);
     }
@@ -63,8 +63,8 @@ public class PilihMetodeActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.M)
     @OnClick(R.id.btn_konvensional)
     void onClickKonvensional(){
-        btn_auto_pilot.setForeground(getResources().getDrawable(R.drawable.bg_outer_bro));
-        btn_konvensional.setForeground(getResources().getDrawable(R.drawable.bg_outer_orange));
+        btn_auto_pilot.setBackground(getResources().getDrawable(R.drawable.bg_outer_bro));
+        btn_konvensional.setBackground(getResources().getDrawable(R.drawable.bg_outer_orange));
         metodeType = Constant.KONVENSIONAL;
         btn_pilih.setEnabled(true);
     }

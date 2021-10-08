@@ -36,7 +36,7 @@
                 android:layout_height="256.69dp"
                 android:layout_marginTop="12dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/hidroponik_43"/>
+                android:src="@drawable/img_home_feed"/>
 
             <LinearLayout
                 android:visibility="gone"
@@ -80,17 +80,17 @@
             <LinearLayout
                 android:id="@+id/layout_already_plant_site"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="6dp"
+                android:layout_height="match_parent"
                 android:paddingStart="9dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/tv_item_info"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="Status : Dalam Pembibitan\nJumlah Slot : 200\nJumlah Slot Kosong : 100"
                     android:textSize="16sp"
+                    android:gravity="center_vertical"
                     android:textColor="@color/colorTextBro"
                     android:fontFamily="@font/poppins_regular"
                     android:textStyle="bold"/>

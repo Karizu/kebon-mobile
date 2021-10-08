@@ -92,7 +92,7 @@
                 android:background="@drawable/bg_round_header_home"
                 android:gravity="center"
                 android:fontFamily="@font/poppins_regular"
-                android:paddingTop="2dp"
+                android:paddingTop="3dp"
                 android:text="15 Hari"
                 android:textSize="20sp"
                 android:textStyle="bold"

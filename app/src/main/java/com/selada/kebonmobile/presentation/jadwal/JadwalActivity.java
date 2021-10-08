@@ -16,6 +16,7 @@ import com.github.dewinjm.monthyearpicker.MonthYearPickerDialogFragment;
 import com.selada.kebonmobile.R;
 import com.selada.kebonmobile.model.CalendarModel;
 import com.selada.kebonmobile.util.CalendarAdapter;
+import com.selada.kebonmobile.util.CustomBottomSheetDialog;
 import com.selada.kebonmobile.util.MethodUtil;
 import com.skydoves.elasticviews.ElasticButton;
 
@@ -29,7 +30,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class JadwalActivity extends AppCompatActivity {
+public class JadwalActivity extends AppCompatActivity implements CustomBottomSheetDialog.BottomSheetListener{
 
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
@@ -239,5 +240,10 @@ public class JadwalActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         this.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+    }
+
+    @Override
+    public void onButtonClicked(String text) {
+
     }
 }
