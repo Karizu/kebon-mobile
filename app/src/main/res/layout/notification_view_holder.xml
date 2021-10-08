@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.skydoves.elasticviews.ElasticLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="93dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_notif"
+    app:layout_duration="100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/chat_notif"
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/bg_elipse_notif">
+
+            <ImageView
+                android:id="@+id/img_notif"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/bg_chat_notif"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/notif_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="15dp"
+                android:text="Penilaian"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/Black" />
+
+            <TextView
+                android:id="@+id/notif_text"
+                android:layout_width="242dp"
+                android:layout_height="wrap_content"
+                android:text="@string/text_notif1"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/Black"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/notif_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="7dp"
+            android:textColor="@color/Black"
+            android:text="29 Sept"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</com.skydoves.elasticviews.ElasticLayout>
