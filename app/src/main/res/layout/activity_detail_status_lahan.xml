@@ -154,6 +154,7 @@
                 android:layout_alignParentEnd="true"
                 android:background="?attr/selectableItemBackground"
                 android:padding="12dp"
+                app:imageView_duration="100"
                 android:src="@drawable/ic_calendar_orange"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

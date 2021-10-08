@@ -1,8 +1,10 @@
 package com.selada.kebonmobile.presentation.jadwal;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +16,8 @@ import com.github.dewinjm.monthyearpicker.MonthYearPickerDialogFragment;
 import com.selada.kebonmobile.R;
 import com.selada.kebonmobile.model.CalendarModel;
 import com.selada.kebonmobile.util.CalendarAdapter;
+import com.selada.kebonmobile.util.MethodUtil;
+import com.skydoves.elasticviews.ElasticButton;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -68,7 +72,42 @@ public class JadwalActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_filter)
     void onClickFilter(){
+        showDialogFilter();
+    }
 
+    private void showDialogFilter() {
+        Dialog dialog = MethodUtil.getDialogFilter(R.layout.dialog_filter_event, this);
+        RecyclerView rvFilterLahan = dialog.findViewById(R.id.rv_filter_lahan);
+        RecyclerView rvFilterTanaman = dialog.findViewById(R.id.rv_filter_tanaman);
+        LinearLayout layout = dialog.findViewById(R.id.dialog);
+        ElasticButton btn_atur_ulang = dialog.findViewById(R.id.btn_atur_ulang);
+        ElasticButton btn_pakai = dialog.findViewById(R.id.btn_pakai);
+
+        layout.setOnClickListener(view -> dialog.dismiss());
+        rvFilterLahan.setLayoutManager(new GridLayoutManager(this, 2));
+        rvFilterTanaman.setLayoutManager(new GridLayoutManager(this, 2));
+
+        List<String> list = new ArrayList<>();
+        list.add("Depari Farm");
+        list.add("Green HOS");
+        list.add("SeladaSegar");
+        list.add("Berastagi Farm");
+
+        FilterAdapter adapter = new FilterAdapter(list, this, this);
+        rvFilterLahan.setAdapter(adapter);
+
+        List<String> list2 = new ArrayList<>();
+        list2.add("Kangkung");
+        list2.add("Selada Merah");
+        list2.add("Selada Hijau");
+        list2.add("Pakcoy");
+        list2.add("Bayam");
+
+        FilterAdapter adapter2 = new FilterAdapter(list2, this, this);
+        rvFilterTanaman.setAdapter(adapter2);
+
+        btn_atur_ulang.setOnClickListener(view -> {});
+        btn_pakai.setOnClickListener(view -> {});
     }
 
     @OnClick(R.id.btn_back)

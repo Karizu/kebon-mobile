@@ -85,6 +85,7 @@
                 android:textColor="@color/colorDarkBlue"/>
 
             <TextView
+                android:id="@+id/tv_panen_terdekat"
                 android:layout_width="149dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="16dp"

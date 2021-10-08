@@ -6,15 +6,19 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.selada.kebonmobile.R;
 import com.selada.kebonmobile.presentation.status.history.HistoryActivity;
+import com.selada.kebonmobile.util.SocketClient;
 import com.selada.kebonmobile.util.ViewPagerAdapter;
 import com.selada.kebonmobile.util.ViewPagerStatusAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import io.socket.client.Socket;
+import io.socket.emitter.Emitter;
 
 public class StatusActivity extends AppCompatActivity {
 

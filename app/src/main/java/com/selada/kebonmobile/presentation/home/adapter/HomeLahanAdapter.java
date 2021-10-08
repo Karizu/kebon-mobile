@@ -20,6 +20,7 @@ import com.selada.kebonmobile.presentation.home.tanam.PilihMetodeActivity;
 import com.selada.kebonmobile.util.Constant;
 import com.selada.kebonmobile.util.PreferenceManager;
 import com.skydoves.elasticviews.ElasticButton;
+import com.skydoves.elasticviews.ElasticImageView;
 
 import java.util.List;
 
@@ -81,6 +82,10 @@ public class HomeLahanAdapter extends RecyclerView.Adapter<HomeLahanAdapter.View
                 holder.tv_item_info.setText("Status : "+ plantStatus + "\nJumlah Slot : "+ slot + "\nJumlah Slot Kosong : " + slotKosong);
                 break;
         }
+
+        holder.btn_play.setOnClickListener(view -> {
+
+        });
     }
 
     @Override
@@ -93,6 +98,7 @@ public class HomeLahanAdapter extends RecyclerView.Adapter<HomeLahanAdapter.View
         TextView tv_farm_name, tv_status_farm, tv_item_info;
         ElasticButton btn_rincian;
         LinearLayout layout_already_plant_site, layout_hold_and_plant;
+        ElasticImageView btn_play;
 
         ViewHolder(View v) {
             super(v);
@@ -103,6 +109,7 @@ public class HomeLahanAdapter extends RecyclerView.Adapter<HomeLahanAdapter.View
             btn_rincian = v.findViewById(R.id.btn_rincian);
             layout_already_plant_site = v.findViewById(R.id.layout_already_plant_site);
             layout_hold_and_plant = v.findViewById(R.id.layout_ready_plant);
+            btn_play = v.findViewById(R.id.btn_play);
         }
     }
 }
