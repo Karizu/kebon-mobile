@@ -12,4 +12,5 @@
         memasukkan password</string>
     <string name="text">text</string>
     <string name="desc_panen">Silahkan datang ke kebun <b>Depari Farm</b>\ndari tanggal <b>24 September s/d 27 September</b></string>
+    <string name="feedback_hint">Beritahu pengguna lain mengapa Anda sangat menyukai hasil panen tanaman ini</string>
 </resources>
