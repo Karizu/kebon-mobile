@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import com.selada.kebonmobile.presentation.akun.AkunFragment;
 import com.selada.kebonmobile.presentation.home.HomeFragment;
 import com.selada.kebonmobile.presentation.notification.NotificationFragment;
+import com.selada.kebonmobile.presentation.notification.NotificationPlantFragment;
 import com.selada.kebonmobile.presentation.status.StatusFragment;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
@@ -23,7 +24,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
             case 1:
                 return new StatusFragment();
             case 2:
-                return new NotificationFragment();
+                return new NotificationPlantFragment();
             case 3:
                 return new AkunFragment();
         }

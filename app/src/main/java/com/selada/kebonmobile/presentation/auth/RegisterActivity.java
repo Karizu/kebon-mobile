@@ -20,9 +20,14 @@ public class RegisterActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_lanjutkan)
     void onClickLnajutkan(){
-        Intent intent = new Intent(RegisterActivity.this, Register2Activity.class);
-        startActivity(intent);
-        RegisterActivity.this.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        if (editTextName.getText().toString().equals("")) {
+            editTextName.setError("Nama harus diisi");
+        } else {
+            Intent intent = new Intent(RegisterActivity.this, Register2Activity.class);
+            intent.putExtra("name", editTextName.getText().toString());
+            startActivity(intent);
+            RegisterActivity.this.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        }
     }
 
     @Override

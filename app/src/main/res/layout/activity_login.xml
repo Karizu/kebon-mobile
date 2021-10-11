@@ -40,14 +40,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
-        android:id="@+id/editTextPass"
+        android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginStart="26dp"
         android:layout_marginEnd="26dp"
         android:textSize="14sp"
-        android:inputType="text"
+        android:inputType="textEmailAddress"
         android:fontFamily="@font/poppins_regular"
         android:hint="Masukkan alamat email anda"
         android:background="@drawable/bg_field_transparent"
@@ -57,6 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <ImageView
+        android:id="@+id/imageView12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
@@ -81,10 +82,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPass" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
     <in.anshul.libray.PasswordEditText
-        android:id="@+id/editTextKonfirmPass"
+        android:id="@+id/editTextPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -92,6 +93,7 @@
         android:layout_marginEnd="26dp"
         android:textSize="14sp"
         android:fontFamily="@font/poppins_regular"
+        android:inputType="textPassword"
         android:hint="Masukkan password anda"
         android:background="@drawable/bg_field_transparent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,19 +106,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="2dp"
         android:layout_marginEnd="26dp"
         android:src="@drawable/img_line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextKonfirmPass" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
     <com.skydoves.elasticviews.ElasticButton
         android:id="@+id/btn_lanjutkan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="26dp"
         android:background="@drawable/bg_button_round_green"
         android:fontFamily="@font/poppins_bold"
@@ -127,14 +129,15 @@
         app:button_duration="100"
         app:button_scale="0.87"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextKonfirmPass" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
 
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="match_parent"
         android:layout_height="202dp"
-        android:layout_marginBottom="-4dp"
+        android:layout_marginBottom="-10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

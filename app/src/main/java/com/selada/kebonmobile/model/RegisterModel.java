@@ -1,12 +1,10 @@
 package com.selada.kebonmobile.model;
 
-import java.util.List;
-
 public class RegisterModel {
     private String username;
     private String password;
-    private String email;
-    private List<String> roles;
+    private String conf_password;
+    private String fullname;
 
     public String getUsername() {
         return username;
@@ -24,19 +22,19 @@ public class RegisterModel {
         this.password = password;
     }
 
-    public String getEmail() {
-        return email;
+    public String getConf_password() {
+        return conf_password;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setConf_password(String conf_password) {
+        this.conf_password = conf_password;
     }
 
-    public List<String> getRoles() {
-        return roles;
+    public String getFullname() {
+        return fullname;
     }
 
-    public void setRoles(List<String> roles) {
-        this.roles = roles;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 }

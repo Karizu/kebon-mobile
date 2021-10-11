@@ -10,6 +10,6 @@
     android:ellipsize="marquee"
     android:textColor="#B36602"
     android:fontFamily="@font/poppins_regular"
-    android:textSize="15sp"
+    android:textSize="13sp"
     android:textStyle="bold"
     android:textAlignment="inherit"/>

@@ -1,11 +1,10 @@
 
 package com.selada.kebonmobile.model.response;
 
-import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class LoginResponse {
+public class RegisterResponse {
 
     @SerializedName("message")
     @Expose

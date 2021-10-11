@@ -10,5 +10,6 @@
         <domain includeSubdomains="true">http://13.250.108.11</domain>
         <domain includeSubdomains="true">http://13.250.108.11:8081</domain>
         <domain includeSubdomains="true">13.250.108.11</domain>
+        <domain includeSubdomains="true">13.250.123.226</domain>
     </domain-config>
 </network-security-config>

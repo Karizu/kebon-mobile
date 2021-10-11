@@ -21,14 +21,18 @@ import com.google.gson.Gson;
 import com.selada.kebonmobile.KebonApplication;
 import com.selada.kebonmobile.R;
 import com.selada.kebonmobile.model.JoinModel;
+import com.selada.kebonmobile.model.response.ApiResponse;
 import com.selada.kebonmobile.model.response.FeedBottomHome;
+import com.selada.kebonmobile.model.response.SiteResponse;
 import com.selada.kebonmobile.model.response.socket.SocketDataResponse;
+import com.selada.kebonmobile.network.ApiCore;
 import com.selada.kebonmobile.presentation.home.adapter.HomeFeedAdapter;
 import com.selada.kebonmobile.presentation.home.adapter.HomeFeedBottomAdapter;
 import com.selada.kebonmobile.presentation.home.adapter.HomeLahanAdapter;
 import com.selada.kebonmobile.presentation.home.tanam.PilihTanamanActivity;
 import com.selada.kebonmobile.presentation.jadwal.JadwalActivity;
 import com.selada.kebonmobile.util.Constant;
+import com.selada.kebonmobile.util.Loading;
 import com.selada.kebonmobile.util.PreferenceManager;
 import com.skydoves.elasticviews.ElasticImageView;
 
@@ -37,6 +41,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -45,6 +50,9 @@ import io.socket.client.IO;
 import io.socket.client.Manager;
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class HomeFragment extends Fragment {
 
@@ -186,9 +194,12 @@ public class HomeFragment extends Fragment {
         ButterKnife.bind(this, view);
         new PreferenceManager(requireActivity());
         initComponent();
+        getListSite();
     }
 
     private void initComponent() {
+//        getListSite();
+        PreferenceManager.setUserStatus(Constant.GUEST);
 
         switch (PreferenceManager.getUserStatus()) {
             case Constant.GUEST:
@@ -223,7 +234,6 @@ public class HomeFragment extends Fragment {
                 break;
         }
 
-        LinearLayoutManager layoutManager = new LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false);
         LinearLayoutManager layoutManager2 = new LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false);
         LinearLayoutManager layoutManager3 = new LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false);
 
@@ -239,10 +249,6 @@ public class HomeFragment extends Fragment {
             feedBottomHomes.add(bottomHome);
         }
 
-        HomeFeedAdapter adapter = new HomeFeedAdapter(list, requireContext(), requireActivity());
-        rv_home_1.setLayoutManager(layoutManager);
-        rv_home_1.setAdapter(adapter);
-
         HomeFeedBottomAdapter adapter2 = new HomeFeedBottomAdapter(requireContext(), requireActivity(), feedBottomHomes);
         rv_home_2.setLayoutManager(layoutManager2);
         rv_home_2.setAdapter(adapter2);
@@ -250,6 +256,30 @@ public class HomeFragment extends Fragment {
         HomeLahanAdapter adapter3 = new HomeLahanAdapter(list, requireContext(), requireActivity());
         rv_home_lahan.setLayoutManager(layoutManager3);
         rv_home_lahan.setAdapter(adapter3);
+    }
+
+    private void getListSite(){
+        Loading.show(requireActivity());
+        ApiCore.apiInterface().getListSite(PreferenceManager.getSessionToken()).enqueue(new Callback<ApiResponse<List<SiteResponse>>>() {
+            @Override
+            public void onResponse(Call<ApiResponse<List<SiteResponse>>> call, Response<ApiResponse<List<SiteResponse>>> response) {
+                Loading.hide(requireActivity());
+                try {
+                    List<SiteResponse> responses = Objects.requireNonNull(response.body()).getData();
+                    HomeFeedAdapter adapter = new HomeFeedAdapter(responses, requireContext(), requireActivity());
+                    rv_home_1.setLayoutManager(new LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false));
+                    rv_home_1.setAdapter(adapter);
+                } catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ApiResponse<List<SiteResponse>>> call, Throwable t) {
+                t.printStackTrace();
+                Loading.hide(requireActivity());
+            }
+        });
     }
 
     private void attemptSend() {

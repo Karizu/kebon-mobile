@@ -211,7 +211,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:visibility="visible"
+            android:visibility="gone"
             android:id="@+id/layout_already_plant_site"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

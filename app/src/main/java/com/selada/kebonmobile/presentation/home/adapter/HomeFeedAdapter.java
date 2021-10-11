@@ -13,17 +13,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.selada.kebonmobile.R;
+import com.selada.kebonmobile.model.response.SiteResponse;
 import com.selada.kebonmobile.presentation.home.lahan.SewaLahanActivity;
 import com.skydoves.elasticviews.ElasticCardView;
 
 import java.util.List;
 
 public class HomeFeedAdapter extends RecyclerView.Adapter<HomeFeedAdapter.ViewHolder> {
-    private List<String> transactionModels;
+    private List<SiteResponse> transactionModels;
     private Context context;
     private Activity activity;
 
-    public HomeFeedAdapter(List<String> transactionModels, Context context, Activity activity) {
+    public HomeFeedAdapter(List<SiteResponse> transactionModels, Context context, Activity activity) {
         this.transactionModels = transactionModels;
         this.context = context;
         this.activity = activity;
@@ -41,6 +42,9 @@ public class HomeFeedAdapter extends RecyclerView.Adapter<HomeFeedAdapter.ViewHo
     @SuppressLint({"SetTextI18n", "ResourceAsColor", "CheckResult"})
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        SiteResponse siteResponse = transactionModels.get(position);
+
+        holder.text_item.setText(siteResponse.getName());
         holder.cvItem.setOnClickListener(view -> {
             Intent intent = new Intent(activity, SewaLahanActivity.class);
             activity.startActivity(intent);
