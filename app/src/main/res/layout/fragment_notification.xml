@@ -2,38 +2,119 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/bg_splash_gradient"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="vertical">
+        android:layout_height="?attr/actionBarSize"
+        android:background="#67C8B4">
 
-        <ImageView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="49dp"
-            android:layout_marginEnd="49dp"
-            android:src="@drawable/ic_notification_empty"/>
+            android:layout_height="match_parent">
 
-        <com.skydoves.elasticviews.ElasticButton
-            android:id="@+id/btn_tanam"
+            <com.skydoves.elasticviews.ElasticImageView
+                android:visibility="gone"
+                android:id="@+id/btn_back"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:padding="15dp"
+                android:src="@drawable/ic_back"
+                app:imageView_duration="100"
+                app:imageView_scale="0.87" />
+
+            <TextView
+                android:id="@+id/tv_title_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notifikasi"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:layout_centerInParent="true"/>
+
+            <com.skydoves.elasticviews.ElasticImageView
+                android:visibility="gone"
+                android:id="@+id/btn_chat"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_chat"
+                android:layout_alignParentEnd="true"
+                android:padding="7dp"
+                app:imageView_duration="100"/>
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.madapps.liquid.LiquidRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:AniBackColor="#A5DCB1"
+        app:AniForeColor="#FBF4EA"
+        android:layout_below="@+id/appBar">
+
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="21dp"
-            android:layout_marginStart="59dp"
-            android:layout_marginEnd="64dp"
-            android:layout_marginBottom="19dp"
-            android:background="@drawable/bg_button_round"
-            android:fontFamily="@font/poppins_bold"
-            android:text="Mulai Tanam Sekarang!"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            app:button_duration="100"
-            app:button_scale="0.87" />
+            android:layout_height="match_parent">
 
-    </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:scrollbars="vertical"
+                    android:orientation="vertical"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/notification_view_holder"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/layout_no_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="49dp"
+                        android:layout_marginEnd="49dp"
+                        android:src="@drawable/ic_notification_empty"/>
+
+                    <com.skydoves.elasticviews.ElasticButton
+                        android:id="@+id/btn_tanam"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginStart="59dp"
+                        android:layout_marginEnd="64dp"
+                        android:layout_marginBottom="19dp"
+                        android:background="@drawable/bg_button_round"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Mulai Tanam Sekarang!"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        app:button_duration="100"
+                        app:button_scale="0.87" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </com.madapps.liquid.LiquidRefreshLayout>
 
 </RelativeLayout>

@@ -46,64 +46,97 @@
 
         </com.skydoves.elasticviews.ElasticLayout>
 
-        <TextView
-            android:id="@+id/tv_pengguna"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
             android:layout_toEndOf="@+id/frame_profile"
-            android:fontFamily="@font/poppins_regular"
-            android:gravity="center"
-            android:text="Dharmadi"
-            android:textColor="@color/colorTextBroLight"
-            android:textSize="12sp"
-            android:textStyle="bold"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/frame_profile"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_pengguna"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/colorTextBroLight"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/colorTextBroLight"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/colorTextBroLight"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/jumlah_lahan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_pengguna"
             android:layout_marginStart="16dp"
             android:layout_marginTop="3dp"
             android:layout_toEndOf="@+id/frame_profile"
             android:fontFamily="@font/poppins_regular"
             android:gravity="center"
-            android:text="Jumlah Lahan"
+            android:text="Jumlah Lahan :"
             android:textColor="@color/colorTextBroLight"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/frame_profile"
-            app:layout_constraintTop_toBottomOf="@+id/tv_pengguna" />
+            app:layout_constraintTop_toBottomOf="@+id/layout" />
 
         <TextView
             android:id="@+id/tv_jumlah_lahan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="6dp"
             android:layout_marginTop="3dp"
             android:layout_toEndOf="@+id/frame_profile"
             android:fontFamily="@font/poppins_regular"
             android:gravity="center"
-            android:text="2"
+            android:text="-"
             android:textColor="@color/colorTextBroLight"
             android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/jumlah_lahan"
-            app:layout_constraintTop_toBottomOf="@+id/tv_pengguna" />
+            app:layout_constraintTop_toBottomOf="@+id/layout" />
 
         <TextView
             android:id="@+id/jumlah_slot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_pengguna"
             android:layout_marginStart="16dp"
             android:layout_toEndOf="@+id/frame_profile"
             android:fontFamily="@font/poppins_regular"
             android:gravity="center"
-            android:text="Jumlah Slot"
+            android:text="Jumlah Slot : "
             android:textColor="@color/colorTextBroLight"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/frame_profile"
@@ -113,11 +146,11 @@
             android:id="@+id/tv_jumlah_slot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="6dp"
             android:layout_toEndOf="@+id/frame_profile"
             android:fontFamily="@font/poppins_regular"
             android:gravity="center"
-            android:text="100"
+            android:text="-"
             android:textColor="@color/colorTextBroLight"
             android:textSize="12sp"
             android:textStyle="bold"
@@ -125,10 +158,10 @@
             app:layout_constraintTop_toBottomOf="@+id/jumlah_lahan" />
 
         <TextView
+            android:visibility="gone"
             android:id="@+id/jumlah_slot_kosong"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_pengguna"
             android:layout_marginStart="16dp"
             android:layout_toEndOf="@+id/frame_profile"
             android:fontFamily="@font/poppins_regular"
@@ -140,6 +173,7 @@
             app:layout_constraintTop_toBottomOf="@+id/jumlah_slot" />
 
         <TextView
+            android:visibility="gone"
             android:id="@+id/tv_jumlah_slot_kosong"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -147,7 +181,7 @@
             android:layout_toEndOf="@+id/frame_profile"
             android:fontFamily="@font/poppins_regular"
             android:gravity="center"
-            android:text="20"
+            android:text="-"
             android:textColor="@color/colorTextBroLight"
             android:textSize="12sp"
             android:textStyle="bold"
@@ -155,34 +189,38 @@
             app:layout_constraintTop_toBottomOf="@+id/jumlah_slot" />
 
         <TextView
+            android:visibility="gone"
             android:id="@+id/masa_sewa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_pengguna"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/frame_profile"
             android:fontFamily="@font/poppins_regular"
             android:gravity="center"
-            android:text="Masa Sewa"
+            android:text="Berakhir Sewa"
             android:textColor="@color/colorTextBroLight"
             android:textSize="12sp"
-            app:layout_constraintStart_toEndOf="@+id/frame_profile"
-            app:layout_constraintTop_toBottomOf="@+id/jumlah_slot_kosong" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frame_profile" />
 
         <TextView
+            android:visibility="gone"
             android:id="@+id/tv_masa_sewa"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/frame_profile"
             android:fontFamily="@font/poppins_regular"
-            android:gravity="center"
-            android:text="1 Tahun"
+            android:lines="1"
+            android:text="2022-10-25 00:00:00, 2022-10-26 00:00:00"
             android:textColor="@color/colorTextBroLight"
             android:textSize="12sp"
             android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/masa_sewa"
-            app:layout_constraintTop_toBottomOf="@+id/jumlah_slot_kosong" />
+            app:layout_constraintTop_toBottomOf="@+id/frame_profile" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -261,7 +299,7 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/poppins_regular"
                 android:gravity="center_vertical"
-                android:text="Histori"
+                android:text="Riwayat Pembayaran"
                 android:textColor="@color/colorTextBroLight"
                 android:textSize="16sp"
                 android:textStyle="bold" />

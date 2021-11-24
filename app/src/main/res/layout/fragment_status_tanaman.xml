@@ -1,58 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<com.madapps.liquid.LiquidRefreshLayout android:id="@+id/refreshLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:AniBackColor="#FBF4EA"
+    app:AniForeColor="#F9E5CA"
+    app:CircleSmaller="6"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <com.skydoves.elasticviews.ElasticLayout
-        android:id="@+id/layout_spinner"
-        android:layout_width="150dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/bg_spinner_status_tanaman"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_duration="50">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <Spinner
-                android:id="@+id/spinner_filter_tanaman"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@null"
-                android:fontFamily="@font/poppins_regular"
-                android:gravity="center"
-                android:textColor="@color/colorTextBroLight"
-                android:textSize="14sp" />
-
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginEnd="4dp"
-                android:padding="5dp"
-                android:src="@drawable/ic_spinner" />
-
-        </LinearLayout>
-
-    </com.skydoves.elasticviews.ElasticLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_status_tanaman"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6.5dp"
-        android:layout_marginEnd="6.5dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_spinner" />
+        android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.skydoves.elasticviews.ElasticLayout
+                android:id="@+id/layout_spinner"
+                android:layout_width="150dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_spinner_status_tanaman"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_duration="50">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner_filter_tanaman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:textColor="@color/colorTextBroLight"
+                        android:textSize="14sp" />
+
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="4dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_spinner" />
+
+                </LinearLayout>
+
+            </com.skydoves.elasticviews.ElasticLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:visibility="visible"
+                android:id="@+id/rv_status_tanaman"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6.5dp"
+                android:layout_marginEnd="6.5dp"
+                android:layout_marginTop="10dp"
+                tools:listitem="@layout/item_status_tanaman"
+                tools:itemCount="1"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_spinner" />
+
+            <RelativeLayout
+                android:id="@+id/layout_no_data"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_status_tanaman">
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lottie"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="34dp"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:text="Anda belum memiliki tanaman"
+                    android:textColor="@color/colorDarkBlue"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</com.madapps.liquid.LiquidRefreshLayout>

@@ -13,19 +13,21 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.selada.kebonmobile.R;
+import com.selada.kebonmobile.model.CommodityCart;
 import com.skydoves.elasticviews.ElasticButton;
 import com.skydoves.elasticviews.ElasticImageView;
 
 import java.util.List;
 
 public class ItemCompleteAdapter extends RecyclerView.Adapter<ItemCompleteAdapter.ViewHolder> {
-    private List<String> transactionModels;
+    private List<CommodityCart> transactionModels;
     private Context context;
     private Activity activity;
     private boolean isCheckedAll = false;
 
-    public ItemCompleteAdapter(List<String> transactionModels, Context context, Activity activity) {
+    public  ItemCompleteAdapter(List<CommodityCart> transactionModels, Context context, Activity activity) {
         this.transactionModels = transactionModels;
         this.context = context;
         this.activity = activity;
@@ -42,7 +44,16 @@ public class ItemCompleteAdapter extends RecyclerView.Adapter<ItemCompleteAdapte
     @SuppressLint({"SetTextI18n", "ResourceAsColor", "CheckResult"})
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.tv_plant_name.setText(transactionModels.get(position));
+        CommodityCart cart = transactionModels.get(position);
+        holder.tv_plant_name.setText(cart.getName());
+        holder.tv_jumlah.setText(String.valueOf(cart.getTotal_objects()));
+        Glide.with(activity)
+                .load(cart.getImage())
+                .placeholder(R.drawable.img_plant)
+                .into(holder.img_plant);
+        holder.tv_site.setText(cart.getFarm_name());
+        holder.tv_panen.setText("-");
+        holder.tv_harga_jual.setText("-");
     }
 
     @Override

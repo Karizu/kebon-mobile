@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.selada.kebonmobile.R;
 import com.selada.kebonmobile.presentation.akun.DetailAkunActivity;
+import com.selada.kebonmobile.util.PreferenceManager;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -16,11 +18,14 @@ import butterknife.OnClick;
 
 public class UbahNamaActivity extends AppCompatActivity {
 
+    @BindView(R.id.ubahNama)
+    EditText ubahNama;
+
     @OnClick(R.id.save_name)
     void onClickSaveName(){
         finish();
         this.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-        Toast.makeText(getApplicationContext(), "Successfully saved", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getApplicationContext(), "Successfully saved", Toast.LENGTH_SHORT).show();
     }
 
     @OnClick(R.id.btn_back)
@@ -33,6 +38,8 @@ public class UbahNamaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ubah_nama);
         ButterKnife.bind(this);
+
+        ubahNama.setText(PreferenceManager.getLoginResponse().getUser().getProfile().getFullName());
     }
 
     public void saveName(View view) {

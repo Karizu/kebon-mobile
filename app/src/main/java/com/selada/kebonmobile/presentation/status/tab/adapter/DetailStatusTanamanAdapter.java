@@ -14,17 +14,23 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.selada.kebonmobile.R;
+import com.selada.kebonmobile.model.response.commoditymonitoring.CurrentSite;
+import com.selada.kebonmobile.model.response.detailcommodities.ActiveSite;
+import com.selada.kebonmobile.presentation.home.tanam.PilihTanamanActivity;
 import com.selada.kebonmobile.presentation.status.tab.lahan.DetailStatusLahanActivity;
+import com.selada.kebonmobile.presentation.status.tab.tanaman.DetailStatusTanamanActivity;
 
 import java.util.List;
 
 public class DetailStatusTanamanAdapter extends RecyclerView.Adapter<DetailStatusTanamanAdapter.ViewHolder> {
-    private List<String> transactionModels;
+    private List<CurrentSite> transactionModels;
     private Context context;
     private Activity activity;
+    private int pos = -1;
 
-    public DetailStatusTanamanAdapter(List<String> transactionModels, Context context, Activity activity) {
+    public DetailStatusTanamanAdapter(List<CurrentSite> transactionModels, Context context, Activity activity) {
         this.transactionModels = transactionModels;
         this.context = context;
         this.activity = activity;
@@ -41,13 +47,26 @@ public class DetailStatusTanamanAdapter extends RecyclerView.Adapter<DetailStatu
     @SuppressLint({"SetTextI18n", "ResourceAsColor", "CheckResult"})
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.tv_farm_name.setText(transactionModels.get(position));
+        CurrentSite currentSite = transactionModels.get(position);
+        holder.tv_farm_name.setText(currentSite.getName());
+        holder.tv_alamat.setText(currentSite.getAddressStreet() + ", " + currentSite.getAddressSubdistrict() + ", " + currentSite.getAddressCity());
         holder.cvItem.setOnClickListener(view -> {
-            Intent intent = new Intent(activity, DetailStatusLahanActivity.class);
-            intent.putExtra("tv_farm_name", transactionModels.get(position));
-            activity.startActivity(intent);
-            activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+            if (context instanceof DetailStatusTanamanActivity) {
+                ((DetailStatusTanamanActivity)context).setSiteId(currentSite.getSiteId());
+            }
+            pos = position;
+            notifyDataSetChanged();
         });
+        Glide.with(activity)
+                .load(currentSite.getLogo().getFullpath())
+                .placeholder(R.drawable.img_plant)
+                .into(holder.img_plant);
+
+        if(pos==position){
+            holder.cvItem.setBackground(activity.getResources().getDrawable(R.drawable.bg_outer_pilih_tanaman));
+        } else {
+            holder.cvItem.setBackground(activity.getResources().getDrawable(R.drawable.bg_round_detail_pesanan));
+        }
     }
 
     @Override
@@ -56,16 +75,14 @@ public class DetailStatusTanamanAdapter extends RecyclerView.Adapter<DetailStatu
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tv_farm_name, tv_jumlah_lubang, tv_jumlah_lubang_kosong, tv_tanaman;
+        TextView tv_farm_name, tv_alamat;
         ConstraintLayout cvItem;
         ImageView img_plant;
 
         ViewHolder(View v) {
             super(v);
             tv_farm_name = v.findViewById(R.id.tv_farm_name);
-            tv_jumlah_lubang = v.findViewById(R.id.tv_jumlah_lubang);
-            tv_tanaman = v.findViewById(R.id.tv_tanaman);
-            tv_jumlah_lubang_kosong = v.findViewById(R.id.tv_jumlah_lubang_kosong);
+            tv_alamat = v.findViewById(R.id.tv_alamat);
             img_plant = v.findViewById(R.id.img_plant);
             cvItem = v.findViewById(R.id.constraintLayout6);
         }

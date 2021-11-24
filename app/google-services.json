@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1030456583971",
+    "project_id": "kebon-smart-farm",
+    "storage_bucket": "kebon-smart-farm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030456583971:android:d0616467e3e26488b5ce96",
+        "android_client_info": {
+          "package_name": "com.selada.kebonmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1030456583971-can2skhnodv3f8tsm9jqvuoej0vej1cr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.selada.kebonmobile",
+            "certificate_hash": "6d1a3db39b1a5f78e147674e97ea2e491ef5f7c6"
+          }
+        },
+        {
+          "client_id": "1030456583971-limi5ejllmfjj2ftskva7ej5t2rn5mt0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk4mwD-o46Tad8E9wL-2LMaaVi2G0iGLw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1030456583971-limi5ejllmfjj2ftskva7ej5t2rn5mt0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

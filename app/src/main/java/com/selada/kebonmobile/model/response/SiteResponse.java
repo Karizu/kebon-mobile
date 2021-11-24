@@ -46,6 +46,28 @@ public class SiteResponse {
     @SerializedName("site_components")
     @Expose
     private List<SiteComponent> siteComponents;
+    @SerializedName("image")
+    @Expose
+    private Image image;
+    @SerializedName("logo")
+    @Expose
+    private Logo logo;
+
+    public Logo getLogo() {
+        return logo;
+    }
+
+    public void setLogo(Logo logo) {
+        this.logo = logo;
+    }
+
+    public Image getImage() {
+        return image;
+    }
+
+    public void setImage(Image image) {
+        this.image = image;
+    }
 
     public Integer getId() {
         return id;

@@ -16,7 +16,7 @@
         android:layout_marginBottom="25dp"
         android:background="@drawable/bg_button_round"
         android:fontFamily="@font/poppins_bold"
-        android:text="Gabung Sekarang"
+        android:text="Login"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         app:button_duration="100"
@@ -32,7 +32,7 @@
         android:layout_marginBottom="48dp"
         android:fontFamily="@font/poppins_semibold"
         android:gravity="center"
-        android:text="Sudah Punya Akun? Klik Disini"
+        android:text="Belum Punya Akun? Daftar Disini"
         android:textColor="@color/colorOrange"
         android:layout_alignParentBottom="true"/>
 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_round_rincian_bayar">
+
+        <TextView
+            android:id="@+id/tv_rincian_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="Siap Panen"
+            android:textColor="@color/colorTextBro"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_rincian_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Tanaman anda siap untuk dipanen"
+            android:textColor="@color/colorTextBro"
+            android:textSize="16sp" />
+
+        <com.skydoves.elasticviews.ElasticButton
+            android:id="@+id/btn_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_button_round"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Cek sekarang"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:button_duration="100"
+            app:button_scale="0.87"
+            android:layout_below="@id/tv_msg"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

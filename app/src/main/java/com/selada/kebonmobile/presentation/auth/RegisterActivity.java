@@ -23,7 +23,7 @@ public class RegisterActivity extends AppCompatActivity {
         if (editTextName.getText().toString().equals("")) {
             editTextName.setError("Nama harus diisi");
         } else {
-            Intent intent = new Intent(RegisterActivity.this, Register2Activity.class);
+            Intent intent = new Intent(RegisterActivity.this, RegisterPhoneActivity.class);
             intent.putExtra("name", editTextName.getText().toString());
             startActivity(intent);
             RegisterActivity.this.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);

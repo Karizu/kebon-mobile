@@ -15,9 +15,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.selada.kebonmobile.R;
+import com.selada.kebonmobile.model.CommodityCart;
 import com.selada.kebonmobile.presentation.home.lahan.SewaLahanActivity;
 import com.selada.kebonmobile.presentation.home.pembayaran.RincianPembayaranActivity;
 import com.selada.kebonmobile.presentation.home.tanam.PilihMetodeActivity;
+import com.selada.kebonmobile.presentation.home.tanam.PilihTanamanActivity;
 import com.skydoves.elasticviews.ElasticButton;
 import com.skydoves.elasticviews.ElasticCardView;
 import com.skydoves.elasticviews.ElasticImageView;
@@ -25,11 +27,11 @@ import com.skydoves.elasticviews.ElasticImageView;
 import java.util.List;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
-    private List<String> transactionModels;
+    private List<CommodityCart> transactionModels;
     private Context context;
     private Activity activity;
 
-    public CartAdapter(List<String> transactionModels, Context context, Activity activity) {
+    public CartAdapter(List<CommodityCart> transactionModels, Context context, Activity activity) {
         this.transactionModels = transactionModels;
         this.context = context;
         this.activity = activity;
@@ -46,7 +48,25 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     @SuppressLint({"SetTextI18n", "ResourceAsColor", "CheckResult"})
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.tv_plant_name.setText(transactionModels.get(position));
+        CommodityCart cart = transactionModels.get(position);
+        int id = cart.getCommodity_id();
+
+        holder.tv_plant_name.setText(cart.getName());
+        holder.tv_quantity.setText(String.valueOf(cart.getTotal_objects()));
+
+        holder.btn_add.setOnClickListener(view -> {
+            if (context instanceof PilihTanamanActivity) {
+                int qty = ((PilihTanamanActivity)context).onAdapterClickAdd(id);
+                holder.tv_quantity.setText(String.valueOf(qty));
+            }
+        });
+
+        holder.btn_min.setOnClickListener(view -> {
+            if (context instanceof PilihTanamanActivity) {
+                int qty = ((PilihTanamanActivity)context).onAdapterClickMin(id);
+                holder.tv_quantity.setText(String.valueOf(qty));
+            }
+        });
     }
 
     @Override

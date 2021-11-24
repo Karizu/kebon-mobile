@@ -56,14 +56,14 @@
 
     <com.skydoves.elasticviews.ElasticButton
         android:id="@+id/btn_filter_today"
-        android:layout_width="86dp"
+        android:layout_width="75dp"
         android:layout_height="31dp"
         android:layout_marginTop="11dp"
         android:layout_marginStart="9dp"
         android:background="@drawable/bg_custom_calendar_filter_today"
         android:fontFamily="@font/poppins_regular"
         android:text="Hari ini"
-        android:textSize="15sp"
+        android:textSize="13sp"
         android:textStyle="bold"
         app:button_duration="100"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,14 +71,14 @@
 
     <com.skydoves.elasticviews.ElasticButton
         android:id="@+id/btn_filter"
-        android:layout_width="86dp"
+        android:layout_width="70dp"
         android:layout_height="31dp"
         android:layout_marginTop="11dp"
         android:layout_marginEnd="9dp"
         android:background="@drawable/bg_custom_calendar_filter_today"
         android:fontFamily="@font/poppins_regular"
         android:text="Filter"
-        android:textSize="15sp"
+        android:textSize="13sp"
         android:textStyle="bold"
         app:button_duration="100"
         app:layout_constraintEnd_toEndOf="parent"
@@ -99,8 +99,10 @@
 
     <TextView
         android:id="@+id/year"
-        android:layout_width="144dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:background="@drawable/bg_custom_calendar"
         android:layout_marginStart="8dp"
         android:layout_marginTop="10dp"
@@ -262,13 +264,14 @@
         android:numColumns="7"
         android:orientation="horizontal"
         android:paddingBottom="8dp"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll_day"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:listitem="@layout/item_date"
         tools:itemCount="7"
-        tools:listitem="@layout/item_date" />
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

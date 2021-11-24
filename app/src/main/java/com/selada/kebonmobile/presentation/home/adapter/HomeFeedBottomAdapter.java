@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.selada.kebonmobile.R;
 import com.selada.kebonmobile.model.response.FeedBottomHome;
+import com.selada.kebonmobile.presentation.home.content.ContentActivity;
 import com.selada.kebonmobile.presentation.home.lahan.SewaLahanActivity;
 import com.skydoves.elasticviews.ElasticCardView;
 
@@ -45,7 +46,10 @@ public class HomeFeedBottomAdapter extends RecyclerView.Adapter<HomeFeedBottomAd
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         FeedBottomHome feedBottomHome = feedBottomHomes.get(position);
         holder.cvItem.setOnClickListener(view -> {
-
+            Intent intent = new Intent(activity, ContentActivity.class);
+            intent.putExtra("url", feedBottomHome.getLink());
+            activity.startActivity(intent);
+            activity.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         });
         holder.text_item.setText(feedBottomHome.getTitle());
         Glide.with(activity)

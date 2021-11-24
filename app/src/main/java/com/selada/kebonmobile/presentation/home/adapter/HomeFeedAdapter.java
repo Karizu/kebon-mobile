@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
 import com.selada.kebonmobile.R;
 import com.selada.kebonmobile.model.response.SiteResponse;
 import com.selada.kebonmobile.presentation.home.lahan.SewaLahanActivity;
@@ -45,8 +47,14 @@ public class HomeFeedAdapter extends RecyclerView.Adapter<HomeFeedAdapter.ViewHo
         SiteResponse siteResponse = transactionModels.get(position);
 
         holder.text_item.setText(siteResponse.getName());
+        Glide.with(activity)
+                .load(siteResponse.getLogo().getFullpath())
+                .placeholder(R.drawable.img_plant)
+                .into(holder.img_item);
         holder.cvItem.setOnClickListener(view -> {
             Intent intent = new Intent(activity, SewaLahanActivity.class);
+            intent.putExtra("is_from_adapter", true);
+            intent.putExtra("site_id", siteResponse.getId());
             activity.startActivity(intent);
             activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         });

@@ -12,17 +12,21 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.selada.kebonmobile.R;
+import com.selada.kebonmobile.model.response.commodity.AvailableCommodity;
+import com.selada.kebonmobile.presentation.home.tanam.DetailCartActivity;
+import com.selada.kebonmobile.presentation.home.tanam.PilihTanamanActivity;
 import com.skydoves.elasticviews.ElasticButton;
 
 import java.util.List;
 
 public class CartBottomDetailAdapter extends RecyclerView.Adapter<CartBottomDetailAdapter.ViewHolder> {
-    private List<String> transactionModels;
+    private List<AvailableCommodity> transactionModels;
     private Context context;
     private Activity activity;
 
-    public CartBottomDetailAdapter(List<String> transactionModels, Context context, Activity activity) {
+    public CartBottomDetailAdapter(List<AvailableCommodity> transactionModels, Context context, Activity activity) {
         this.transactionModels = transactionModels;
         this.context = context;
         this.activity = activity;
@@ -39,10 +43,22 @@ public class CartBottomDetailAdapter extends RecyclerView.Adapter<CartBottomDeta
     @SuppressLint({"SetTextI18n", "ResourceAsColor", "CheckResult"})
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.tv_plant_name.setText(transactionModels.get(position));
+        AvailableCommodity commodity = transactionModels.get(position);
+        holder.tv_plant_name.setText(commodity.getName());
+        Glide.with(activity)
+                .load(commodity.getMainImage().getFullpath())
+                .placeholder(R.drawable.img_plant)
+                .into(holder.img_plant);
         holder.btn_tambah_keranjang.setOnClickListener(view -> {
-
+            if (context instanceof DetailCartActivity) {
+                ((DetailCartActivity)context).addToCart(commodity, position);
+            }
         });
+    }
+
+    public void updateItem(int position){
+        transactionModels.remove(position); //Remove the current content from the array
+        notifyDataSetChanged();
     }
 
     @Override

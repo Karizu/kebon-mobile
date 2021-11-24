@@ -1,133 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textViewTanaman"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
-        android:fontFamily="@font/poppins_regular"
-        android:text="Jumlah lubang"
-        android:textColor="@color/colorTextBroLight"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp">
 
-    <TextView
-        android:id="@+id/textViewHarga"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/poppins_regular"
-        android:text="Alamat"
-        android:textColor="@color/colorTextBroLight"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPanen" />
+            <TextView
+                android:id="@+id/textViewTanaman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Jumlah lubang"
+                android:textColor="@color/colorTextBroLight"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewPanen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/poppins_regular"
-        android:text="Tanaman yang ditanam"
-        android:textColor="@color/colorTextBroLight"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSite" />
+            <TextView
+                android:id="@+id/textViewHarga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Alamat"
+                android:textColor="@color/colorTextBroLight"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tanaman" />
 
-    <TextView
-        android:id="@+id/tv_tanaman"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="@font/poppins_regular"
-        android:text="Bayam, Kangkung"
-        android:textColor="#FFC107"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSite" />
+            <TextView
+                android:id="@+id/textViewPanen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Tanaman yang ditanam"
+                android:textColor="@color/colorTextBroLight"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewActive" />
 
-    <TextView
-        android:id="@+id/tv_jumlah_lubang"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="@font/poppins_regular"
-        android:text="30"
-        android:textColor="#FFC107"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/tv_tanaman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="140dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="right"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Sawi Hijau, Selada Merah"
+                android:textColor="#FFC107"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewActive" />
 
-    <TextView
-        android:id="@+id/tv_alamat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="@font/poppins_regular"
-        android:text="Depari Farm"
-        android:textColor="#FFC107"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPanen" />
+            <TextView
+                android:id="@+id/tv_jumlah_lubang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="30"
+                android:textColor="#FFC107"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewSite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/poppins_regular"
-        android:text="Jumlah lubang kosong"
-        android:textColor="@color/colorTextBroLight"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTanaman" />
+            <TextView
+                android:id="@+id/tv_alamat"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:lines="4"
+                android:layout_marginEnd="16dp"
+                android:gravity="end"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Jalan Parakan Mas VI No. 32, Antapani Tengah, Antapani, Bandung"
+                android:textColor="#FFC107"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tanaman" />
 
-    <TextView
-        android:id="@+id/tv_jumlah_lubang_kosong"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="@font/poppins_regular"
-        android:text="15"
-        android:textColor="#FFC107"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTanaman" />
+            <TextView
+                android:id="@+id/textViewSite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Jumlah lubang kosong"
+                android:textColor="@color/colorTextBroLight"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTanaman" />
 
-    <com.skydoves.elasticviews.ElasticButton
-        android:id="@+id/btn_lihat_lokasi"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="36dp"
-        android:background="@drawable/bg_button_bro_round_5dp"
-        android:fontFamily="@font/poppins_regular"
-        android:text="Lihat lokasi di Google Maps"
-        android:textColor="@color/colorTextBroLight"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        app:button_duration="100"
-        app:button_scale="0.87"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewHarga" />
+            <TextView
+                android:id="@+id/textViewActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Jumlah lubang ditanam"
+                android:textColor="@color/colorTextBroLight"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSite" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/tv_jumlah_lubang_kosong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="15"
+                android:textColor="#FFC107"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTanaman" />
+
+            <TextView
+                android:id="@+id/tv_jumlah_lubang_active"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="15"
+                android:textColor="#FFC107"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSite" />
+
+            <com.skydoves.elasticviews.ElasticButton
+                android:id="@+id/btn_lihat_lokasi"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="36dp"
+                android:background="@drawable/bg_button_bro_round_5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Lihat lokasi di Google Maps"
+                android:textColor="@color/colorTextBroLight"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                app:button_duration="100"
+                app:button_scale="0.87"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_alamat" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

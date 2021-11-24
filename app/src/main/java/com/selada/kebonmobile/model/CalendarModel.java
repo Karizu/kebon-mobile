@@ -1,5 +1,7 @@
 package com.selada.kebonmobile.model;
 
+import com.selada.kebonmobile.model.response.calendar.Calendars;
+
 import java.util.Calendar;
 
 public class CalendarModel {
@@ -7,14 +9,16 @@ public class CalendarModel {
     private int month;
     private int year;
     private Calendar calendarCompare ;
-    private String status ;
+    private String status;
+    private Calendars calendars;
 
-    public CalendarModel(int date, int month, int year, Calendar calendarCompare, String status) {
+    public CalendarModel(int date, int month, int year, Calendar calendarCompare, String status, Calendars calendars) {
         this.date = date;
         this.month = month;
         this.year = year;
         this.calendarCompare = calendarCompare;
         this.status = status;
+        this.calendars = calendars;
     }
 
     public int getDate() {
@@ -55,5 +59,13 @@ public class CalendarModel {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Calendars getCalendars() {
+        return calendars;
+    }
+
+    public void setCalendars(Calendars calendars) {
+        this.calendars = calendars;
     }
 }

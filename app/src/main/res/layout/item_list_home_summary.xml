@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_rincian_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="9dp"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:text="Rincian Kavling"
+        android:textColor="@color/colorTextBro"
+        android:textStyle="bold"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="13dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="start"
+            android:text="Total Kavling: 4"
+            android:textColor="@color/colorTextBro"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_active"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="13dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="right"
+            android:text="Sudah tertanam: 1 kavling"
+            android:textColor="@color/colorTextBro"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_total_pending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="13dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="start"
+            android:text="Pending: 4 Kavling"
+            android:textColor="@color/colorTextBro"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_total_idle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="13dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="end"
+            android:text="Siap Tanam: 0 Kavling"
+            android:textColor="@color/colorTextBro"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorTextBro"
+        android:alpha="200"/>
+
+</LinearLayout>

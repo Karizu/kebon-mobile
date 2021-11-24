@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.skydoves.elasticviews.ElasticCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cv_item"
     android:layout_width="313dp"
-    android:layout_height="404dp"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginTop="8dp"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="8dp"
     android:layout_marginBottom="8dp"
+    app:cardView_duration="100"
+    android:layout_gravity="center_horizontal"
     app:cardBackgroundColor="#FEF9E6"
     app:cardCornerRadius="10dp">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
@@ -33,36 +36,87 @@
             <ImageView
                 android:id="@+id/img_farm"
                 android:layout_width="fill_parent"
-                android:layout_height="256.69dp"
+                android:layout_height="150dp"
                 android:layout_marginTop="12dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/img_home_feed"/>
+                android:src="@drawable/img_site"/>
 
             <LinearLayout
-                android:visibility="gone"
+                android:visibility="visible"
                 android:id="@+id/layout_ready_plant"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
+                    android:visibility="gone"
                     android:id="@+id/tv_status_farm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="Status : Menunggu Pembayaran"
+                    android:text="Status : Menunggu pembayaran"
                     android:textColor="@color/colorTextBro"
                     android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_summary_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Total : - \nSiap Tanam: -"
+                    android:textColor="@color/colorTextBro"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_lihat_selengkapnya"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="end"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textStyle="bold"
+                    android:text="@string/lihat_selengkapnya"
+                    android:textColor="@color/colorTextBro"
+                    android:textSize="13sp" />
+
+                <com.skydoves.elasticviews.ElasticButton
+                    android:visibility="gone"
+                    android:id="@+id/btn_siap_tanam"
+                    android:layout_width="match_parent"
+                    android:layout_height="40.6dp"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginEnd="36dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_button_round"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Mulai tanam"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    app:button_duration="100"
+                    app:button_scale="0.87"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_beranda" />
 
                 <com.skydoves.elasticviews.ElasticButton
                     android:id="@+id/btn_rincian"
                     android:layout_width="match_parent"
                     android:layout_height="40.6dp"
                     android:layout_marginStart="36dp"
-                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="36dp"
+                    android:layout_marginBottom="20dp"
                     android:background="@drawable/bg_button_round"
                     android:fontFamily="@font/poppins_bold"
                     android:text="Lihat rincian pembayaran"
@@ -78,6 +132,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:visibility="gone"
                 android:id="@+id/layout_already_plant_site"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -100,16 +155,18 @@
         </LinearLayout>
 
         <com.skydoves.elasticviews.ElasticImageView
+            android:visibility="gone"
             android:id="@+id/btn_play"
             android:layout_width="56dp"
             android:layout_height="56dp"
+            android:layout_marginTop="100dp"
             android:layout_gravity="center"
             android:background="?attr/selectableItemBackground"
             android:scaleType="centerCrop"
             android:src="@drawable/img_play"
             app:imageView_duration="100"
-            android:layout_centerInParent="true"/>
+            android:layout_centerHorizontal="true"/>
 
     </RelativeLayout>
 
-</androidx.cardview.widget.CardView>
+</com.skydoves.elasticviews.ElasticCardView>

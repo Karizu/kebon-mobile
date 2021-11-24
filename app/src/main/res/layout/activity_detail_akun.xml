@@ -130,6 +130,7 @@
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/tv_pengguna"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="8dp"
@@ -228,6 +229,7 @@
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/tv_email"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="8dp"
@@ -298,6 +300,7 @@
     </com.skydoves.elasticviews.ElasticLayout>
 
     <com.skydoves.elasticviews.ElasticLayout
+        android:visibility="gone"
         android:id="@+id/layout_change_pass"
         android:layout_width="match_parent"
         android:layout_height="58dp"

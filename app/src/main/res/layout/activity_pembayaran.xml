@@ -29,7 +29,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/include" />
 
-
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
@@ -88,7 +87,7 @@
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/poppins_regular"
                 android:gravity="center"
-                android:text="Jumlah Kavling :"
+                android:text="Jumlah - :"
                 android:textColor="@color/colorTextBro"
                 android:textSize="13sp"
                 android:textStyle="bold"
@@ -195,51 +194,52 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
 
-    <FrameLayout
-        android:id="@+id/frame_transfer"
+    <FrameLayout android:id="@+id/frame_item"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="18dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="-2dp"
         android:layout_marginEnd="18dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
         android:paddingStart="12dp"
-        android:paddingEnd="12dp"
         android:background="@drawable/bg_text_radius_5"
         android:textColor="@color/colorTextBro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_metode_bayar">
 
-        <CheckBox
-            android:id="@+id/checkBoxTransferBank"
+        <Spinner
+            android:id="@+id/spinner_payment_method"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/poppins_regular"
-            android:text="Transfer Bank" />
+            android:buttonTint="@color/colorTextBro" />
 
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/frame_qris"
+        android:id="@+id/frame_sub_spinner"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="18dp"
-        android:layout_marginTop="-2dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="18dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
         android:paddingStart="12dp"
-        android:paddingEnd="12dp"
         android:background="@drawable/bg_text_radius_5"
         android:textColor="@color/colorTextBro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frame_transfer">
+        app:layout_constraintTop_toBottomOf="@+id/frame_item">
 
-        <CheckBox
-            android:id="@+id/checkBoxQris"
+        <Spinner
+            android:id="@+id/spinner_sub_payment_method"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/poppins_regular"
-            android:text="QRIS (GoPay, OVO, Dana, dll)" />
+            android:buttonTint="@color/colorTextBro" />
 
     </FrameLayout>
 
@@ -256,12 +256,12 @@
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frame_qris" />
+        app:layout_constraintTop_toBottomOf="@+id/frame_sub_spinner" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/frame_ringkasan"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="100dp"
         android:layout_marginStart="18dp"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="18dp"
@@ -288,6 +288,20 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Jumlah"
+            android:textColor="@color/colorTextBro"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sub_total"
+            />
+
+        <TextView
             android:id="@+id/total_bayar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -298,7 +312,7 @@
             android:textColor="@color/colorTextBro"
             android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sub_total" />
+            app:layout_constraintTop_toBottomOf="@+id/duration" />
 
         <TextView
             android:id="@+id/tv_sub_total"
@@ -315,6 +329,19 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/colorTextBro"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sub_total" />
+
+        <TextView
             android:id="@+id/tv_total_bayar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -325,7 +352,7 @@
             android:textColor="@color/colorTextBro"
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_sub_total" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_duration" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

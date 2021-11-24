@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayout6"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp"
+    android:paddingBottom="15dp"
+    android:background="@drawable/bg_round_detail_pesanan">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginStart="10dp"
+        android:background="#FEF0C0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_site"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_site"
+        android:layout_width="78.81dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="11dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_site"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTanaman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Lahan : "
+        android:textColor="@color/colorTextBro"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/img_site"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewHarga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Harga : "
+        android:textColor="@color/colorTextBro"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/img_site"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPanen" />
+
+    <TextView
+        android:id="@+id/textViewPanen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Lama Sewa : "
+        android:textColor="@color/colorTextBro"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/img_site"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSite" />
+
+    <TextView
+        android:id="@+id/tv_lama_sewa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="1 Tahun"
+        android:textColor="@color/dark_green_text"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textViewPanen"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSite" />
+
+    <TextView
+        android:id="@+id/tv_farm_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Depari Farm"
+        android:textColor="@color/dark_green_text"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textViewTanaman"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Rp. 4,500,000"
+        android:textColor="@color/dark_green_text"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textViewHarga"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPanen" />
+
+    <TextView
+        android:id="@+id/textViewSite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Jumlah : "
+        android:textColor="@color/colorTextBro"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/img_site"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTanaman" />
+
+    <TextView
+        android:id="@+id/tv_jumlah_kavling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="10 Kavling"
+        android:textColor="@color/dark_green_text"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textViewSite"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTanaman" />
+
+    <com.skydoves.elasticviews.ElasticButton
+        android:id="@+id/btn_panen"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bg_button_small_reminder"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Panen Tanaman"
+        android:textAllCaps="false"
+        android:textColor="@color/White"
+        android:textSize="15sp"
+        app:button_duration="100"
+        app:layout_constraintStart_toEndOf="@+id/textViewHarga"
+        app:layout_constraintTop_toBottomOf="@+id/img_site" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

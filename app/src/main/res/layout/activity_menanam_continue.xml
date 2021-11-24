@@ -13,11 +13,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginStart="13dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center"
-        android:text="Apakah Anda ingin menanam kembali\ndi Kebun Depari Farm ?"
+        android:text="Tanaman anda akan segera dipanen silahkan tunggu notifikasi selanjutnya"
         android:textColor="@color/Black"
         android:textSize="19sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,46 +31,48 @@
         android:layout_marginTop="49dp"
         android:src="@drawable/rafiki"/>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_marginTop="136dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <com.skydoves.elasticviews.ElasticButton
-            android:id="@+id/btn_tidak"
-            android:layout_width="140dp"
+            android:id="@+id/btn_konfirmasi_wa"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
-            android:layout_marginStart="49dp"
-            android:layout_marginBottom="8dp"
-            android:layout_alignParentStart="true"
-            android:background="@drawable/bg_button_round"
-            android:fontFamily="@font/poppins_regular"
-            android:text="Tidak"
-            android:textSize="25sp"
-            android:textAllCaps="false"
-            android:textColor="@color/White"
-            android:textStyle="bold"
-            app:button_duration="100"/>
-
-        <com.skydoves.elasticviews.ElasticButton
-            android:id="@+id/btn_ya"
-            android:layout_width="140dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="49dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp"
             android:layout_alignParentEnd="true"
             android:background="@drawable/bg_button_round_green"
             android:fontFamily="@font/poppins_regular"
-            android:text="Ya"
+            android:text="Konfirmasi Whatsapp"
             android:textSize="25sp"
             android:textAllCaps="false"
             android:textColor="@color/White"
             android:textStyle="bold"
             app:button_duration="100"/>
 
-    </RelativeLayout>
+        <com.skydoves.elasticviews.ElasticButton
+            android:id="@+id/btn_beranda"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/bg_button_round"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Beranda"
+            android:textSize="25sp"
+            android:textAllCaps="false"
+            android:textColor="@color/White"
+            android:textStyle="bold"
+            app:button_duration="100"/>
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@android:id/text1"
     android:background="@drawable/bg_rectangle_bro"
     android:singleLine="true"
@@ -7,14 +8,16 @@
     android:layout_marginEnd="-2.5dp"
     android:lines="2"
     android:layout_width="match_parent"
-    android:layout_height="40dp"
+    android:layout_height="wrap_content"
+    android:minHeight="40dp"
     android:layout_marginTop="1dp"
     android:fontFamily="@font/poppins_regular"
     android:textColor="#B36602"
-    android:textSize="13sp"
+    android:textSize="11sp"
     android:textStyle="bold"
     android:gravity="center"
     android:paddingStart="4dp"
     android:checkMark="@drawable/checked"
     android:textAlignment="inherit"
-    android:ellipsize="marquee"/>
+    android:ellipsize="marquee"
+    tools:ignore="SmallSp" />

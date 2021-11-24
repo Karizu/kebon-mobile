@@ -1,11 +1,14 @@
 package com.selada.kebonmobile.util;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.Application;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.text.SpannableString;
 import android.text.TextUtils;
 import android.text.style.StrikethroughSpan;
@@ -16,14 +19,22 @@ import android.transition.TransitionManager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
+import com.google.gson.Gson;
 import com.selada.kebonmobile.R;
+import com.selada.kebonmobile.model.response.GeneralInformation;
+import com.selada.kebonmobile.model.response.errormsg.ErrorResponse;
+import com.selada.kebonmobile.presentation.akun.history.InvoiceHistoryActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.ParseException;
@@ -31,6 +42,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Objects;
+import java.util.TimeZone;
+
+import okhttp3.ResponseBody;
 
 /**
  * Created by Dhimas on 9/29/17.
@@ -237,9 +251,11 @@ public class MethodUtil extends Application {
     public static String[] formatDateAndTime(String dateTime) {
         String[] tempDateTime = new String[2];
         try {
-            Date date = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", new Locale("id")).parse(dateTime);
-            SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy", new Locale("id", "ID"));
-            @SuppressLint("SimpleDateFormat") SimpleDateFormat timeFormat = new SimpleDateFormat("HH : mm");
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.US);
+            simpleDateFormat.setTimeZone(TimeZone.getTimeZone("Etc/UTC"));
+            Date date = simpleDateFormat.parse(dateTime);
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM yyyy", new Locale("id", "ID"));
+            @SuppressLint("SimpleDateFormat") SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm");
             tempDateTime[0] = dateFormat.format(date);
             tempDateTime[1] = timeFormat.format(date);
         } catch (ParseException e) {
@@ -280,5 +296,86 @@ public class MethodUtil extends Application {
             e.printStackTrace();
         }
         return "";
+    }
+
+    public static void getDialogWarning(ResponseBody response, Activity activity){
+        Gson gson = new Gson();
+        ErrorResponse message = gson.fromJson(Objects.requireNonNull(response).charStream(),ErrorResponse.class);
+        String errorMessage = message.getData().getMessage();
+        Dialog dialog = MethodUtil.getDialogCart(R.layout.dialog_warning, activity);
+        TextView desc = dialog.findViewById(R.id.tv_desc);
+        desc.setText(errorMessage);
+        ImageView btn_close = dialog.findViewById(R.id.btn_close);
+        btn_close.setOnClickListener(view -> {
+            dialog.dismiss();
+        });
+    }
+
+    public static void getDialogWarningCatch(Activity activity){
+        String errorMessage = "Terjadi kesalahan\nMohon hubungi customer service";
+        Dialog dialog = MethodUtil.getDialogCart(R.layout.dialog_warning, activity);
+        TextView desc = dialog.findViewById(R.id.tv_desc);
+        desc.setText(errorMessage);
+        ImageView btn_close = dialog.findViewById(R.id.btn_close);
+        btn_close.setOnClickListener(view -> {
+            dialog.dismiss();
+        });
+    }
+
+    public static String getUrlCsData(){
+        String msg = "Halo, Kebon";
+        String phone = "6281321436661";
+        try {
+            for (GeneralInformation information: PreferenceManager.getLoginResponse().getGeneralInformation()){
+                if (information.getCode().equals("kebon_general_cs_whatsapp_message_template")){
+                    msg = information.getValue();
+                }
+
+                if (information.getCode().equals("kebon_official_cs_whatsapp_number")){
+                    phone = information.getValue();
+                    phone = "62" + phone.substring(1);
+                }
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
+        String url = "https://api.whatsapp.com/send?phone=" + phone;
+        try {
+            url = "https://api.whatsapp.com/send?phone="+phone+"&text=" + URLEncoder.encode(msg, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return url;
+    }
+
+    public static String getPhoneCs(){
+        String msg = "Halo, Kebon";
+        String phone = "6281321436661";
+        try {
+            for (GeneralInformation information: PreferenceManager.getLoginResponse().getGeneralInformation()){
+                if (information.getCode().equals("kebon_official_cs_whatsapp_number")){
+                    phone = information.getValue();
+                    phone = "62" + phone.substring(1);
+                }
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return phone;
+    }
+
+    public static String getTemplateMsgCs(){
+        String msg = "Halo, Kebon";
+        try {
+            for (GeneralInformation information: PreferenceManager.getLoginResponse().getGeneralInformation()){
+                if (information.getCode().equals("kebon_general_cs_whatsapp_message_template")){
+                    msg = information.getValue();
+                }
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return msg;
     }
 }

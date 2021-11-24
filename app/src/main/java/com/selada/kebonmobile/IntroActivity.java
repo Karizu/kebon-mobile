@@ -67,14 +67,14 @@ public class IntroActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_gabung)
     void onClickGabung(){
-        Intent intent = new Intent(IntroActivity.this, RegisterActivity.class);
+        Intent intent = new Intent(IntroActivity.this, LoginActivity.class);
         startActivity(intent);
         IntroActivity.this.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     @OnClick(R.id.textView)
     void onClickLogin(){
-        Intent intent = new Intent(IntroActivity.this, LoginActivity.class);
+        Intent intent = new Intent(IntroActivity.this, RegisterActivity.class);
         startActivity(intent);
         IntroActivity.this.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }

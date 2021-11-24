@@ -13,18 +13,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.selada.kebonmobile.R;
+import com.selada.kebonmobile.model.response.commodity.AvailableCommodity;
 import com.selada.kebonmobile.presentation.home.tanam.PilihTanamanActivity;
 
 import java.util.List;
 
 public class PilihTanamanAdapter extends RecyclerView.Adapter<PilihTanamanAdapter.ViewHolder> {
-    private List<String> transactionModels;
+    private List<AvailableCommodity> transactionModels;
     private Context context;
     private Activity activity;
     private int pos = -1;
 
-    public PilihTanamanAdapter(List<String> transactionModels, Context context, Activity activity) {
+    public PilihTanamanAdapter(List<AvailableCommodity> transactionModels, Context context, Activity activity) {
         this.transactionModels = transactionModels;
         this.context = context;
         this.activity = activity;
@@ -41,15 +43,16 @@ public class PilihTanamanAdapter extends RecyclerView.Adapter<PilihTanamanAdapte
     @SuppressLint({"SetTextI18n", "ResourceAsColor", "CheckResult"})
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        String plantName = transactionModels.get(position);
-        int dayHarvest = 20 + position;
-        int price = 5000 + (position * 2);
-        String img = "";
+        AvailableCommodity availableCommodity = transactionModels.get(position);
 
-        holder.tv_plant_name.setText(transactionModels.get(position));
+        holder.tv_plant_name.setText(availableCommodity.getName());
+        Glide.with(activity)
+                .load(availableCommodity.getMainImage().getFullpath())
+                .placeholder(R.drawable.img_plant)
+                .into(holder.img_plant);
         holder.frame_item.setOnClickListener(view -> {
             if (context instanceof PilihTanamanActivity) {
-                ((PilihTanamanActivity)context).setDataTanaman(plantName, String.valueOf(dayHarvest), String.valueOf(price), img);
+                ((PilihTanamanActivity)context).setDataTanaman(availableCommodity);
                 ((PilihTanamanActivity)context).setEnableComponent();
             }
             pos = position;

@@ -1,19 +1,20 @@
 package com.selada.kebonmobile.presentation.home.tanam;
 
+import android.content.Intent;
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
-
+import com.google.gson.Gson;
 import com.selada.kebonmobile.R;
+import com.selada.kebonmobile.model.CommodityCart;
 import com.selada.kebonmobile.presentation.MainActivity;
-import com.selada.kebonmobile.presentation.home.tanam.adapter.CartBottomDetailAdapter;
-import com.selada.kebonmobile.presentation.home.tanam.adapter.CartDetailAdapter;
 import com.selada.kebonmobile.presentation.home.tanam.adapter.ItemCompleteAdapter;
-import com.selada.kebonmobile.util.Constant;
 import com.selada.kebonmobile.util.PreferenceManager;
+import java.lang.reflect.Type;
+import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,24 +43,23 @@ public class SelesaiMenanamActivity extends AppCompatActivity {
     }
 
     private void initComponent() {
-        PreferenceManager.setUserStatus(Constant.ALREADY_PLANT_SITE);
-
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rv_selesai_menanam.setLayoutManager(layoutManager);
 
-        List<String> list = new ArrayList<>();
-        list.add("Kangkung");
-        list.add("Brokoli");
+        String json = getIntent().getStringExtra("json");
+        Type listType = new TypeToken<ArrayList<CommodityCart>>(){}.getType();
+        List<CommodityCart> commodityCartList = new Gson().fromJson(json, listType);
 
-        ItemCompleteAdapter adapter = new ItemCompleteAdapter(list, this, this);
+        ItemCompleteAdapter adapter = new ItemCompleteAdapter(commodityCartList, this, this);
         rv_selesai_menanam.setAdapter(adapter);
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(SelesaiMenanamActivity.this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
 }

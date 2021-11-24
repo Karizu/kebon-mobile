@@ -18,12 +18,27 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.selada.kebonmobile.R;
 import com.selada.kebonmobile.model.CalendarModel;
+import com.selada.kebonmobile.model.response.calendardetail.DetailHarvestCalendarResponse;
+import com.selada.kebonmobile.model.response.calendardetail.HarvestSchedule;
+import com.selada.kebonmobile.network.ApiCore;
+import com.selada.kebonmobile.presentation.home.tanam.DetailCartActivity;
+import com.selada.kebonmobile.presentation.jadwal.JadwalActivity;
 import com.selada.kebonmobile.presentation.status.history.DetailHistory;
 import com.skydoves.elasticviews.ElasticLayout;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
+import java.util.Objects;
+import java.util.TimeZone;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.ViewHolder> {
     private List<CalendarModel> transactionModels;
@@ -39,18 +54,20 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.ViewHo
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        new PreferenceManager(activity);
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_date, parent, false);
 
         return new ViewHolder(v);
     }
 
-    @SuppressLint({"SetTextI18n", "ResourceAsColor", "CheckResult"})
+    @SuppressLint({"SetTextI18n", "ResourceAsColor", "CheckResult", "SimpleDateFormat"})
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        CalendarModel calendarModel = transactionModels.get(position);
         holder.date.setText(String.valueOf(transactionModels.get(position).getDate()));
 
-        if (transactionModels.get(position).getMonth() == transactionModels.get(position).getCalendarCompare().get(Calendar.MONTH) && transactionModels.get(position).getYear() == transactionModels.get(position).getCalendarCompare().get(Calendar.YEAR)){
+        if (calendarModel.getMonth() == calendarModel.getCalendarCompare().get(Calendar.MONTH) && calendarModel.getYear() == calendarModel.getCalendarCompare().get(Calendar.YEAR)){
             holder.item.setBackground(activity.getResources().getDrawable(R.drawable.bg_custom_calendar));
             holder.date.setTextColor(activity.getResources().getColor(R.color.colorDarkBlue));
         } else {
@@ -61,9 +78,8 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.ViewHo
         if (transactionModels.get(position).getStatus()!=null){
             if (transactionModels.get(position).getStatus().equals("event")){
                 holder.dot.setImageDrawable(activity.getResources().getDrawable(R.drawable.dot));
-                holder.item.setBackground(activity.getResources().getDrawable(R.drawable.bg_custom_calendar_event));
                 holder.text_event.setVisibility(View.VISIBLE);
-                holder.text_event.setText("2");
+                holder.text_event.setText(calendarModel.getCalendars().getTotalObjectCount()+"");
             } else {
                 holder.text_event.setVisibility(View.GONE);
             }
@@ -71,14 +87,32 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.ViewHo
             holder.text_event.setVisibility(View.GONE);
         }
 
-        holder.item.setOnClickListener((View.OnClickListener) view -> {
-            if (transactionModels.get(position).getStatus()!=null){
-                if (transactionModels.get(position).getStatus().equals("event")){
-                    List<String> list = new ArrayList<>();
-                    list.add("Kangkung");
-                    list.add("Bayam");
-                    CustomBottomSheetDialog bottomSheet = new CustomBottomSheetDialog(list, context, activity);
-                    bottomSheet.show(((AppCompatActivity)context).getSupportFragmentManager(), "exampleBottomSheet");
+        holder.item.setOnClickListener(view -> {
+            if (calendarModel.getStatus()!=null){
+                if (calendarModel.getStatus().equals("event")){
+                    String strCurrentDate = calendarModel.getCalendars().getCalendarDate();
+                    try {
+                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.US);
+                        simpleDateFormat.setTimeZone(TimeZone.getTimeZone("Etc/UTC"));
+                        Date date = simpleDateFormat.parse(strCurrentDate);
+                        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", new Locale("id", "ID"));
+                        String sDate = dateFormat.format(Objects.requireNonNull(date));
+                        int commodityId = 0;
+                        int siteId = 0;
+                        if (context instanceof JadwalActivity) {
+                            commodityId = ((JadwalActivity)context).getCommodityId();
+                            siteId = ((JadwalActivity)context).getSiteId();
+                        }
+                        if (commodityId == 0 && siteId == 0){
+                            getDetailHarvestCalendar(sDate);
+                        } else {
+                            String siteIds = siteId==0?"":siteId+"";
+                            String commodityIds = commodityId==0?"":commodityId+"";
+                            getDetailHarvestCalendarFilter(siteIds, commodityIds, sDate);
+                        }
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         });
@@ -105,13 +139,62 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.ViewHo
         }
     }
 
-    public String dateBuilder(int tanggal, int bulan, int tahun){
-//        String tgl = String.valueOf(tanggal).length() == 1?"tanggal":""+tanggal;
-//        String bln = String.valueOf(bulan).length() == 1?"0$bulan":""+bulan;
-        String tgl = "Tanggal "+tanggal;
-        String bln = "Bulan " + bulan;
+    private void getDetailHarvestCalendar(String date){
+        Loading.show(activity);
+        ApiCore.apiInterface().getDetailHarvestCalendar(date, PreferenceManager.getSessionToken()).enqueue(new Callback<DetailHarvestCalendarResponse>() {
+            @Override
+            public void onResponse(Call<DetailHarvestCalendarResponse> call, Response<DetailHarvestCalendarResponse> response) {
+                Loading.hide(activity);
+                try {
+                    if (response.isSuccessful()){
+                        List<HarvestSchedule> harvestScheduleList = Objects.requireNonNull(response.body()).getHarvestSchedules();
 
+                        CustomBottomSheetDialog bottomSheet = new CustomBottomSheetDialog(harvestScheduleList, context, activity);
+                        bottomSheet.show(((AppCompatActivity)context).getSupportFragmentManager(), "exampleBottomSheet");
+                    } else {
+                        MethodUtil.getDialogWarning(response.errorBody(), activity);
+                    }
+                } catch (Exception e){
+                    e.printStackTrace();
+                    MethodUtil.getDialogWarningCatch(activity);
+                }
+            }
 
-        return tgl+ " " + bln + " " + tahun;
+            @Override
+            public void onFailure(Call<DetailHarvestCalendarResponse> call, Throwable t) {
+                t.printStackTrace();
+                Loading.hide(activity);
+            }
+        });
     }
+
+    private void getDetailHarvestCalendarFilter(String site_id, String commodity_id, String date){
+        Loading.show(activity);
+        ApiCore.apiInterface().getDetailHarvestCalendar(site_id, commodity_id, date, PreferenceManager.getSessionToken()).enqueue(new Callback<DetailHarvestCalendarResponse>() {
+            @Override
+            public void onResponse(Call<DetailHarvestCalendarResponse> call, Response<DetailHarvestCalendarResponse> response) {
+                Loading.hide(activity);
+                try {
+                    if (response.isSuccessful()){
+                        List<HarvestSchedule> harvestScheduleList = Objects.requireNonNull(response.body()).getHarvestSchedules();
+
+                        CustomBottomSheetDialog bottomSheet = new CustomBottomSheetDialog(harvestScheduleList, context, activity);
+                        bottomSheet.show(((AppCompatActivity)context).getSupportFragmentManager(), "exampleBottomSheet");
+                    } else {
+                        MethodUtil.getDialogWarning(response.errorBody(), activity);
+                    }
+                } catch (Exception e){
+                    e.printStackTrace();
+                    MethodUtil.getDialogWarningCatch(activity);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<DetailHarvestCalendarResponse> call, Throwable t) {
+                Loading.hide(activity);
+                t.printStackTrace();
+            }
+        });
+    }
+
 }

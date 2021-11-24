@@ -15,6 +15,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.skydoves.elasticviews.ElasticImageView
+        android:visibility="gone"
         android:id="@+id/btn_cart"
         android:layout_width="30dp"
         android:layout_height="30dp"
@@ -38,6 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/include3">
 
         <com.skydoves.elasticviews.ElasticLayout
+            android:visibility="gone"
             android:id="@+id/btn_filter"
             android:layout_width="match_parent"
             android:layout_height="35dp"
@@ -89,7 +91,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginTop="57dp"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center"
         android:text="Kangkung"
@@ -107,15 +109,17 @@
         android:id="@+id/img_plant"
         android:layout_width="0dp"
         android:layout_height="200dp"
-        android:layout_marginStart="59dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginEnd="50dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/img_plant"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/tv_plant_name" />
 
     <TextSwitcher
+        android:visibility="visible"
         android:id="@+id/tv_plant_desc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -130,9 +134,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_regular"
+            android:fontFamily="@font/poppins_semibold"
             android:gravity="center"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/red_text"
             android:text="Silahkan pilih tanaman"
             android:textSize="20sp"/>
         <TextView
@@ -162,6 +166,7 @@
         app:layout_constraintTop_toBottomOf="@+id/img_plant" />
 
     <com.skydoves.elasticviews.ElasticButton
+        android:visibility="gone"
         android:enabled="false"
         android:id="@+id/btn_lihat_keuntungan"
         android:layout_width="0dp"
@@ -181,49 +186,54 @@
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/tv_plant_desc" />
 
-    <com.skydoves.elasticviews.ElasticButton
-        android:id="@+id/btn_min"
-        android:layout_width="27.93dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="81dp"
-        android:layout_marginBottom="9dp"
-        app:button_duration="100"
-        app:layout_constraintTop_toBottomOf="@+id/btn_lihat_keuntungan"
+    <RelativeLayout
+        android:id="@+id/layout_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        android:background="@drawable/ic_minus_button" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_lihat_keuntungan">
 
-    <TextView
-        android:id="@+id/tv_quantity"
-        android:layout_width="43.53dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="-1dp"
-        android:layout_marginBottom="9dp"
-        android:background="@drawable/bg_quantity_text"
-        android:fontFamily="@font/poppins_regular"
-        android:gravity="center"
-        android:maxLength="3"
-        android:text="0"
-        android:textColor="@color/colorTextBro"
-        android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@+id/btn_lihat_keuntungan"
-        app:layout_constraintStart_toEndOf="@+id/btn_min" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true">
+
+            <com.skydoves.elasticviews.ElasticButton
+                android:id="@+id/btn_min"
+                android:layout_width="33.93dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_minus_button"
+                app:button_duration="100" />
+
+            <TextView
+                android:id="@+id/tv_quantity"
+                android:layout_width="46.53dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="-1dp"
+                android:layout_marginTop="-2dp"
+                android:background="@drawable/bg_quantity_text"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:maxLength="3"
+                android:text="0"
+                android:textColor="@color/colorTextBro"
+                android:textSize="14sp" />
+
+            <com.skydoves.elasticviews.ElasticButton
+                android:id="@+id/btn_add"
+                android:layout_width="33.93dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_add_button"
+                app:button_duration="100"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
     <com.skydoves.elasticviews.ElasticButton
-        android:enabled="false"
-        android:id="@+id/btn_add"
-        android:layout_width="27.93dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="9dp"
-        app:button_duration="100"
-        app:layout_constraintTop_toBottomOf="@+id/btn_lihat_keuntungan"
-        app:layout_constraintStart_toEndOf="@+id/tv_quantity"
-        android:background="@drawable/ic_add_button" />
-
-    <com.skydoves.elasticviews.ElasticButton
-        android:enabled="false"
         android:id="@+id/btn_tambah_keranjang"
         android:layout_width="0dp"
         android:layout_height="30dp"
@@ -240,7 +250,22 @@
         app:button_scale="0.87"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/btn_min" />
+        app:layout_constraintTop_toBottomOf="@+id/layout_btn" />
+
+    <TextView
+        android:id="@+id/tv_sisa_lubang"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Sisa - : -"
+        android:textColor="@color/colorTextBro"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/btn_tambah_keranjang" />
 
     <com.skydoves.elasticviews.ElasticLayout
         android:visibility="gone"
@@ -282,7 +307,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppins_bold"
-                android:text="1"
+                android:text="0"
                 android:gravity="center_vertical"
                 android:paddingEnd="16dp"
                 android:textAllCaps="false"

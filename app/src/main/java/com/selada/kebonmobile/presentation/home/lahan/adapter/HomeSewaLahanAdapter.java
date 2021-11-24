@@ -19,6 +19,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.selada.kebonmobile.R;
 import com.selada.kebonmobile.model.SewaLahanModel;
@@ -75,10 +76,10 @@ public class HomeSewaLahanAdapter extends RecyclerView.Adapter<HomeSewaLahanAdap
         sewaLahanModel.setHarga("0");
         sewaLahanModel.setTotalHarga("0");
 
-        int id = leasableResponse.getId();
         int stokKavling;
         int maksSewa;
         int price;
+        String packageId;
 
         holder.layout_spinner.setOnClickListener(view -> {
             holder.spinner_type_code.performClick();
@@ -101,7 +102,8 @@ public class HomeSewaLahanAdapter extends RecyclerView.Adapter<HomeSewaLahanAdap
             setSpinner(leasableResponse, holder, 2);
 
         } else {
-            holder.layout_spinner.setVisibility(View.INVISIBLE);
+            holder.layout_spinner.setVisibility(View.GONE);
+            holder.label_spinner.setVisibility(View.GONE);
 
             if (leasableResponse.getLeaseableObjects().size() == 0){
                 Toast.makeText(context, "Saat ini kavling tidak tersedia", Toast.LENGTH_SHORT).show();
@@ -112,16 +114,33 @@ public class HomeSewaLahanAdapter extends RecyclerView.Adapter<HomeSewaLahanAdap
                 holder.tv_harga_sewa.setText("-");
 
             } else {
-                stokKavling = leasableResponse.getLeaseableObjects().get(0).getProductionCapacity();
+                packageId = leasableResponse.getLeaseableObjects().get(0).getPackage_id();
                 maksSewa = leasableResponse.getLeaseableObjects().get(0).getMaxDuration();
                 price = leasableResponse.getLeaseableObjects().get(0).getPricePerDuration();
+
+                LeaseableObject object = leasableResponse.getLeaseableObjects().get(0);
+                stokKavling = Integer.parseInt(object.getAvailable());
+                String objectType = object.getObjectName();
+                sewaLahanModel.setJenisSewa(objectType);
+
+                holder.tv_label_pick_jumlah.setText("Jumlah " + objectType);
+                holder.tv_label_jumlah.setText("Jumlah " + objectType + " :");
+                holder.tv_label_lubang.setText("Lubang tiap " + objectType + " :");
+                holder.label_harga.setText("Harga Sewa (" + object.getLeaseDurationName() + ")");
+                holder.label_lama.setText("Lama Sewa (" + object.getLeaseDurationName() + ")");
+                holder.tv_jumlah_kavling.setText(object.getAvailable() + " " + objectType);
+                holder.tv_jumlah_lubang.setText(object.getProductionCapacity() + " Lubang");
+                holder.tv_maksimal_sewa.setText("" + object.getMaxDuration() + " " + object.getLeaseDurationName());
+                holder.tv_harga_sewa.setText("Rp. " + MethodUtil.toCurrencyNumber(object.getPricePerDuration()));
 
                 holder.btn_add_kavling.setOnClickListener(view -> {
                     int count = Integer.parseInt(holder.tv_quantity_kavling.getText().toString());
                     count += 1;
                     if (count <= stokKavling) {
                         holder.tv_quantity_kavling.setText(""+count);
-                        sewaLahanModel.setId(String.valueOf(id));
+                        sewaLahanModel.setId(packageId);
+                        sewaLahanModel.setNamaLahan(leasableResponse.getName());
+                        sewaLahanModel.setJenisSewa(objectType);
                         sewaLahanModel.setJumlahKavling(String.valueOf(count));
                     }
                 });
@@ -131,11 +150,15 @@ public class HomeSewaLahanAdapter extends RecyclerView.Adapter<HomeSewaLahanAdap
                         int count = Integer.parseInt(holder.tv_quantity_kavling.getText().toString());
                         count -= 1;
                         holder.tv_quantity_kavling.setText(""+count);
-                        sewaLahanModel.setId(String.valueOf(id));
+                        sewaLahanModel.setId(packageId);
+                        sewaLahanModel.setNamaLahan(leasableResponse.getName());
+                        sewaLahanModel.setJenisSewa(objectType);
                         sewaLahanModel.setJumlahKavling(String.valueOf(count));
                     } else {
                         holder.tv_quantity_kavling.setText("0");
-                        sewaLahanModel.setId(String.valueOf(id));
+                        sewaLahanModel.setId(packageId);
+                        sewaLahanModel.setNamaLahan(leasableResponse.getName());
+                        sewaLahanModel.setJenisSewa(objectType);
                         sewaLahanModel.setJumlahKavling("0");
                     }
                 });
@@ -146,7 +169,9 @@ public class HomeSewaLahanAdapter extends RecyclerView.Adapter<HomeSewaLahanAdap
                     if (count <= maksSewa) {
                         int totalPrice = price * count;
                         holder.tv_quantity_sewa.setText(""+count);
-                        sewaLahanModel.setId(String.valueOf(id));
+                        sewaLahanModel.setId(packageId);
+                        sewaLahanModel.setNamaLahan(leasableResponse.getName());
+                        sewaLahanModel.setJenisSewa(objectType);
                         sewaLahanModel.setLamaSewa(String.valueOf(count));
                         sewaLahanModel.setHarga(String.valueOf(price));
                         sewaLahanModel.setTotalHarga(String.valueOf(totalPrice));
@@ -159,20 +184,23 @@ public class HomeSewaLahanAdapter extends RecyclerView.Adapter<HomeSewaLahanAdap
                         count -= 1;
                         int totalPrice = price * count;
                         holder.tv_quantity_sewa.setText(""+count);
-                        sewaLahanModel.setId(String.valueOf(id));
+                        sewaLahanModel.setId(packageId);
+                        sewaLahanModel.setNamaLahan(leasableResponse.getName());
+                        sewaLahanModel.setJenisSewa(objectType);
                         sewaLahanModel.setLamaSewa(String.valueOf(count));
                         sewaLahanModel.setHarga(String.valueOf(price));
                         sewaLahanModel.setTotalHarga(String.valueOf(totalPrice));
                     } else {
                         holder.tv_quantity_sewa.setText("0");
-                        sewaLahanModel.setId(String.valueOf(id));
+                        sewaLahanModel.setId(packageId);
+                        sewaLahanModel.setNamaLahan(leasableResponse.getName());
+                        sewaLahanModel.setJenisSewa(objectType);
                         sewaLahanModel.setLamaSewa("0");
                         sewaLahanModel.setHarga("0");
                         sewaLahanModel.setTotalHarga("0");
                     }
                 });
-
-                setSpinner(leasableResponse, holder, 1);
+//                setSpinner(leasableResponse, holder, 1);
             }
         }
 
@@ -185,9 +213,15 @@ public class HomeSewaLahanAdapter extends RecyclerView.Adapter<HomeSewaLahanAdap
 
         holder.btn_informasi.setOnClickListener(view -> {
             Intent intent = new Intent(activity, InformasiKeuntunganActivity.class);
+            intent.putExtra("farm_name", leasableResponse.getName());
             activity.startActivity(intent);
             activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         });
+
+        Glide.with(activity)
+                .load(leasableResponse.getLogo().getFullpath())
+                .placeholder(R.drawable.img_plant)
+                .into(holder.img_lahan);
 
         holder.img_lahan.setOnClickListener(view -> {
             Intent intent = new Intent(activity, GaleriLahanActivity.class);
@@ -203,6 +237,8 @@ public class HomeSewaLahanAdapter extends RecyclerView.Adapter<HomeSewaLahanAdap
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         TextView tv_jumlah_kavling, tv_jumlah_lubang, tv_lokasi_lahan, tv_harga_sewa, tv_maksimal_sewa, tv_quantity_kavling, tv_quantity_sewa, tv_farm_name;
+        TextView tv_label_jumlah, tv_label_lubang, tv_label_pick_jumlah;
+        TextView label_spinner, label_harga, label_lama;
         Spinner spinner_type_code;
         ElasticImageView img_lahan, btn_add_kavling, btn_min_kavling, btn_add_sewa, btn_min_sewa;
         ElasticCheckButton btn_informasi;
@@ -214,6 +250,11 @@ public class HomeSewaLahanAdapter extends RecyclerView.Adapter<HomeSewaLahanAdap
             tv_jumlah_kavling = v.findViewById(R.id.tv_jumlah_kavling);
             tv_jumlah_lubang = v.findViewById(R.id.tv_jumlah_lubang);
             tv_lokasi_lahan = v.findViewById(R.id.tv_lokasi_lahan);
+            tv_label_jumlah = v.findViewById(R.id.textView5);
+            tv_label_lubang = v.findViewById(R.id.textView6);
+            label_harga = v.findViewById(R.id.textView7);
+            label_lama = v.findViewById(R.id.textView18);
+            tv_label_pick_jumlah = v.findViewById(R.id.textView15);
             img_lahan = v.findViewById(R.id.img_lahan);
             btn_informasi = v.findViewById(R.id.btn_informasi);
             tv_harga_sewa = v.findViewById(R.id.tv_harga_sewa);
@@ -226,13 +267,13 @@ public class HomeSewaLahanAdapter extends RecyclerView.Adapter<HomeSewaLahanAdap
             btn_min_sewa = v.findViewById(R.id.btn_min_sewa);
             spinner_type_code = v.findViewById(R.id.spinner_type_code);
             layout_spinner = v.findViewById(R.id.layout_spinner);
+            label_spinner = v.findViewById(R.id.label_spinner);
         }
     }
 
     private void setSpinner(SiteLeasableResponse siteLeasableResponse, ViewHolder holder, int leasableObjectNum){
         List<String> list = new ArrayList<>();
         if (leasableObjectNum > 1){
-            list.add("Pilih jenis sewa");
             holder.tv_jumlah_kavling.setText("-");
             holder.tv_jumlah_lubang.setText("-");
             holder.tv_maksimal_sewa.setText("-");
@@ -240,23 +281,10 @@ public class HomeSewaLahanAdapter extends RecyclerView.Adapter<HomeSewaLahanAdap
         }
 
         for (LeaseableObject object: siteLeasableResponse.getLeaseableObjects()){
-            list.add(object.getObjectTypeName());
+            list.add(object.getPackageName());
         }
 
-        ArrayAdapter adapter = new ArrayAdapter(activity, R.layout.simple_spinner_item_categories, list){
-            @Override
-            public boolean isEnabled(int position) {
-                if (leasableObjectNum > 1){
-                    if (position == 0) {
-                        return false;
-                    } else {
-                        return true;
-                    }
-                } else {
-                    return true;
-                }
-            }
-        };
+        ArrayAdapter adapter = new ArrayAdapter(activity, R.layout.simple_spinner_item_categories, list);
         adapter.setDropDownViewResource(R.layout.simple_spinner_dropdown_item_categories);
         holder.spinner_type_code.setAdapter(adapter);
 
@@ -264,7 +292,8 @@ public class HomeSewaLahanAdapter extends RecyclerView.Adapter<HomeSewaLahanAdap
             @SuppressLint("SetTextI18n")
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                LeaseableObject object = siteLeasableResponse.getLeaseableObjects().get(leasableObjectNum > 1 ? i-1 : i);
+                LeaseableObject object = siteLeasableResponse.getLeaseableObjects().get(i);
+//                LeaseableObject object = siteLeasableResponse.getLeaseableObjects().get(i);
 
                 //set default quantity
                 holder.tv_quantity_kavling.setText("0");
@@ -273,17 +302,27 @@ public class HomeSewaLahanAdapter extends RecyclerView.Adapter<HomeSewaLahanAdap
                 int stokKavling = Integer.parseInt(object.getAvailable());
                 int maksSewa = object.getMaxDuration();
                 int price = object.getPricePerDuration();
-                String objectType = object.getObjectTypeName().toLowerCase().contains("kavling")?"Kavling":"Baris";
+                String objectType = object.getObjectName();
+                sewaLahanModel.setJenisSewa(objectType);
+
+                holder.tv_label_pick_jumlah.setText("Jumlah " + objectType);
+                holder.tv_label_jumlah.setText("Jumlah " + objectType + " :");
+                holder.tv_label_lubang.setText("Lubang tiap " + objectType + " :");
+                holder.label_harga.setText("Harga Sewa (" + object.getLeaseDurationName() + ")");
+                holder.label_lama.setText("Lama Sewa (" + object.getLeaseDurationName() + ")");
                 holder.tv_jumlah_kavling.setText(object.getAvailable() + " " + objectType);
-                holder.tv_jumlah_lubang.setText("" + object.getProductionCapacity());
-                holder.tv_maksimal_sewa.setText("" + object.getMaxDuration());
+                holder.tv_jumlah_lubang.setText(object.getProductionCapacity() + " Lubang");
+                holder.tv_maksimal_sewa.setText("" + object.getMaxDuration() + " " + object.getLeaseDurationName());
                 holder.tv_harga_sewa.setText("Rp. " + MethodUtil.toCurrencyNumber(object.getPricePerDuration()));
+
                 holder.btn_add_kavling.setOnClickListener(view2 -> {
                     int count = Integer.parseInt(holder.tv_quantity_kavling.getText().toString());
                     count += 1;
                     if (count <= stokKavling) {
                         holder.tv_quantity_kavling.setText(""+count);
-                        sewaLahanModel.setId(String.valueOf(siteLeasableResponse.getId()));
+                        sewaLahanModel.setId(object.getPackage_id());
+                        sewaLahanModel.setNamaLahan(siteLeasableResponse.getName());
+                        sewaLahanModel.setJenisSewa(objectType);
                         sewaLahanModel.setJumlahKavling(String.valueOf(count));
                     }
                 });
@@ -292,11 +331,15 @@ public class HomeSewaLahanAdapter extends RecyclerView.Adapter<HomeSewaLahanAdap
                         int count = Integer.parseInt(holder.tv_quantity_kavling.getText().toString());
                         count -= 1;
                         holder.tv_quantity_kavling.setText(""+count);
-                        sewaLahanModel.setId(String.valueOf(siteLeasableResponse.getId()));
+                        sewaLahanModel.setId(object.getPackage_id());
+                        sewaLahanModel.setNamaLahan(siteLeasableResponse.getName());
+                        sewaLahanModel.setJenisSewa(objectType);
                         sewaLahanModel.setJumlahKavling(String.valueOf(count));
                     } else {
                         holder.tv_quantity_kavling.setText("0");
-                        sewaLahanModel.setId(String.valueOf(siteLeasableResponse.getId()));
+                        sewaLahanModel.setId(object.getPackage_id());
+                        sewaLahanModel.setNamaLahan(siteLeasableResponse.getName());
+                        sewaLahanModel.setJenisSewa(objectType);
                         sewaLahanModel.setJumlahKavling("0");
                     }
                 });
@@ -306,7 +349,9 @@ public class HomeSewaLahanAdapter extends RecyclerView.Adapter<HomeSewaLahanAdap
                     if (count <= maksSewa) {
                         int totalPrice = price * count;
                         holder.tv_quantity_sewa.setText(""+count);
-                        sewaLahanModel.setId(String.valueOf(siteLeasableResponse.getId()));
+                        sewaLahanModel.setId(object.getPackage_id());
+                        sewaLahanModel.setNamaLahan(siteLeasableResponse.getName());
+                        sewaLahanModel.setJenisSewa(objectType);
                         sewaLahanModel.setLamaSewa(String.valueOf(count));
                         sewaLahanModel.setHarga(String.valueOf(price));
                         sewaLahanModel.setTotalHarga(String.valueOf(totalPrice));
@@ -318,13 +363,17 @@ public class HomeSewaLahanAdapter extends RecyclerView.Adapter<HomeSewaLahanAdap
                         count -= 1;
                         int totalPrice = price * count;
                         holder.tv_quantity_sewa.setText(""+count);
-                        sewaLahanModel.setId(String.valueOf(siteLeasableResponse.getId()));
+                        sewaLahanModel.setId(object.getPackage_id());
+                        sewaLahanModel.setNamaLahan(siteLeasableResponse.getName());
+                        sewaLahanModel.setJenisSewa(objectType);
                         sewaLahanModel.setLamaSewa(String.valueOf(count));
                         sewaLahanModel.setHarga(String.valueOf(price));
                         sewaLahanModel.setTotalHarga(String.valueOf(totalPrice));
                     } else {
                         holder.tv_quantity_sewa.setText("0");
-                        sewaLahanModel.setId(String.valueOf(siteLeasableResponse.getId()));
+                        sewaLahanModel.setId(object.getPackage_id());
+                        sewaLahanModel.setNamaLahan(siteLeasableResponse.getName());
+                        sewaLahanModel.setJenisSewa(objectType);
                         sewaLahanModel.setLamaSewa("0");
                         sewaLahanModel.setHarga("0");
                         sewaLahanModel.setTotalHarga("0");

@@ -2,7 +2,7 @@
     <string name="app_name">Kebon Mobile</string>
     <string name="string_register_disini">Belum memiliki akun? <font fgcolor='#FA6A37'>Register disini</font></string>
     <string name="text_inq">Site : Depari Farm\nJumlah Kavling : 10 kavling\nLama Sewa : 1 tahun\nHarga : Rp 4,500,000</string>
-    <string name="text_istilah">Lahan : Lahan adalah lahan\nKavling : Kavling adalah kavling.\nKavling terdiri atas x slot.</string>
+    <string name="text_istilah">Lahan : Luas tanah yang bisa dimanfaatkan untuk keperluan manusia, dalam hal ini adalah menanam\n\nKavling : bagian tanah yang sudah dipetak-petak dengan ukuran tertentu yang akan dijadikan tampat penanaman.\n\nKavling terdiri atas beberapa baris dan lubang.</string>
     <string name="text_panen_online">Metode panen yang dipilih otomatis online. Namun Anda masih dapat merubahnya menjadi offline dengan cara menekan tombol ‘Panen Sekarang’ di halaman panen tanaman saya.</string>
     <string name="req_nama">Maks. 30 Karakter</string>
     <string name="req_email">Maks. 100 Karakter</string>
@@ -14,4 +14,6 @@
     <string name="desc_panen">Silahkan datang ke kebun <b>Depari Farm</b>\ndari tanggal <b>24 September s/d 27 September</b></string>
     <string name="feedback_hint">Beritahu pengguna lain mengapa Anda sangat menyukai hasil panen tanaman ini</string>
     <string name="text_notif1">Ceritakan pengalaman Anda pada saat berkebun di KEBON</string>
+    <string name="lihat_selengkapnya"><u>Lihat selengkapnya..</u>.</string>
+    <string name="default_notification_channel_id">com.selada.kebonmobile</string>
 </resources>

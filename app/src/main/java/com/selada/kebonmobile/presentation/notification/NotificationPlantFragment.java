@@ -30,11 +30,6 @@ import butterknife.OnClick;
 
 public class NotificationPlantFragment extends Fragment {
 
-    private RecyclerView recyclerView;
-    private NotificationAdapter notifAdapter;
-    private ArrayList<NotificationModel> notifArrayList;
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -47,19 +42,5 @@ public class NotificationPlantFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
 
-        addData();
-        recyclerView = view.findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        notifAdapter = new NotificationAdapter(notifArrayList);
-        recyclerView.setAdapter(notifAdapter);
     }
-
-    private void addData() {
-        notifArrayList = new ArrayList<>();
-        notifArrayList.add(new NotificationModel("Penilaian","Ceritakan pengalaman Anda pada saat berkebun di KEBON", "29 Sept"));
-        notifArrayList.add(new NotificationModel("Informasi","Panen sekarang Sawi Anda di Lahan Depari Farm", "29 Sept"));
-        notifArrayList.add(new NotificationModel("Pembayaran","Pembayaran sewa lahan anda telah diterima", "23 Sept"));
-        notifArrayList.add(new NotificationModel("Pembayaran","Segera melakukan pembayaran sewa lahan sebelum tanggal 24 Agustus 2021", "24 Sept"));
-    }
-
 }

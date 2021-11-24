@@ -41,6 +41,7 @@
                 app:imageView_scale="0.87" />
 
             <com.skydoves.elasticviews.ElasticImageView
+                android:visibility="gone"
                 android:id="@+id/btn_share"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
@@ -55,225 +56,390 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <ScrollView
+    <com.madapps.liquid.LiquidRefreshLayout
+        android:id="@+id/refreshLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:scrollbars="none"
+        app:AniBackColor="#A5DCB1"
+        app:AniForeColor="#FBF4EA"
+        app:CircleSmaller="6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <com.skydoves.elasticviews.ElasticImageView
-                android:id="@+id/img_plant"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginTop="26dp"
-                android:layout_gravity="center"
-                android:src="@drawable/img_plant"
-                app:imageView_duration="100"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_plant_name"/>
-
-            <TextView
-                android:id="@+id/textView24"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="19dp"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/poppins_regular"
-                android:gravity="center"
-                android:text="Lahan saya yang ditanami ini"
-                android:textColor="@color/colorTextBro"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/img_plant" />
-
-            <HorizontalScrollView
-                android:id="@+id/horizontal_scroll"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView24"
-                android:scrollbars="none">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_tanaman_site"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="14dp"/>
-
-            </HorizontalScrollView>
-
-            <com.iambedant.text.OutlineTextView
-                android:id="@+id/tv_plant_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/poppins_bold"
-                android:gravity="center"
-                android:text="Kangkung"
-                android:textColor="#FFE693"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:outlineColor="#704D20"
-                app:outlineWidth="1.5" />
-
-            <com.skydoves.elasticviews.ElasticImageView
-                android:id="@+id/btn_jadwal"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:layout_alignParentEnd="true"
-                android:background="?attr/selectableItemBackground"
-                android:padding="12dp"
-                app:imageView_duration="100"
-                android:src="@drawable/ic_calendar_orange"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="match_parent"
+            android:scrollbars="none">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="20dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="18dp"
-                android:background="@drawable/bg_round_tanaman_saya"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/horizontal_scroll">
+                android:layout_height="match_parent">
+
+                <com.skydoves.elasticviews.ElasticImageView
+                    android:id="@+id/img_plant"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/img_plant"
+                    app:imageView_duration="100"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_plant_name"/>
 
                 <TextView
-                    android:id="@+id/text_title"
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:text="Filter data berdasarkan lahan"
+                    android:textColor="@color/colorTextBro"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_plant" />
+
+                <com.skydoves.elasticviews.ElasticButton
+                    android:visibility="gone"
+                    android:id="@+id/btn_reset_filter"
+                    android:layout_width="wrap_content"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="19dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/bg_button_small_reminder"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="Reset Filter"
+                    android:textColor="@color/White"
+                    android:textSize="14sp"
+                    app:button_duration="100"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView24"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontal_scroll"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:gravity="center"
-                    android:text="Informasi Tanaman : Kangkung"
-                    android:textColor="@color/colorTextBro"
-                    android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView24"
+                    android:scrollbars="none">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_tanaman_site"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"/>
+
+                </HorizontalScrollView>
+
+                <com.iambedant.text.OutlineTextView
+                    android:id="@+id/tv_plant_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="Kangkung"
+                    android:textColor="#FFE693"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:outlineColor="#704D20"
+                    app:outlineWidth="1.5" />
+
+                <com.skydoves.elasticviews.ElasticImageView
+                    android:id="@+id/btn_jadwal"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="12dp"
+                    app:imageView_duration="100"
+                    android:src="@drawable/ic_calendar_orange"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/textViewTanaman"
-                    android:layout_width="wrap_content"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:layout_marginTop="24dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="Jumlah lubang"
-                    android:textColor="@color/colorTextBroLight"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="18dp"
+                    android:background="@drawable/bg_round_tanaman_saya"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/text_title"/>
+                    app:layout_constraintTop_toBottomOf="@+id/horizontal_scroll">
 
-                <TextView
-                    android:id="@+id/textViewPanen"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/text_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"
+                        android:text="Ringkasan"
+                        android:textColor="@color/colorTextBro"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/margin"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_title"/>
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/site"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Lokasi"
+                        android:textColor="@color/colorTextBroLight"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/margin"/>
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tv_site_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Depari Farm"
+                        android:textColor="#FFC107"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/margin" />
+
+                    <TextView
+                        android:id="@+id/textViewTanaman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Jumlah"
+                        android:textColor="@color/colorTextBroLight"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/site"/>
+
+                    <TextView
+                        android:id="@+id/tv_jumlah_lubang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="300"
+                        android:textColor="#FFC107"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/site" />
+
+                    <TextView
+                        android:id="@+id/textViewSite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Panen Terdekat"
+                        android:textColor="@color/colorTextBroLight"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewTanaman" />
+
+                    <TextView
+                        android:id="@+id/textViewAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Usia Tanaman"
+                        android:textColor="@color/colorTextBroLight"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewSite" />
+
+                    <TextView
+                        android:id="@+id/tv_panen_terdekat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="27 Hari"
+                        android:textColor="#FFC107"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewTanaman" />
+
+                    <TextView
+                        android:id="@+id/tv_usia_panen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="0 - 5 Hari"
+                        android:textColor="#FFC107"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewSite" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_monitoring"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:layout_marginTop="24dp"
                     android:layout_marginStart="16dp"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="Harga Jual"
-                    android:textColor="@color/colorTextBroLight"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="18dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_round_tanaman_saya"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textViewSite" />
+                    app:layout_constraintTop_toBottomOf="@+id/layout">
 
-                <TextView
-                    android:id="@+id/tv_harga_jual"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="3.000/kg"
-                    android:textColor="#FFC107"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textViewSite" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"
+                        android:text="Monitoring"
+                        android:textColor="@color/colorTextBro"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/tv_jumlah_lubang"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="16dp"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="300"
-                    android:textColor="#FFC107"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/text_title" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_monitoring"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        tools:listitem="@layout/item_list_monitoring"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        />
 
-                <TextView
-                    android:id="@+id/textViewSite"
-                    android:layout_width="wrap_content"
+                    <com.skydoves.elasticviews.ElasticButton
+                        android:id="@+id/btn_lihat_grafik"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_gravity="end"
+                        android:text="Lihat Grafik"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textColor="@color/colorTextBro"
+                        android:textSize="13sp"
+                        android:textAllCaps="false"
+                        android:background="@drawable/bg_button_reminder"
+                        app:button_duration="100"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_aktivitas_penanaman"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:layout_marginTop="24dp"
                     android:layout_marginStart="16dp"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="Usia Panen"
-                    android:textColor="@color/colorTextBroLight"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textViewTanaman" />
-
-                <TextView
-                    android:id="@+id/tv_usia_panen"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="27 Hari"
-                    android:textColor="#FFC107"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
+                    android:layout_marginBottom="18dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_round_tanaman_saya"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textViewTanaman" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_monitoring">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"
+                        android:text="Rincian"
+                        android:textColor="@color/colorTextBro"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_plant_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_list_plant_activity" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/margin2"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_aktivitas_penanaman"/>
+
+                <com.skydoves.elasticviews.ElasticButton
+                    android:visibility="invisible"
+                    android:id="@+id/btn_lihat_lokasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="36dp"
+                    android:background="@drawable/bg_button_bro_round_5dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Lihat lokasi di Google Maps"
+                    android:textColor="@color/colorTextBroLight"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    app:button_duration="100"
+                    app:button_scale="0.87"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <com.skydoves.elasticviews.ElasticButton
-                android:visibility="invisible"
-                android:id="@+id/btn_lihat_lokasi"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="36dp"
-                android:background="@drawable/bg_button_bro_round_5dp"
-                android:fontFamily="@font/poppins_regular"
-                android:text="Lihat lokasi di Google Maps"
-                android:textColor="@color/colorTextBroLight"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                app:button_duration="100"
-                app:button_scale="0.87"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layout" />
+        </androidx.core.widget.NestedScrollView>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </ScrollView>
+    </com.madapps.liquid.LiquidRefreshLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

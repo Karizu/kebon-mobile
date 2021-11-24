@@ -43,7 +43,7 @@
         android:layout_marginStart="35dp"
         android:fontFamily="@font/poppins_regular"
         android:gravity="center"
-        android:text="Hasil panen akan dikirimkan ke rumah Anda\npada tanggal 24 September 2021"
+        android:text="Hasil panen akan dikirimkan ke rumah Anda pada tanggal -"
         android:textStyle="bold"
         android:textColor="@color/Black"
         android:textSize="14sp"
@@ -54,7 +54,7 @@
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="175dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="13dp"
@@ -84,6 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:layout_marginStart="16dp"
+            android:layout_marginBottom="20dp"
             android:fontFamily="@font/poppins_regular"
             android:text="Jl. Sulaksana Makmur Raya No.30, Cicaheum, Kec. Kiaracondong, Kota Bandung, Jawa Barat 40282"
             android:textColor="@color/colorTextBroLight"
@@ -92,10 +93,11 @@
             app:layout_constraintTop_toBottomOf="@+id/textView30" />
 
         <TextView
+            android:visibility="gone"
             android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/poppins_regular"
             android:text="Metode Pengiriman"
             android:textColor="@color/colorTextBro"
@@ -104,7 +106,33 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView30" />
 
+        <com.skydoves.elasticviews.ElasticButton
+            android:visibility="gone"
+            android:id="@+id/btn_konfirmasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="start"
+            android:drawableEnd="@drawable/ic_baseline_chevron_right_hite_24"
+            android:background="@drawable/bg_button_round"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Konfirmasi Pengiriman"
+            android:textSize="15sp"
+            android:textAllCaps="false"
+            android:textColor="@color/White"
+            android:textStyle="bold"
+            app:button_duration="100"
+            android:layout_alignParentBottom="true"/>
+
         <TextView
+            android:visibility="gone"
             android:id="@+id/tv_metode_pengiriman"
             android:layout_width="270dp"
             android:layout_height="wrap_content"

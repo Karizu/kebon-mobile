@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:visibility="visible"
+    android:id="@+id/layout_already_plant_site"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="27dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Menu"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorDarkBlue"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.skydoves.elasticviews.ElasticCardView
+        android:id="@+id/cv_jadwal"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="14dp"
+        app:cardView_duration="100"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/White">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="16dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginTop="-2dp"
+                    android:layout_gravity="right"
+                    android:text="Kalendar"
+                    android:textColor="@color/colorDarkBlue"
+                    android:textSize="25sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="right"
+                    android:text="Lihat jadwal panen \ntanamanmu"
+                    android:textColor="@color/colorDarkBlue"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_ilustration_1" />
+
+        </LinearLayout>
+
+    </com.skydoves.elasticviews.ElasticCardView>
+
+    <com.skydoves.elasticviews.ElasticCardView
+        android:id="@+id/cv_panen"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        app:cardView_duration="100"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/White">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="16dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginTop="-2dp"
+                    android:layout_gravity="right"
+                    android:text="Panen Hari Ini"
+                    android:textColor="@color/colorDarkBlue"
+                    android:textSize="25sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="right"
+                    android:text="Lihat tanamanmu yang akan panen."
+                    android:textColor="@color/colorDarkBlue"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_gardenning" />
+
+        </LinearLayout>
+
+    </com.skydoves.elasticviews.ElasticCardView>
+
+    <com.skydoves.elasticviews.ElasticCardView
+        android:id="@+id/cv_history"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        app:cardView_duration="100"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/White">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="16dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginTop="-2dp"
+                    android:layout_gravity="right"
+                    android:text="Aktifitas"
+                    android:textColor="@color/colorDarkBlue"
+                    android:textSize="25sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="right"
+                    android:text="Lihat segala aktifitasmu \ndisini"
+                    android:textColor="@color/colorDarkBlue"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_confirmed_rafiki"/>
+
+        </LinearLayout>
+
+    </com.skydoves.elasticviews.ElasticCardView>
+
+    <com.skydoves.elasticviews.ElasticCardView
+        android:id="@+id/cv_tanam_baru"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        app:cardView_duration="100"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/White">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="16dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginTop="-2dp"
+                    android:layout_gravity="right"
+                    android:text="Lahan Baru"
+                    android:textColor="@color/colorDarkBlue"
+                    android:textSize="25sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="right"
+                    android:text="Mulai menanam di lahan yang kamu sewa"
+                    android:textColor="@color/colorDarkBlue"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_memilih_tanaman" />
+
+        </LinearLayout>
+
+    </com.skydoves.elasticviews.ElasticCardView>
+
+</LinearLayout>

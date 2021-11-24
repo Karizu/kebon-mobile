@@ -89,7 +89,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout"
                 android:layout_width="match_parent"
-                android:layout_height="186dp"
+                android:layout_height="wrap_content"
                 android:paddingBottom="20dp"
                 android:layout_marginTop="29dp"
                 android:layout_marginStart="16dp"
@@ -107,7 +107,8 @@
                     android:layout_marginTop="12dp"
                     android:paddingStart="16dp"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="Data"
+                    android:text="Data Tanaman"
+                    android:gravity="center"
                     android:textColor="@color/colorTextBro"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -129,6 +130,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/text_title"/>
 
                 <TextView
+                    android:visibility="gone"
                     android:id="@+id/textViewPanen"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -147,7 +149,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="Jumlah Panen"
+                    android:text="Jumlah -"
                     android:textColor="@color/colorTextBroLight"
                     android:textSize="14sp"
                     android:textStyle="bold"
@@ -160,7 +162,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="Metode Panen"
+                    android:text="Metode -"
                     android:textColor="@color/colorTextBroLight"
                     android:textSize="14sp"
                     android:textStyle="bold"
@@ -168,6 +170,20 @@
                     app:layout_constraintTop_toBottomOf="@+id/textViewPanens" />
 
                 <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Metode -"
+                    android:textColor="@color/colorTextBroLight"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewPanens" />
+
+                <TextView
+                    android:visibility="gone"
                     android:id="@+id/tv_usia_tanaman"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -226,7 +242,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="Tanggal Dipanen"
+                    android:text="Tanggal -"
                     android:textColor="@color/colorTextBroLight"
                     android:textSize="14sp"
                     android:textStyle="bold"
@@ -248,6 +264,268 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:visibility="gone"
+                android:id="@+id/layout_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/bg_round_tanaman_saya"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout">
+
+                <TextView
+                    android:id="@+id/text_title_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:paddingStart="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Rincian Pengiriman"
+                    android:gravity="center"
+                    android:textColor="@color/colorTextBro"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewAlamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Alamat Kirim"
+                    android:textColor="@color/colorTextBroLight"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_title_2"/>
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="-"
+                    android:gravity="right"
+                    android:textColor="#FFC107"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textViewAlamat"
+                    app:layout_constraintTop_toBottomOf="@+id/text_title_2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_cost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="18dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_round_tanaman_saya"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_address">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:text="Rincian Biaya"
+                    android:textColor="@color/colorTextBro"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/layout_recycler_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:visibility="visible"
+                        android:id="@+id/rv_cost_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        tools:itemCount="1"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_list_activity_cost" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:text="Sub Total"
+                            android:textColor="@color/colorTextBro"
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_sub_total"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="end"
+                            android:text="Rp 0"
+                            android:textColor="@color/colorTextBro"
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_jumlah_obj"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:text="Jumlah -"
+                            android:textColor="@color/colorTextBro"
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_total_obj"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="16dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="end"
+                            android:text="10"
+                            android:textColor="@color/colorTextBro"
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:gravity="center"
+                            android:text="Total"
+                            android:textColor="@color/colorTextBro"
+                            android:textStyle="bold"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_total"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="16dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:gravity="end"
+                            android:text="Rp 0"
+                            android:textColor="@color/colorTextBro"
+                            android:textStyle="bold"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_no_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:text="Tidak Ada Biaya"
+                    android:textColor="#FFC107"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_title" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/layout_aktivitas_penanaman"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="18dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_round_tanaman_saya"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_cost">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:text="Status Aktifitas"
+                    android:textColor="@color/colorTextBro"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_plant_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_list_activity_detail" />
+
+            </LinearLayout>
+
             <com.skydoves.elasticviews.ElasticButton
                 android:visibility="invisible"
                 android:id="@+id/btn_lihat_lokasi"
@@ -266,7 +544,7 @@
                 app:button_scale="0.87"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layout" />
+                app:layout_constraintTop_toBottomOf="@+id/layout_aktivitas_penanaman" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

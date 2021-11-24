@@ -24,7 +24,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
             case 1:
                 return new StatusFragment();
             case 2:
-                return new NotificationPlantFragment();
+                return new NotificationFragment();
             case 3:
                 return new AkunFragment();
         }

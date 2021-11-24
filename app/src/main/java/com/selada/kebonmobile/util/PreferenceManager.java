@@ -2,8 +2,8 @@ package com.selada.kebonmobile.util;
 
 import android.content.Context;
 
-import androidx.annotation.NonNull;
 import com.orhanobut.hawk.Hawk;
+import com.selada.kebonmobile.model.CommodityCart;
 import com.selada.kebonmobile.model.SewaLahanModel;
 import com.selada.kebonmobile.model.response.LoginResponse;
 
@@ -17,6 +17,12 @@ public class PreferenceManager {
     private static final String SESSION_TOKEN = "sessionToken";
     private static final String SEWA_LAHAN = "sewaLahan";
     private static final String LOGIN_RESPONSE = "loginResponse";
+    private static final String HISTORY_SEWA_lAHAN = "historySewaLahan";
+    private static final String IS_FIRST_OPEN = "isFirstOpen";
+    private static final String COMMODITY_CART = "commodityCart";
+    private static final String MIN_QUANTITY = "minQuantity";
+    private static final String FIREBASE_TOKEN = "firebaseToken";
+    private static final String IS_FIRST_OPEN_HOME_REMINDER_HARVEST = "isFirstOpenHomeReminderHarvest";
 
 
     private static Context ctx;
@@ -83,4 +89,51 @@ public class PreferenceManager {
     }
 
 
+    public static void setHistorySewalahan(List<SewaLahanModel> historySewalahan){
+        Hawk.put(HISTORY_SEWA_lAHAN, historySewalahan);
+    }
+
+    public static List<SewaLahanModel> getHistorySewaLahan() {
+        return Hawk.get(HISTORY_SEWA_lAHAN, null);
+    }
+
+    public static void setIsFirstOpen(boolean isFirstOpen){
+        Hawk.put(IS_FIRST_OPEN, isFirstOpen);
+    }
+
+    public static boolean isFirstOpen() {
+        return Hawk.get(IS_FIRST_OPEN, true);
+    }
+
+    public static void setCommodityCart(List<CommodityCart> availableCommodity){
+        Hawk.put(COMMODITY_CART, availableCommodity);
+    }
+
+    public static List<CommodityCart> getCommodityCart(){
+        return Hawk.get(COMMODITY_CART, null);
+    }
+
+    public static void setMinQuantity(int minQuantity){
+        Hawk.put(MIN_QUANTITY, minQuantity);
+    }
+
+    public static int getMinQuantity() {
+        return Hawk.get(MIN_QUANTITY, 0);
+    }
+
+    public static void setFirebaseToken(String token) {
+        Hawk.put(FIREBASE_TOKEN, token);
+    }
+
+    public static String getFirebaseToken() {
+        return Hawk.get(FIREBASE_TOKEN, "");
+    }
+
+    public static void setIsFirstOpenHomeReminderHarvest(boolean isFirstOpenHomeReminderHarvest){
+        Hawk.put(IS_FIRST_OPEN_HOME_REMINDER_HARVEST, isFirstOpenHomeReminderHarvest);
+    }
+
+    public static boolean getIsFirstOpenHomeReminderHarvest(){
+        return Hawk.get(IS_FIRST_OPEN_HOME_REMINDER_HARVEST, true);
+    }
 }

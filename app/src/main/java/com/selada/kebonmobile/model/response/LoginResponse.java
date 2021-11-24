@@ -16,6 +16,9 @@ public class LoginResponse {
     @SerializedName("user")
     @Expose
     private User user;
+    @SerializedName("general_informations")
+    @Expose
+    private List<GeneralInformation> generalInformation;
 
     public String getMessage() {
         return message;
@@ -41,4 +44,11 @@ public class LoginResponse {
         this.user = user;
     }
 
+    public List<GeneralInformation> getGeneralInformation() {
+        return generalInformation;
+    }
+
+    public void setGeneralInformation(List<GeneralInformation> generalInformation) {
+        this.generalInformation = generalInformation;
+    }
 }

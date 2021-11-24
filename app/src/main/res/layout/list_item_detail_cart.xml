@@ -7,6 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <CheckBox
+        android:visibility="gone"
         android:id="@+id/cb_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,6 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="111dp"
         android:background="@drawable/bg_frame_outline_border"
+        android:layout_marginStart="20dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="6dp">
 
@@ -37,7 +39,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="11dp"
             android:fontFamily="@font/poppins_regular"
             android:text="Nama Tanaman : "
@@ -51,7 +53,7 @@
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="10dp"
             android:fontFamily="@font/poppins_regular"
             android:text="Harga Jual : "
             android:textColor="@color/colorTextBro"
@@ -64,7 +66,7 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="10dp"
             android:layout_marginBottom="16dp"
             android:fontFamily="@font/poppins_regular"
             android:text="Jumlah Tanaman"
@@ -74,7 +76,22 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/img_plant" />
 
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_jumlah_tanaman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginBottom="16dp"
+            android:text="20"
+            android:textColor="@color/dark_green_text"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView2" />
+
         <com.skydoves.elasticviews.ElasticImageView
+            android:visibility="visible"
             android:id="@+id/btn_delete"
             android:layout_width="22.73dp"
             android:layout_height="23.37dp"
@@ -111,6 +128,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <com.skydoves.elasticviews.ElasticButton
+            android:visibility="visible"
             android:id="@+id/btn_min"
             android:layout_width="23.06dp"
             android:layout_height="17.19dp"
@@ -121,6 +139,7 @@
             app:layout_constraintEnd_toStartOf="@+id/tv_quantity" />
 
         <TextView
+            android:visibility="visible"
             android:id="@+id/tv_quantity"
             android:layout_width="35.05dp"
             android:layout_height="17.19dp"
@@ -136,13 +155,13 @@
             app:layout_constraintEnd_toStartOf="@+id/btn_add" />
 
         <com.skydoves.elasticviews.ElasticButton
+            android:visibility="visible"
             android:id="@+id/btn_add"
             android:layout_width="23.06dp"
             android:layout_height="17.19dp"
             android:layout_marginEnd="19dp"
             android:layout_marginBottom="19dp"
             android:background="@drawable/ic_add_button"
-            android:enabled="false"
             app:button_duration="100"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.ProgressBar;
 
 import com.selada.kebonmobile.R;
+import com.selada.kebonmobile.model.response.leasesite.LeaseSiteResponse;
 import com.selada.kebonmobile.presentation.MainActivity;
 import com.selada.kebonmobile.util.Constant;
 import com.selada.kebonmobile.util.PreferenceManager;
@@ -43,7 +44,8 @@ public class KonfirmasiPembayaranActivity extends AppCompatActivity {
     }
 
     private void initComponent() {
-        PreferenceManager.setUserStatus(Constant.ON_HOLD);
+//        PreferenceManager.setUserStatus(Constant.ON_HOLD);
+
     }
 
     @Override

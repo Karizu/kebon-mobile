@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -32,18 +33,16 @@
         android:id="@+id/btn_min_kavling"
         android:layout_width="28.15dp"
         android:layout_height="24dp"
-        android:layout_marginStart="11dp"
         android:layout_marginBottom="9dp"
         app:imageView_duration="100"
         app:layout_constraintBottom_toTopOf="@+id/btn_min_sewa"
-        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintEnd_toStartOf="@+id/tv_quantity_kavling"
         app:srcCompat="@drawable/ic_minus_button" />
 
     <TextView
         android:id="@+id/tv_quantity_kavling"
         android:layout_width="29dp"
         android:layout_height="24dp"
-        android:layout_marginStart="-1dp"
         android:layout_marginBottom="9dp"
         android:background="@drawable/bg_quantity_text"
         android:fontFamily="@font/poppins_regular"
@@ -53,16 +52,17 @@
         android:textColor="@color/colorTextBro"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/tv_quantity_sewa"
-        app:layout_constraintStart_toEndOf="@+id/btn_min_kavling" />
+        app:layout_constraintEnd_toStartOf="@+id/btn_add_kavling" />
 
     <com.skydoves.elasticviews.ElasticImageView
         android:id="@+id/btn_add_kavling"
         android:layout_width="28.15dp"
         android:layout_height="24dp"
+        android:layout_marginEnd="26dp"
         android:layout_marginBottom="9dp"
         app:imageView_duration="100"
         app:layout_constraintBottom_toTopOf="@+id/btn_add_sewa"
-        app:layout_constraintStart_toEndOf="@+id/tv_quantity_kavling"
+        app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_add_button" />
 
     <TextView
@@ -80,35 +80,51 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.skydoves.elasticviews.ElasticCheckButton
+        android:visibility="gone"
         android:id="@+id/btn_informasi"
         android:layout_width="match_parent"
         android:layout_height="24dp"
-        android:layout_marginStart="65dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="18dp"
-        android:layout_marginEnd="65dp"
+        android:layout_marginEnd="50dp"
         android:background="@drawable/bg_text"
         android:fontFamily="@font/poppins_bold"
-        app:checkButton_duration="100"
         android:gravity="center"
         android:padding="2dp"
         android:text="Informasi Keuntungan"
         android:textColor="@android:color/black"
         android:textSize="12sp"
+        app:checkButton_duration="100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_lahan" />
+
+    <TextView
+        android:id="@+id/label_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Pilih jenis sewa"
+        android:textColor="@color/colorTextBroLight"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_informasi"/>
 
     <com.skydoves.elasticviews.ElasticLayout
         android:id="@+id/layout_spinner"
         android:layout_width="match_parent"
         android:layout_height="25dp"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="6dp"
         android:layout_marginEnd="26dp"
-        android:background="@drawable/bg_spinner_status_tanaman"
+        android:background="@drawable/bg_custom_spinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_informasi"
+        app:layout_constraintTop_toBottomOf="@+id/label_spinner"
         app:layout_duration="50">
 
         <LinearLayout
@@ -143,7 +159,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="14dp"
         android:fontFamily="@font/poppins_regular"
         android:gravity="center"
         android:text="Lokasi Lahan :"
@@ -160,7 +176,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_regular"
         android:gravity="center"
-        android:text="Jumlah kavling/baris:"
+        android:text="Jumlah kavling:"
         android:textColor="@color/colorTextBroLight"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -188,7 +204,7 @@
         android:layout_marginTop="2dp"
         android:fontFamily="@font/poppins_regular"
         android:gravity="center"
-        android:text="Harga Sewa (tahun) :"
+        android:text="Harga Sewa - :"
         android:textColor="@color/colorTextBroLight"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -212,7 +228,7 @@
         android:id="@+id/tv_lokasi_lahan"
         android:layout_width="133dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="14dp"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/poppins_regular"
         android:lines="2"
@@ -287,7 +303,7 @@
         android:layout_marginBottom="15dp"
         android:fontFamily="@font/poppins_regular"
         android:gravity="center"
-        android:text="Jumlah kavling/baris"
+        android:text="Jumlah kavling"
         android:textColor="@android:color/black"
         android:textSize="12sp"
         android:textStyle="bold"
@@ -302,7 +318,7 @@
         android:layout_marginBottom="30dp"
         android:fontFamily="@font/poppins_regular"
         android:gravity="center"
-        android:text="Lama Sewa (tahun)"
+        android:text="Lama Sewa -"
         android:textColor="@android:color/black"
         android:textSize="12sp"
         android:textStyle="bold"
@@ -313,10 +329,9 @@
         android:id="@+id/btn_min_sewa"
         android:layout_width="28.15dp"
         android:layout_height="24dp"
-        android:layout_marginStart="11dp"
         android:layout_marginTop="11dp"
         app:imageView_duration="100"
-        app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:layout_constraintEnd_toStartOf="@+id/tv_quantity_sewa"
         app:layout_constraintTop_toBottomOf="@+id/textView15"
         app:srcCompat="@drawable/ic_minus_button" />
 
@@ -324,7 +339,6 @@
         android:id="@+id/tv_quantity_sewa"
         android:layout_width="29dp"
         android:layout_height="24dp"
-        android:layout_marginStart="-1dp"
         android:layout_marginTop="11dp"
         android:background="@drawable/bg_quantity_text"
         android:fontFamily="@font/poppins_regular"
@@ -333,7 +347,7 @@
         android:text="0"
         android:textColor="@color/colorTextBro"
         android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_min_sewa"
+        app:layout_constraintEnd_toStartOf="@+id/btn_add_sewa"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <com.skydoves.elasticviews.ElasticImageView
@@ -341,8 +355,9 @@
         android:layout_width="28.15dp"
         android:layout_height="24dp"
         android:layout_marginTop="11dp"
+        android:layout_marginEnd="26dp"
         app:imageView_duration="100"
-        app:layout_constraintStart_toEndOf="@+id/tv_quantity_sewa"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15"
         app:srcCompat="@drawable/ic_add_button" />
 

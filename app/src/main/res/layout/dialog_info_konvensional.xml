@@ -10,15 +10,17 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="481dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:paddingStart="8dp"
         android:paddingEnd="16dp"
+        android:paddingBottom="20dp"
         android:orientation="vertical"
-        android:background="@drawable/pop_up_auto_pilot">
+        android:background="@drawable/bg_round_panen">
 
         <TextView
+            android:id="@+id/tv_title"
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,6 +33,7 @@
             android:textColor="@color/Black"/>
 
         <TextView
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -43,7 +46,7 @@
             android:textColor="@color/Black"/>
 
         <TextView
-            android:id="@+id/tv_metode_panen_online"
+            android:id="@+id/tv_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

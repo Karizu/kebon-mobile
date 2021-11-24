@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.selada.kebonmobile.R;
+import com.selada.kebonmobile.model.response.calendardetail.HarvestSchedule;
 import com.selada.kebonmobile.presentation.jadwal.BottomSheetEventAdapter;
 
 import java.util.List;
@@ -21,11 +22,11 @@ import java.util.List;
 
 public class CustomBottomSheetDialog extends BottomSheetDialogFragment {
     private BottomSheetListener mListener;
-    private List<String> transactionModels;
+    private List<HarvestSchedule> transactionModels;
     private Context context;
     private Activity activity;
 
-    public CustomBottomSheetDialog(List<String> transactionModels, Context context, Activity activity) {
+    public CustomBottomSheetDialog(List<HarvestSchedule> transactionModels, Context context, Activity activity) {
         this.transactionModels = transactionModels;
         this.context = context;
         this.activity = activity;

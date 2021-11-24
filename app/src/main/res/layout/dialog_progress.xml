@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <com.github.ybq.android.spinkit.SpinKitView
+        android:visibility="gone"
         android:id="@+id/spin_kit"
         style="@style/SpinKitView.FoldingCube"
         android:layout_width="wrap_content"
@@ -12,14 +14,26 @@
         android:layout_centerInParent="true"
         app:SpinKit_Color="@color/green_primary" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/spin_kit"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/poppins_bold"
-        android:gravity="center"
-        android:text="Tunggu sebentar yaa.."
-        android:textColor="@color/green_primary"
-        android:textSize="16sp" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/kebon_loading" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
 </RelativeLayout>

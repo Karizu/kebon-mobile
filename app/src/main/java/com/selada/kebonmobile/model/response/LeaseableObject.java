@@ -36,6 +36,9 @@ public class LeaseableObject {
     @SerializedName("available")
     @Expose
     private String available;
+    @SerializedName("package_id")
+    @Expose
+    private String package_id;
     @SerializedName("package_name")
     @Expose
     private String packageName;
@@ -148,6 +151,14 @@ public class LeaseableObject {
 
     public void setAvailable(String available) {
         this.available = available;
+    }
+
+    public String getPackage_id() {
+        return package_id;
+    }
+
+    public void setPackage_id(String package_id) {
+        this.package_id = package_id;
     }
 
     public String getPackageName() {

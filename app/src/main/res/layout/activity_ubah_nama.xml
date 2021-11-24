@@ -68,7 +68,7 @@
         android:id="@+id/ubahNama"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:text="Dharmadi"
+        android:text="-"
         android:textSize="18sp"
         android:background="@drawable/bg_info_akun_text"
         android:layout_marginStart="16dp"

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.skydoves.elasticviews.ElasticLayout
+    android:id="@+id/cvItem"
+    android:layout_width="match_parent"
+    android:layout_height="112dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="0.5dp"
+    android:layout_marginEnd="0.5dp"
+    app:layout_duration="100"
+    android:background="@drawable/bg_rectangle_history"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_alignParentTop="true"
+            android:text="Invoice No: KBID/SL/12/09/2021/422/1/1"
+            android:textColor="@color/colorTextBro"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_centerVertical="true"
+            android:text="Sewa Lahan 1 Paket Depari Farm per Kavling Tahunan"
+            android:textColor="@color/colorTextBroLight"
+            android:textSize="15sp"
+            android:layout_below="@+id/tv_title"/>
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_centerVertical="true"
+            android:text="2021-10-14 00:00:00"
+            android:textColor="@color/colorTextBroLight"
+            android:textSize="13sp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/tv_message"/>
+
+        <TextView
+            android:id="@+id/tv_status_bayar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_centerVertical="true"
+            android:text="Menunggu Pembayaran"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextOrange"
+            android:textSize="13sp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/tv_message"
+            android:layout_alignParentEnd="true"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="12dp"
+            android:layout_centerVertical="true"
+            android:padding="2dp"
+            android:src="@drawable/ic_chevron_right_history"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+</com.skydoves.elasticviews.ElasticLayout>

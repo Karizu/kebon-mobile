@@ -8,6 +8,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,8 +24,11 @@ import com.selada.kebonmobile.util.CustomLayoutManager;
 import com.selada.kebonmobile.util.Loading;
 import com.selada.kebonmobile.util.MethodUtil;
 import com.selada.kebonmobile.util.PreferenceManager;
+import com.skydoves.elasticviews.ElasticImageView;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 
@@ -47,6 +51,8 @@ public class SewaLahanActivity extends AppCompatActivity {
 //    ElasticImageView btn_min_sewa;
     @BindView(R.id.rv_pilih_lahan)
     RecyclerView rv_pilih_lahan;
+    @BindView(R.id.btn_chat)
+    ElasticImageView btn_chat;
 
     @BindView(R.id.tv_title_bar)
     TextView tv_title_bar;
@@ -56,6 +62,9 @@ public class SewaLahanActivity extends AppCompatActivity {
     private int qtySewa = 0;
     private Context context;
     private HomeSewaLahanAdapter adapter;
+    private List<SiteLeasableResponse> responseList;
+    private List<SiteLeasableResponse> responses;
+    private boolean isFromAdapter;
 
     @OnClick(R.id.btn_back)
     void onClickBtnBack(){
@@ -66,6 +75,12 @@ public class SewaLahanActivity extends AppCompatActivity {
     void onClickPrevious(){
         if (linearLayoutManager.findLastCompletelyVisibleItemPosition() <= (adapter.getItemCount() - 1)) {
             linearLayoutManager.scrollToPosition(linearLayoutManager.findLastCompletelyVisibleItemPosition() - 1);
+            if (isFromAdapter){
+                adapter = new HomeSewaLahanAdapter(responseList, SewaLahanActivity.this, SewaLahanActivity.this);
+            } else {
+                adapter = new HomeSewaLahanAdapter(responses, SewaLahanActivity.this, SewaLahanActivity.this);
+            }
+            rv_pilih_lahan.setAdapter(adapter);
         }
     }
 
@@ -73,6 +88,12 @@ public class SewaLahanActivity extends AppCompatActivity {
     void onClickNext(){
         if (linearLayoutManager.findLastCompletelyVisibleItemPosition() < (adapter.getItemCount() - 1)) {
             linearLayoutManager.scrollToPosition(linearLayoutManager.findLastCompletelyVisibleItemPosition() + 1);
+            if (isFromAdapter){
+                adapter = new HomeSewaLahanAdapter(responseList, SewaLahanActivity.this, SewaLahanActivity.this);
+            } else {
+                adapter = new HomeSewaLahanAdapter(responses, SewaLahanActivity.this, SewaLahanActivity.this);
+            }
+            rv_pilih_lahan.setAdapter(adapter);
         }
     }
 
@@ -133,31 +154,21 @@ public class SewaLahanActivity extends AppCompatActivity {
         }
     }
 
-//    @OnClick(R.id.btn_informasi)
-//    void onClickBtnInformasiKeuntungan(){
-//        Intent intent = new Intent(SewaLahanActivity.this, InformasiKeuntunganActivity.class);
-//        startActivity(intent);
-//        SewaLahanActivity.this.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-//    }
-
-//    @OnClick(R.id.img_lahan)
-//    void onClickImgLahan(){
-//        Intent intent = new Intent(SewaLahanActivity.this, GaleriLahanActivity.class);
-//        startActivity(intent);
-//        SewaLahanActivity.this.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-//    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sewa_lahan);
         ButterKnife.bind(this);
+        new PreferenceManager(this);
         context = this;
         initComponent();
     }
 
     @SuppressLint("SetTextI18n")
     private void initComponent() {
+        isFromAdapter = getIntent().getBooleanExtra("is_from_adapter", false);
+        int siteId = getIntent().getIntExtra("site_id", 0);
+        btn_chat.setVisibility(View.GONE);
         tv_title_bar.setText("Sewa Lahan");
         linearLayoutManager = new CustomLayoutManager(context) {
             @Override
@@ -172,20 +183,38 @@ public class SewaLahanActivity extends AppCompatActivity {
         };
 
         rv_pilih_lahan.setLayoutManager(linearLayoutManager);
-        getListSiteLeasable();
+        getListSiteLeasable(isFromAdapter, siteId);
     }
 
-    private void getListSiteLeasable() {
+    private void getListSiteLeasable(boolean isFromAdapter, int siteId) {
         Loading.show(this);
         ApiCore.apiInterface().getListSiteLeasable(PreferenceManager.getSessionToken()).enqueue(new Callback<ApiResponse<List<SiteLeasableResponse>>>() {
             @Override
             public void onResponse(Call<ApiResponse<List<SiteLeasableResponse>>> call, Response<ApiResponse<List<SiteLeasableResponse>>> response) {
                 Loading.hide(SewaLahanActivity.this);
                 try {
-                    List<SiteLeasableResponse> responses = Objects.requireNonNull(response.body()).getData();
-                    adapter = new HomeSewaLahanAdapter(responses, SewaLahanActivity.this, SewaLahanActivity.this);
-                    rv_pilih_lahan.setAdapter(adapter);
+                    responses = Objects.requireNonNull(response.body()).getData();
 
+                    if (isFromAdapter){
+                        responseList = new ArrayList<>();
+                        for (SiteLeasableResponse leasableResponse: responses){
+                            if (leasableResponse.getId() == siteId){
+                                responseList.add(leasableResponse);
+                            }
+                        }
+
+                        for (SiteLeasableResponse leasableResponse: responses){
+                            if (leasableResponse.getId() != siteId){
+                                responseList.add(leasableResponse);
+                            }
+                        }
+
+                        adapter = new HomeSewaLahanAdapter(responseList, SewaLahanActivity.this, SewaLahanActivity.this);
+                        rv_pilih_lahan.setAdapter(adapter);
+                    } else {
+                        adapter = new HomeSewaLahanAdapter(responses, SewaLahanActivity.this, SewaLahanActivity.this);
+                        rv_pilih_lahan.setAdapter(adapter);
+                    }
                 } catch (Exception e){
                     e.printStackTrace();
                 }

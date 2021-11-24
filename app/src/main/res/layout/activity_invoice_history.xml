@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient"
+    android:orientation="vertical"
+    tools:context=".presentation.akun.history.InvoiceHistoryActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#67C8B4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_title_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Riwayat Pembayaran"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+            <com.skydoves.elasticviews.ElasticImageView
+                android:id="@+id/btn_back"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                android:src="@drawable/ic_back"
+                android:background="?attr/selectableItemBackground"
+                app:imageView_duration="100"
+                app:imageView_scale="0.87" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5.5dp"
+            android:background="@drawable/bg_rectangle_white_5dp"
+            android:layout_weight="1">
+
+            <Spinner
+                android:id="@+id/spinner_categories"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="12dp"
+                android:padding="2dp"
+                android:src="@drawable/ic_chevron_bottom"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5.5dp"
+            android:background="@drawable/bg_rectangle_white_5dp"
+            android:layout_weight="1">
+
+            <Spinner
+                android:id="@+id/spinner_tanggal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="12dp"
+                android:padding="2dp"
+                android:src="@drawable/ic_chevron_bottom"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="21dp"
+        android:background="#FBF4EA"
+        android:layout_marginTop="17dp">
+
+        <com.madapps.liquid.LiquidRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:AniBackColor="#A5DCB1"
+            app:AniForeColor="#FBF4EA"
+            app:CircleSmaller="6">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:visibility="visible"
+                        android:id="@+id/rv_invoice_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/layout_no_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/lottie"
+                            android:layout_width="match_parent"
+                            android:layout_height="400dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_centerInParent="true"
+                            app:lottie_rawRes="@raw/empty_state"
+                            app:lottie_loop="true"
+                            app:lottie_autoPlay="true"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lottie"
+                            android:layout_marginStart="34dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="34dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:text="Tidak ada riwayat pembayaran.."
+                            android:textColor="@color/colorDarkBlue"
+                            android:textSize="20sp"
+                            android:textStyle="normal"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </com.madapps.liquid.LiquidRefreshLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

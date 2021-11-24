@@ -43,7 +43,10 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+
+
     <CheckBox
+        android:visibility="invisible"
         android:id="@+id/cbFarmName"
         android:layout_width="wrap_content"
         android:layout_height="23dp"
@@ -57,17 +60,72 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout2" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_detail_cart"
+    <TextView
+        android:id="@+id/tvFarmName"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Depari Farm"
+        android:textColor="@color/colorTextBro"
+        android:textStyle="bold"
+        android:buttonTint="@color/colorTextBro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout2" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cbFarmName" />
+        app:layout_constraintTop_toBottomOf="@+id/cbFarmName">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:visibility="visible"
+                android:id="@+id/rv_detail_cart"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_item_detail_cart"/>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/layout_no_data"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="34dp"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:text="Keranjangmu kosong"
+                    android:textColor="@color/colorTextBro"
+                    android:textSize="20sp"
+                    android:textStyle="normal"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/tv_sisa_lubang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="19dp"
@@ -78,7 +136,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_detail_cart" />
+        app:layout_constraintTop_toBottomOf="@+id/scroll" />
 
 
     <LinearLayout
@@ -89,7 +147,7 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView21">
+        app:layout_constraintTop_toBottomOf="@+id/tv_sisa_lubang">
 
         <TextView
             android:layout_width="match_parent"

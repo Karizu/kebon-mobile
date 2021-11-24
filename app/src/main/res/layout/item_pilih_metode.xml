@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginEnd="15dp"
+    android:padding="2dp"
+    android:background="@drawable/bg_outer_bro"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_pilih"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_scheme"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_illustration" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/img_scheme"
+                android:layout_marginTop="-4dp"
+                android:layout_marginStart="-2dp"
+                android:layout_marginEnd="-2dp"
+                android:layout_marginBottom="-2dp"
+                android:background="@drawable/bg_jadwal_image">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:text="Autopilot"
+                    android:textColor="@color/colorTextBro"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="281dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center_vertical"
+                    android:text="Jenis tanaman dan jumlah tanaman yang  akan ditanam ditentukan  oleh operator."
+                    android:textColor="@color/colorTextBroLight"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text1" />
+
+                <com.skydoves.elasticviews.ElasticButton
+                    android:id="@+id/btn_info_selengkapnya"
+                    android:layout_width="167dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/bg_button_info_selengkapnya"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Informasi selengkapnya"
+                    android:textAllCaps="false"
+                    android:textColor="#FBF4EA"
+                    android:textSize="12sp"
+                    app:button_duration="100"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

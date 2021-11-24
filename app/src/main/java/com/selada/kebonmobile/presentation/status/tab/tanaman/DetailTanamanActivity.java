@@ -1,17 +1,23 @@
 package com.selada.kebonmobile.presentation.status.tab.tanaman;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.gson.Gson;
 import com.selada.kebonmobile.R;
+import com.selada.kebonmobile.model.response.detailcommodities.DetailCommoditiesResponse;
 import com.selada.kebonmobile.presentation.jadwal.JadwalActivity;
+import com.selada.kebonmobile.presentation.status.tab.adapter.ActiveLahanAdapter;
 import com.selada.kebonmobile.presentation.status.tab.tanaman.panen.PanenTanamanActivity;
 import com.selada.kebonmobile.util.ViewPagerDetailStatusAdapter;
 import com.selada.kebonmobile.util.ViewPagerDetailTanamanAdapter;
@@ -37,56 +43,48 @@ public class DetailTanamanActivity extends AppCompatActivity {
     FrameLayout tab_info;
     @BindView(R.id.tab_grafik)
     FrameLayout tab_grafik;
-    @BindView(R.id.tv_farm_name)
-    TextView tv_farm_name;
-    @BindView(R.id.tv_jumlah_kavling)
-    TextView tv_jumlah_kavling;
-    @BindView(R.id.tv_lama_sewa)
-    TextView tv_lama_sewa;
-    @BindView(R.id.tv_harga)
-    TextView tv_harga;
-    @BindView(R.id.img_site)
-    ImageView img_site;
-
-    private String plantName;
+    @BindView(R.id.rv_active_sites)
+    RecyclerView rv_active_sites;
+    @BindView(R.id.tv_fase_tanaman)
+    TextView tv_fase_tanaman;
 
     @OnClick(R.id.btn_jadwal)
-    void onClickJadwal(){
+    void onClickJadwal() {
         Intent intent = new Intent(this, JadwalActivity.class);
         startActivity(intent);
         this.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 
-    @OnClick(R.id.btn_panen)
-    void onClickPanen(){
-        Intent intent = new Intent(this, PanenTanamanActivity.class);
-        intent.putExtra("plant_name", plantName);
-        startActivity(intent);
-        this.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-    }
+//    @OnClick(R.id.btn_panen)
+//    void onClickPanen() {
+//        Intent intent = new Intent(this, PanenTanamanActivity.class);
+//        intent.putExtra("plant_name", "plantName");
+//        startActivity(intent);
+//        this.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+//    }
 
     @OnClick(R.id.btn_share)
-    void onClickShare(){
+    void onClickShare() {
         showDialogShare();
     }
 
     @OnClick(R.id.btn_reminder)
-    void onClickReminder(){
+    void onClickReminder() {
 
     }
 
     @OnClick(R.id.tab_info)
-    void onClickTabInfo(){
+    void onClickTabInfo() {
         viewPager.setCurrentItem(0);
     }
 
     @OnClick(R.id.tab_grafik)
-    void onClickTabRiwayat(){
+    void onClickTabRiwayat() {
         viewPager.setCurrentItem(1);
     }
 
     @OnClick(R.id.btn_back)
-    void onClickBack(){
+    void onClickBack() {
         onBackPressed();
     }
 
@@ -99,14 +97,24 @@ public class DetailTanamanActivity extends AppCompatActivity {
         initComponent();
     }
 
+    @SuppressLint("SetTextI18n")
     private void initComponent() {
-        if (getIntent()!=null){
-            plantName = getIntent().getStringExtra("plant_name");
-            tv_plant_name.setText(plantName);
-        }
+        String json = getIntent().getStringExtra("json");
+        DetailCommoditiesResponse commoditiesResponse = new Gson().fromJson(json, DetailCommoditiesResponse.class);
+
+        tv_plant_name.setText(commoditiesResponse.getCommodity().getName());
+        Glide.with(DetailTanamanActivity.this)
+                .load(commoditiesResponse.getCommodity().getMainImage().getFullpath())
+                .placeholder(R.drawable.img_plant)
+                .into(img_plant);
+        tv_day.setText(commoditiesResponse.getActiveSites().get(0).getDevelopmentSummaries().get(0).getAge() + " Hari");
+        tv_fase_tanaman.setText(commoditiesResponse.getActiveSites().get(0).getDevelopmentSummaries().get(0).getPhaseName());
+
+        ActiveLahanAdapter adapter = new ActiveLahanAdapter(commoditiesResponse.getActiveSites(), this, this);
+        rv_active_sites.setAdapter(adapter);
 
         //setViewPager
-        ViewPagerDetailTanamanAdapter statusAdapter = new ViewPagerDetailTanamanAdapter(getSupportFragmentManager());
+        ViewPagerDetailTanamanAdapter statusAdapter = new ViewPagerDetailTanamanAdapter(getSupportFragmentManager(), commoditiesResponse);
         viewPager.setAdapter(statusAdapter);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -116,7 +124,7 @@ public class DetailTanamanActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                switch (position){
+                switch (position) {
                     case 0:
                         tab_info.setBackground(getResources().getDrawable(R.drawable.bg_round_tab_status_on_presssed));
                         tab_grafik.setBackground(getResources().getDrawable(R.drawable.bg_round_tab_status));

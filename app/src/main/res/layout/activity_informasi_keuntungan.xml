@@ -35,6 +35,7 @@
         android:background="@drawable/bg_informasi_keuntungan">
 
         <TextView
+            android:id="@+id/tv_desc_keuntungan"
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -43,7 +44,7 @@
             android:layout_marginEnd="46dp"
             android:gravity="center"
             android:fontFamily="@font/poppins_regular"
-            android:text="Keuntungan menanam di  Depari Farm"
+            android:text="Keuntungan menanam di \n-"
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="@color/colorDarkBlue"/>
@@ -82,7 +83,7 @@
             android:layout_marginEnd="46dp"
             android:gravity="center"
             android:fontFamily="@font/poppins_regular"
-            android:text="untuk periode\nJanuari 2020 - Januari 2021"
+            android:text="untuk periode\n-"
             android:textSize="14sp"
             android:textStyle="bold"
             android:textColor="@color/colorDarkBlue"/>

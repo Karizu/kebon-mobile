@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/frame_item"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginStart="18dp"
+    android:layout_marginTop="-2dp"
+    android:layout_marginEnd="18dp"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:background="@drawable/bg_text_radius_5"
+    android:textColor="@color/colorTextBro"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/frame_transfer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <CheckBox
+        android:id="@+id/checkBoxMethod"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/poppins_regular"
+        android:buttonTint="@color/colorTextBro"
+        android:text="QRIS (GoPay, OVO, Dana, dll)" />
+
+</FrameLayout>

@@ -44,7 +44,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:scrollbars="none"
@@ -60,38 +60,482 @@
             <LinearLayout
                 android:id="@+id/layout_petunjuk"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginTop="21dp"
+                android:layout_height="wrap_content"
                 android:background="#FEF9E6"
-                android:orientation="horizontal"
+                android:layout_marginTop="21dp"
+                android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
 
-                <TextView
-                    android:id="@+id/petunjuk"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="13dp"
-                    android:layout_marginTop="9dp"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="Petunjuk Transfer"
-                    android:textColor="@color/colorTextBroLight"
-                    android:textSize="15sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="#FEF9E6"
+                    android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="18dp"
-                    android:src="@drawable/ic_down" />
+                    <TextView
+                        android:id="@+id/petunjuk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Petunjuk Transfer"
+                        android:textColor="@color/colorTextBroLight"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/btn_petunjuk"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_down" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:visibility="gone"
+                    android:id="@+id/layout_qris"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppins_bold"
+                            android:gravity="center"
+                            android:text="QRIS"
+                            android:textColor="@color/Black"
+                            android:textSize="18sp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/frame_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
+
+                        <ImageView
+                            android:id="@+id/img_qris"
+                            android:layout_width="250dp"
+                            android:layout_height="250dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/selada_qris" />
+
+                        <com.skydoves.elasticviews.ElasticButton
+                            android:id="@+id/btn_unduh"
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            app:button_duration="100"
+                            android:text="Unduh QRIS"
+                            android:fontFamily="@font/poppins_bold"
+                            android:background="@drawable/bg_button_round_green"
+                            android:textColor="@color/White"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="333dp"
+                        android:layout_marginTop="-10dp"
+                        android:layout_marginStart="-59dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circle__" />
+
+                    <TextView
+                        android:id="@+id/circle__"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="28dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:text="1."
+                        android:textColor="@color/black_primary"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/frame_img" />
+
+                    <TextView
+                        android:id="@+id/tv1_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="19dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:text="Unduh QRIS"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/circle__"
+                        app:layout_constraintTop_toBottomOf="@+id/frame_img"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/circle_2_"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="23dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:text="2."
+                        android:textColor="@color/black_primary"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circle__" />
+
+                    <TextView
+                        android:id="@+id/tv2_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="11dp"
+                        android:lines="2"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:text="Buka aplikasi pembayaran anda"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/circle_2_"
+                        app:layout_constraintTop_toBottomOf="@+id/circle__"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/circle_3_"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:text="3."
+                        android:textColor="@color/black_primary"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circle_2_" />
+
+
+                    <TextView
+                        android:id="@+id/tv3___"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="18dp"
+                        android:lines="2"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:text="Masuk ke menu scan QRIS, \nlalu upload QRIS yang sudah diunduh"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/circle_3_"
+                        app:layout_constraintTop_toBottomOf="@+id/circle_2_"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/circle_4_"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="50dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:text="4."
+                        android:textColor="@color/black_primary"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circle_3_" />
+
+                    <TextView
+                        android:id="@+id/tv4_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="18dp"
+                        android:lines="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:text="Isi nominal yang akan dibayarkan."
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/circle_4_"
+                        app:layout_constraintTop_toBottomOf="@+id/circle_3_"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv6_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="19dp"
+                        android:lines="3"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:text="Pastikan nominal transfer sesuai \ndengan jumlah yang harus \ndibayarkan."
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/circle_4_"
+                        app:layout_constraintTop_toBottomOf="@+id/tv4_"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/circle_5_"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="50dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:text="5."
+                        android:textColor="@color/black_primary"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circle_4_" />
+
+                    <TextView
+                        android:id="@+id/tv7_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="39dp"
+                        android:lines="2"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:text="Kemudian ikuti petunjuk transfer untuk\nmenyelesaikan transaksi"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/circle_5_"
+                        app:layout_constraintTop_toBottomOf="@+id/circle_4_"
+                        tools:ignore="SmallSp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:visibility="gone"
+                    android:id="@+id/layout_atm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppins_bold"
+                            android:gravity="center"
+                            android:text="ATM"
+                            android:textColor="@color/Black"
+                            android:textSize="18sp" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="333dp"
+                        android:layout_marginTop="-10dp"
+                        android:layout_marginStart="-59dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circle_1" />
+
+                    <TextView
+                        android:id="@+id/circle_1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="28dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:text="1."
+                        android:textColor="@color/black_primary"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="19dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:text="Masukan kartu ATM dan isi PIN anda"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/circle_1"
+                        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/circle_2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="23dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:text="2."
+                        android:textColor="@color/black_primary"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circle_1" />
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="11dp"
+                        android:lines="2"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:text="Pilih Transaksi Transfer > Transfer Bank \nLain"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/circle_2"
+                        app:layout_constraintTop_toBottomOf="@+id/circle_1"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/circle_3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:text="3."
+                        android:textColor="@color/black_primary"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circle_2" />
+
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="18dp"
+                        android:lines="2"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:text="Isi nomor rekening diawali dengan kode \nbank (contoh: 018 0771xxxxxxxx)"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/circle_3"
+                        app:layout_constraintTop_toBottomOf="@+id/circle_2"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/circle_4"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="50dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:text="4."
+                        android:textColor="@color/black_primary"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circle_3" />
+
+                    <TextView
+                        android:id="@+id/tv4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="18dp"
+                        android:lines="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:text="Isi nominal yang akan dibayarkan."
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/circle_4"
+                        app:layout_constraintTop_toBottomOf="@+id/circle_3"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="19dp"
+                        android:lines="3"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:text="Pastikan nominal transfer sesuai \ndengan jumlah yang harus \ndibayarkan."
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/circle_4"
+                        app:layout_constraintTop_toBottomOf="@+id/tv4"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/circle_5"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="50dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:text="5."
+                        android:textColor="@color/black_primary"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circle_4" />
+
+                    <TextView
+                        android:id="@+id/tv7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="39dp"
+                        android:lines="2"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:text="Kemudian ikuti petunjuk transfer untuk\nmenyelesaikan transaksi"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/circle_5"
+                        app:layout_constraintTop_toBottomOf="@+id/circle_4"
+                        tools:ignore="SmallSp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout3"
                 android:layout_width="match_parent"
-                android:layout_height="279.5dp"
+                android:layout_height="285dp"
                 android:layout_marginTop="35dp"
                 android:background="@drawable/bg_top_rincian_pembayaran"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -99,6 +543,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_detail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="21dp"
@@ -114,7 +559,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
                         android:fontFamily="@font/poppins_regular"
                         android:gravity="center"
                         android:text="Site :"
@@ -125,13 +569,13 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/tv_jumlah_kavling"
+                        android:id="@+id/jumlah_kavling"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:fontFamily="@font/poppins_regular"
                         android:gravity="center"
-                        android:text="Jumlah Kavling :"
+                        android:text="Jumlah :"
                         android:textColor="@color/colorTextBro"
                         android:textSize="13sp"
                         android:textStyle="bold"
@@ -139,7 +583,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/tv_site" />
 
                     <TextView
-                        android:id="@+id/tv_lama_sewa"
+                        android:id="@+id/lama_sewa"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -163,14 +607,14 @@
                         android:textColor="@color/colorTextBro"
                         android:textSize="13sp"
                         android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tv_lama_sewa" />
 
                     <TextView
-                        android:id="@+id/textView16"
+                        android:id="@+id/tv_farm_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
                         android:layout_marginEnd="16dp"
                         android:fontFamily="@font/poppins_regular"
                         android:text="Depari Farm"
@@ -181,12 +625,12 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView17"
+                        android:id="@+id/tv_jumlah_kavling"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
                         android:fontFamily="@font/poppins_regular"
-                        android:text="10 Kavling"
+                        android:text="10"
                         android:textColor="@color/colorTextBro"
                         android:textSize="13sp"
                         android:textStyle="bold"
@@ -194,7 +638,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/tv_site" />
 
                     <TextView
-                        android:id="@+id/textView19"
+                        android:id="@+id/tv_lama_sewa"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
@@ -207,19 +651,55 @@
                         app:layout_constraintTop_toBottomOf="@+id/tv_jumlah_kavling" />
 
                     <TextView
-                        android:id="@+id/textView15"
+                        android:id="@+id/tv_jumlah_pembayaran"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
                         android:fontFamily="@font/poppins_regular"
                         android:text="Rp 4,500,000"
-                        android:textColor="@color/colorTextBro"
                         android:textSize="13sp"
+                        android:textColor="@color/colorTextBro"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tv_lama_sewa" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/layout_payment_method_success"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_detail">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="28dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="left"
+                        android:text="Metode Pembayaran :"
+                        android:textColor="@color/colorTextBro"
+                        android:textStyle="bold"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_metode_bayar_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="36dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="right"
+                        android:text="Transfer Bank"
+                        android:textColor="@color/colorTextBro"
+                        android:textStyle="bold"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -236,30 +716,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_clock" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="11dp"
-                        android:fontFamily="@font/poppins_regular"
-                        android:gravity="center"
-                        android:text="Menunggu Pembayaran"
-                        android:textColor="@color/colorOrange"
-                        android:textSize="20sp" />
-
-                </LinearLayout>
-
                 <TextView
+                    android:id="@+id/tv_total_bayar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
@@ -270,8 +728,33 @@
                     android:textSize="45sp"
                     android:textStyle="bold" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_status_bayar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_clock" />
+
+                    <TextView
+                        android:id="@+id/tv_status_bayar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="11dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:text="Menunggu Pembayaran"
+                        android:textColor="@color/colorTextOrange"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
                 <TextView
-                    android:id="@+id/tv_status_bayar"
+                    android:id="@+id/tv_due_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -287,32 +770,25 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout4"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
                 android:layout_marginTop="10dp"
                 android:background="#FEF9E6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
 
-                <ImageView
-                    android:id="@+id/imageView14"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginEnd="6dp"
-                    android:src="@drawable/line"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
+                    android:visibility="gone"
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="128dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginEnd="6dp"
                     android:src="@drawable/line"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@+id/rv_rekening" />
 
                 <TextView
                     android:id="@+id/pembayaran"
@@ -329,7 +805,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/transfer"
+                    android:id="@+id/tv_metode_bayar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="9dp"
@@ -343,47 +819,14 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/rekening"
-                    android:layout_width="wrap_content"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_rekening"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="13dp"
-                    android:layout_marginTop="9dp"
-                    android:fontFamily="@font/poppins_regular"
-                    android:gravity="center"
-                    android:text="No Rekening : "
-                    android:textColor="@color/colorTextBroLight"
-                    android:textSize="13sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView14" />
-
-                <TextView
-                    android:id="@+id/tv_no_rekening"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="13dp"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="@font/poppins_regular"
-                    android:gravity="center"
-                    android:text="0000 0000 0000 000"
-                    android:textColor="@color/colorOrange"
-                    android:textSize="27sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/rekening" />
-
-                <TextView
-                    android:id="@+id/tv_salin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginEnd="16dp"
-                    android:fontFamily="@font/poppins_regular"
-                    android:gravity="center"
-                    android:text="SALIN"
-                    android:textColor="#38904A"
-                    android:textSize="20sp"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="6dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView"
@@ -404,19 +847,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="13dp"
-                    android:layout_marginBottom="13dp"
+                    android:layout_marginTop="8dp"
                     android:fontFamily="@font/poppins_regular"
                     android:gravity="center"
                     android:text="Hanya menerima dari Bank BJB, Mandiri, dan BCA"
                     android:textColor="@android:color/black"
                     android:textSize="13sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView"
                     app:layout_constraintStart_toStartOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <com.skydoves.elasticviews.ElasticButton
-                android:id="@+id/btn_beranda"
+                android:id="@+id/btn_konfirmasi_pembayaran"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="36dp"
@@ -424,10 +867,10 @@
                 android:layout_marginEnd="36dp"
                 android:background="@drawable/bg_button_round_green"
                 android:fontFamily="@font/poppins_bold"
-                android:text="Beranda"
+                android:text="Konfirmasi Pembayaran"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
-                android:textSize="25sp"
+                android:textSize="20sp"
                 app:button_duration="100"
                 app:button_scale="0.87"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -435,7 +878,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/layout_petunjuk" />
 
             <com.skydoves.elasticviews.ElasticButton
-                android:id="@+id/btn_batalkan"
+                android:id="@+id/btn_beranda"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="36dp"
@@ -443,15 +886,15 @@
                 android:layout_marginEnd="36dp"
                 android:background="@drawable/bg_button_round"
                 android:fontFamily="@font/poppins_bold"
-                android:text="Batalkan Pesanan"
+                android:text="Beranda"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
-                android:textSize="25sp"
+                android:textSize="20sp"
                 app:button_duration="100"
                 app:button_scale="0.87"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_beranda" />
+                app:layout_constraintTop_toBottomOf="@+id/btn_konfirmasi_pembayaran" />
 
             <com.skydoves.elasticviews.ElasticButton
                 android:id="@+id/btn_batalkan_2"
@@ -472,10 +915,10 @@
                 app:button_scale="0.87"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_batalkan" />
+                app:layout_constraintTop_toBottomOf="@+id/btn_beranda" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

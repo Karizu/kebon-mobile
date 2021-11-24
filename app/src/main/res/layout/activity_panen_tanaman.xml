@@ -131,12 +131,12 @@
                     app:layout_constraintTop_toBottomOf="@+id/text_title"/>
 
                 <TextView
-                    android:id="@+id/textViewPanen"
+                    android:id="@+id/textViewTanam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="Jumlah Panen"
+                    android:text="Jumlah"
                     android:textColor="@color/colorTextBroLight"
                     android:textSize="14sp"
                     android:textStyle="bold"
@@ -144,12 +144,12 @@
                     app:layout_constraintTop_toBottomOf="@+id/textViewSite" />
 
                 <TextView
-                    android:id="@+id/tv_jumlah_lubang"
+                    android:id="@+id/tv_jumlah_tanam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="50 Lubang"
+                    android:text="80 Lubang"
                     android:textColor="#FFC107"
                     android:textSize="14sp"
                     android:textStyle="bold"
@@ -250,160 +250,17 @@
 
             </RelativeLayout>
 
-            <com.skydoves.elasticviews.ElasticLayout
-                android:id="@+id/layout_offline"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_harvest_method"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_duration="100"
+                android:orientation="vertical"
+                tools:listitem="@layout/item_pilih_metode"
+                tools:itemCount="1"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
-
-                <RelativeLayout
-                    android:id="@+id/btn_offline"
-                    android:layout_width="match_parent"
-                    android:layout_height="202dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="15dp"
-                    app:layout_duration="50"
-                    android:background="@drawable/img_offline"
-                    android:foreground="@drawable/bg_outer_bro">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:background="@drawable/bg_jadwal_image"
-                        android:layout_alignParentBottom="true">
-
-                        <TextView
-                            android:id="@+id/text1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="19dp"
-                            android:layout_marginTop="14dp"
-                            android:fontFamily="@font/poppins_regular"
-                            android:gravity="center"
-                            android:text="Offline"
-                            android:textColor="@color/colorTextBro"
-                            android:textSize="23sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <com.skydoves.elasticviews.ElasticButton
-                            android:id="@+id/btn_info_selengkapnya"
-                            android:layout_width="167dp"
-                            android:layout_height="25dp"
-                            android:layout_marginTop="19dp"
-                            android:layout_marginEnd="15dp"
-                            android:background="@drawable/bg_button_info_selengkapnya"
-                            android:fontFamily="@font/poppins_regular"
-                            app:button_duration="100"
-                            android:text="Informasi selengkapnya"
-                            android:textAllCaps="false"
-                            android:textColor="#FBF4EA"
-                            android:textSize="12sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:id="@+id/textView4"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="19dp"
-                            android:layout_marginEnd="19dp"
-                            android:fontFamily="@font/poppins_regular"
-                            android:gravity="center_vertical"
-                            android:text="Panen tanaman Anda secara langsung dengan datang ke kebun Anda"
-                            android:textColor="@color/colorTextBroLight"
-                            android:textSize="12sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/text1" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </RelativeLayout>
-
-            </com.skydoves.elasticviews.ElasticLayout>
-
-            <com.skydoves.elasticviews.ElasticLayout
-                android:id="@+id/layout_online"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_duration="100"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layout_offline">
-
-                <RelativeLayout
-                    android:id="@+id/btn_online"
-                    android:layout_width="match_parent"
-                    android:layout_height="202dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="15dp"
-                    android:background="@drawable/img_offline"
-                    android:foreground="@drawable/bg_outer_bro">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:background="@drawable/bg_jadwal_image"
-                        android:layout_alignParentBottom="true">
-
-                        <TextView
-                            android:id="@+id/text2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="19dp"
-                            android:layout_marginTop="14dp"
-                            android:fontFamily="@font/poppins_regular"
-                            android:gravity="center"
-                            android:text="Online"
-                            android:textColor="@color/colorTextBro"
-                            android:textSize="23sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <com.skydoves.elasticviews.ElasticButton
-                            android:id="@+id/btn_info_selengkapnya_online"
-                            android:layout_width="167dp"
-                            android:layout_height="25dp"
-                            android:layout_marginTop="19dp"
-                            android:layout_marginEnd="15dp"
-                            android:background="@drawable/bg_button_info_selengkapnya"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="Informasi selengkapnya"
-                            app:button_duration="100"
-                            android:textAllCaps="false"
-                            android:textColor="#FBF4EA"
-                            android:textSize="12sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:id="@+id/textView5"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="19dp"
-                            android:layout_marginEnd="9dp"
-                            android:fontFamily="@font/poppins_regular"
-                            android:gravity="center_vertical"
-                            android:text="Tanaman anda akan dibantu panen oleh operator kami dan hasil panen akan diantarkan ke rumah anda."
-                            android:textColor="@color/colorTextBroLight"
-                            android:textSize="12sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/text2" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </RelativeLayout>
-
-            </com.skydoves.elasticviews.ElasticLayout>
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout6"/>
 
             <LinearLayout
                 android:visibility="invisible"
